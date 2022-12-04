@@ -1,0 +1,32 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 616263646566                s db 'a','b','c','d','e','f'
+    14                                      l equ $-s
+    15 00000006 00<rept>                    d times l db 0
+    16                                  ; Se da un sir de caractere s.
+    17                                  ; Se cere sirul de caractere d obtinut prin inversarea sirului s, folosind instructiuni pe siruri.
+    18                                  segment code use32 class=code
+    19                                      start:
+    20 00000000 B906000000                      mov ecx, l
+    21 00000005 E310                            jecxz sfarsit
+    22 00000007 BE[00000000]                    mov esi, s
+    23 0000000C BF[0B000000]                    mov edi, d+l-1
+    24                                          repeta:
+    25 00000011 FC                              cld 
+    26 00000012 AC                              lodsb
+    27 00000013 FD                              std 
+    28 00000014 AA                              stosb
+    29 00000015 E2FA                            loop repeta
+    30                                          sfarsit:
+    31 00000017 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    32 00000019 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
