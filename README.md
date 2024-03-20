@@ -5,3 +5,7 @@
  - OOP = [Programare Orientata Obiect 🔗]
  - AG = [Algoritmica Grafelor 📈]
  - SD = [Sisteme Dinamice ➕]
+ - BD = [Baze de Date 🖥️]
+ - PW = [Programare Web 🖱️]
+ - RC = [Retele de Calculatoare 🌐]
+ - 
