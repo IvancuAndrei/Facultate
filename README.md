@@ -1,14 +1,14 @@
 # Facultate (UBB - Info Romana)
- - ASC = [Arhitectura Sistemelor de Calcul 0️⃣1️⃣]
- - FP = [Fundamentele Programarii 🐍]
- - SDA = [Structuri de Date si Algoritmi 🌲]
- - OOP = [Programare Orientata Obiect 🔗]
- - AG = [Algoritmica Grafelor 📈]
- - SD = [Sisteme Dinamice ➕]
- - BD = [Baze de Date 🖥️]
- - PW = [Programare Web 🖱️]
- - RC = [Retele de Calculatoare 🌐]
- - PLF = [Programare Logica si Functionala 🌵]
- - PS = [Probabilitati si Statistica 🤓]
+ - ASC = [Arhitectura Sistemelor de Calcul 0️⃣1️⃣](https://github.com/IvancuAndrei/Facultate/tree/main/ASC)
+ - FP = [Fundamentele Programarii 🐍](https://github.com/IvancuAndrei/Facultate/tree/main/FP)
+ - SDA = [Structuri de Date si Algoritmi 🌲](https://github.com/IvancuAndrei/Facultate/tree/main/SDA)
+ - OOP = [Programare Orientata Obiect 🔗](https://github.com/IvancuAndrei/Facultate/tree/main/OOP)
+ - AG = [Algoritmica Grafelor 📈](https://github.com/IvancuAndrei/Facultate/tree/main/AG)
+ - SD = [Sisteme Dinamice ➕](https://github.com/IvancuAndrei/Facultate/tree/main/SD)
+ - BD = [Baze de Date 🖥️](https://github.com/IvancuAndrei/Facultate/tree/main/BD)
+ - PW = [Programare Web 🖱️](https://github.com/IvancuAndrei/Facultate/tree/main/PW/HTML)
+ - RC = [Retele de Calculatoare 🌐](https://github.com/IvancuAndrei/Facultate/tree/main/RC)
+ - PLF = [Programare Logica si Functionala 🌵](https://github.com/IvancuAndrei/Facultate/tree/main/PLF)
+ - PS = [Probabilitati si Statistica 🤓](https://github.com/IvancuAndrei/Facultate/tree/main/PS)
  - AI = [Inteligenta Artificiala 🤖](https://github.com/IvancuAndrei/Facultate/tree/main/AI)
    
