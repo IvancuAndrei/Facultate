@@ -1,0 +1,42 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; a-doubleword; b-byte; c-word; x-qword
+    14 00000000 EBFFFFFF                    a dd -21
+    15 00000004 08                          b db 8
+    16 00000005 0400                        c dw 4
+    17 00000007 0600000000000000            x dq 6
+    18                                      ; (a+b/c-1)/(b+2)-x
+    19                                  segment code use32 class=code
+    20                                      start:
+    21 00000000 A0[04000000]                    mov al, [b]; al = b = 8
+    22 00000005 6698                            cbw; conversie cu semn de la al la ax 
+    23 00000007 6699                            cwd; conversie cu semn de la ax la dx:ax
+    24 00000009 66F73D[05000000]                idiv word[c]; ax = dx:ax / c = b / c = 2
+    25 00000010 6699                            cwd; conversie cu semn de la ax la dx:ax
+    26 00000012 660305[00000000]                add ax, word[a]
+    27 00000019 660315[02000000]                add dx, word[a+2]; dx:ax = a + b / c = -19
+    28 00000020 66BB0100                        mov bx, 1; bx = 1
+    29 00000024 66B90000                        mov cx, 0; conversie cu semn de la bx la cx:bx
+    30 00000028 6629D8                          sub ax, bx
+    31 0000002B 6619CA                          sbb dx, cx; dx:ax = a + b / c - 1 = -20
+    32 0000002E 660FBE1D[04000000]              movsx bx, byte[b]; bx = b = 8
+    33 00000036 6683C302                        add bx, 2; bx = b + 2 = 10
+    34 0000003A 66F7FB                          idiv bx; ax = dx:ax / bx = (a + b / c - 1) / (b + 2) = -2
+    35 0000003D 98                              cwde; conversie cu semn de la ax la eax 
+    36 0000003E 99                              cdq; conversie cu semn de la eax la edx:eax
+    37 0000003F 8B1D[07000000]                  mov ebx, dword[x]
+    38 00000045 8B0D[0B000000]                  mov ecx, dword[x+4]; ecx:ebx = x = -6
+    39 0000004B 29D8                            sub eax,ebx
+    40 0000004D 19CA                            sbb edx,ecx; edx:eax = (a + b / c - 1) / (b + 2) - x = -8
+    41 0000004F 6A00                            push    dword 0      
+    42 00000051 FF15[00000000]                  call    [exit]       

@@ -1,0 +1,75 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, fread, fopen, fclose               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  import fread msvcrt.dll
+    12                                  import fclose msvcrt.dll
+    13                                  import fopen msvcrt.dll
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16 00000000 612E74787400                a db "a.txt", 0
+    17 00000006 7200                        mod_a db "r", 0
+    18 00000008 00000000                    des_a dd 0
+    19 0000000C 256300                      format_c db "%c", 0
+    20 0000000F 256400                      format_s db "%d", 0
+    21 00000012 00                          buffer db 0
+    22                                  ; Se da un fisier text. Sa se citeasca continutul fisierului, sa se contorizeze numarul de caractere speciale si sa se afiseze aceasta valoare. Numele fisierului text este definit in segmentul de date
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ;fopen("a.txt", "r")
+    26 00000000 68[06000000]                    push dword mod_a
+    27 00000005 68[00000000]                    push dword a
+    28 0000000A FF15[00000000]                  call [fopen]
+    29 00000010 83C408                          add esp, 2*4
+    30 00000013 83F800                          cmp eax, 0
+    31 00000016 7469                            je final
+    32 00000018 A3[08000000]                    mov dword[des_a], eax
+    33 0000001D BB00000000                      mov ebx, 0
+    34                                          repeta:
+    35                                              ;fread(buffer, 1, 1, des_a)
+    36 00000022 53                                  push ebx
+    37 00000023 FF35[08000000]                      push dword [des_a]
+    38 00000029 6A01                                push dword 1
+    39 0000002B 6A01                                push dword 1
+    40 0000002D 68[12000000]                        push dword buffer 
+    41 00000032 FF15[00000000]                      call [fread]
+    42 00000038 83C410                              add esp, 4*4
+    43 0000003B 5B                                  pop ebx
+    44 0000003C 83F800                              cmp eax, 0
+    45 0000003F 7422                                je final_1
+    46 00000041 A0[12000000]                        mov al, [buffer]
+    47 00000046 3C30                                cmp al, '0'
+    48 00000048 7216                                jb adunare
+    49 0000004A 3C39                                cmp al, '9'
+    50 0000004C 76D4                                jbe repeta
+    51 0000004E 3C41                                cmp al, 'A'
+    52 00000050 720E                                jb adunare
+    53 00000052 3C5A                                cmp al, 'Z'
+    54 00000054 76CC                                jbe repeta
+    55 00000056 3C61                                cmp al, 'a'
+    56 00000058 7206                                jb adunare
+    57 0000005A 3C7A                                cmp al, 'z'
+    58 0000005C 7702                                ja adunare
+    59 0000005E 76C2                                jbe repeta
+    60                                              adunare:
+    61 00000060 43                                      inc ebx
+    62 00000061 EBBF                                    jmp repeta
+    63                                          final_1:
+    64                                              ;printf(format_s, ebx)
+    65 00000063 53                                  push ebx
+    66 00000064 68[0F000000]                        push dword format_s
+    67 00000069 FF15[00000000]                      call [printf]
+    68 0000006F 83C408                              add esp, 2*4
+    69                                              ;fclose(des_a)
+    70 00000072 FF35[08000000]                      push dword [des_a]
+    71 00000078 FF15[00000000]                      call [fclose]
+    72 0000007E 83C404                              add esp, 4
+    73                                          final:
+    74 00000081 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    75 00000083 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

@@ -1,0 +1,118 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, fopen, fclose, scanf, fprintf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll
+     9                                  import fopen msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  import scanf msvcrt.dll
+    12                                  import fprintf msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    13                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    14                                  
+    15                                  ; our data is declared here (the variables needed by our program)
+    16                                  segment data use32 class=data
+    17 00000000 612E74787400                a db "a.txt", 0
+    18 00000006 00000000                    nr dd 0
+    19 0000000A 256400                      format_numar db "%d", 0
+    20 0000000D 257300                      format_cuvant db "%s", 0
+    21 00000010 00000000                    descriptor dd 0
+    22 00000014 7700                        mod_a db "w", 0
+    23 00000016 25732000                    format_cuvant_afisare db "%s ", 0
+    24 0000001A 00<rept>                    sir times 100 db 0
+    25                                  
+    26                                  ; Sa se citeasca de la tastatura pana un numar n, apoi sa se citeasca mai multe cuvinte pana cand se citeste cuvantul "#". 
+    27                                  ; Sa se citeasca toate cuvintele citite care au cel putin n vocale.
+    28                                  segment code use32 class=code
+    29                                      start:
+    30                                          
+    31                                          ;fopen(nume_fisier, mod_acces)
+    32 00000000 68[14000000]                    push dword mod_a
+    33 00000005 68[00000000]                    push dword a
+    34 0000000A FF15[00000000]                  call [fopen]
+    35 00000010 83C408                          add esp, 2 * 4
+    36 00000013 83F800                          cmp eax, 0
+    37 00000016 0F84A7000000                    je final
+    38 0000001C A3[10000000]                    mov [descriptor], eax
+    39                                          
+    40                                          ;scanf(format, nr)
+    41 00000021 68[06000000]                    push dword nr
+    42 00000026 68[0A000000]                    push dword format_numar
+    43 0000002B FF15[00000000]                  call [scanf]
+    44 00000031 83C408                          add esp, 2 * 4
+    45                                          
+    46                                          citire:
+    47                                              
+    48                                              ;scanf(format, sir)
+    49 00000034 68[1A000000]                        push dword sir
+    50 00000039 68[0D000000]                        push dword format_cuvant
+    51 0000003E FF15[00000000]                      call [scanf]
+    52 00000044 83C408                              add esp, 4 * 2
+    53                                              
+    54 00000047 803D[1A000000]23                    cmp byte[sir], "#"
+    55 0000004E 7464                                je afara
+    56                                              
+    57 00000050 BE[1A000000]                        mov esi, sir
+    58 00000055 BB00000000                          mov ebx, 0
+    59 0000005A FC                                  cld
+    60                                              
+    61                                              repeta:
+    62                                                  
+    63 0000005B AC                                      lodsb 
+    64 0000005C 3C00                                    cmp al, 0
+    65 0000005E 742F                                    je afara_repeta
+    66 00000060 3C61                                    cmp al, "a"
+    67 00000062 7426                                    je adunare
+    68 00000064 3C65                                    cmp al, "e"
+    69 00000066 7422                                    je adunare
+    70 00000068 3C69                                    cmp al, "i"
+    71 0000006A 741E                                    je adunare
+    72 0000006C 3C6F                                    cmp al, "o"
+    73 0000006E 741A                                    je adunare
+    74 00000070 3C75                                    cmp al, "u"
+    75 00000072 7416                                    je adunare
+    76 00000074 3C55                                    cmp al, "U"
+    77 00000076 7412                                    je adunare
+    78 00000078 3C41                                    cmp al, "A"
+    79 0000007A 740E                                    je adunare
+    80 0000007C 3C45                                    cmp al, "E"
+    81 0000007E 740A                                    je adunare
+    82 00000080 3C49                                    cmp al, "I"
+    83 00000082 7406                                    je adunare
+    84 00000084 3C4F                                    cmp al, 'O'
+    85 00000086 7402                                    je adunare
+    86 00000088 EBD1                                    jmp repeta
+    87                                                  
+    88                                                  adunare:
+    89 0000008A 83C301                                      add ebx, 1
+    90 0000008D EBCC                                        jmp repeta
+    91                                                      
+    92                                              afara_repeta:
+    93                                              
+    94 0000008F 3B1D[06000000]                          cmp ebx, [nr]
+    95 00000095 7302                                    jae afisare
+    96 00000097 EB9B                                    jmp citire
+    97                                              
+    98                                              afisare:
+    99                                                  
+   100                                                  ;fprintf(descriptor, format_cuvant, sir)
+   101 00000099 68[1A000000]                            push dword sir
+   102 0000009E 68[16000000]                            push dword format_cuvant_afisare
+   103 000000A3 FF35[10000000]                          push dword [descriptor]
+   104 000000A9 FF15[00000000]                          call [fprintf]
+   105 000000AF 83C40C                                  add esp, 4 * 3
+   106                                                  
+   107 000000B2 EB80                                    jmp citire
+   108                                          afara:
+   109                                          
+   110                                              ;fclose(descriptor)
+   111 000000B4 FF35[10000000]                       push dword [descriptor]
+   112 000000BA FF15[00000000]                       call [fclose]
+   113 000000C0 83C404                               add esp, 4
+   114                                          
+   115                                          final:
+   116                                          ; exit(0)
+   117 000000C3 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   118 000000C5 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

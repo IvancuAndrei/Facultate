@@ -1,0 +1,82 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, fopen, fclose, fscanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import printf msvcrt.dll                       ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import fopen msvcrt.dll
+    11                                  import fclose msvcrt.dll
+    12                                  import fscanf msvcrt.dll
+    13                                  
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16 00000000 612E74787400                a db "a.txt", 0
+    17 00000006 257800                      format_hexa db "%x", 0
+    18 00000009 2D2025640D0A00              format_cifra db "- %d", 13, 10, 0
+    19 00000010 7200                        mod_a db "r", 0
+    20 00000012 00000000                    descriptor dd 0
+    21 00000016 00000000                    cifra dd 0
+    22 0000001A 25782000                    format_hexa_afisare db "%x ",0
+    23                                      
+    24                                  ; Se citesc cifre din baza 16 separate prin spatiu. Sa se afiseze fiecare cifra citita si numarul de biti 1 din reprezentarea binara a acestuia.
+    25                                  segment code use32 class=code
+    26                                      start:
+    27                                          
+    28                                          ;fopen(nume_fisier, mod_acces)
+    29 00000000 68[10000000]                    push dword mod_a
+    30 00000005 68[00000000]                    push dword a
+    31 0000000A FF15[00000000]                  call [fopen]
+    32 00000010 83C408                          add esp, 2 * 4
+    33 00000013 83F800                          cmp eax, 0
+    34 00000016 746F                            je final
+    35 00000018 A3[12000000]                    mov [descriptor], eax
+    36                                          
+    37                                          citire:
+    38                                              
+    39                                              ;fscanf(descriptor, format, cifra)
+    40 0000001D 68[16000000]                        push dword cifra
+    41 00000022 68[06000000]                        push dword format_hexa
+    42 00000027 FF35[12000000]                      push dword [descriptor]
+    43 0000002D FF15[00000000]                      call [fscanf]
+    44 00000033 83C40C                              add esp, 4 * 3
+    45                                              
+    46 00000036 83F801                              cmp eax, 1
+    47 00000039 753D                                jne afara
+    48                                              
+    49                                              ;printf(format, cifra)
+    50 0000003B FF35[16000000]                      push dword [cifra]
+    51 00000041 68[1A000000]                        push dword format_hexa_afisare
+    52 00000046 FF15[00000000]                      call [printf]
+    53 0000004C 83C408                              add esp, 4 * 2
+    54                                              
+    55                                              numar_biti:
+    56 0000004F BA00000000                              mov edx, 0
+    57 00000054 A1[16000000]                            mov eax, [cifra]
+    58 00000059 B920000000                              mov ecx, 32
+    59                                                  repeta:
+    60 0000005E D1E8                                        shr eax, 1
+    61 00000060 7303                                        jnc next
+    62 00000062 83C201                                      add edx, 1
+    63                                                      next:
+    64 00000065 E2F7                                        loop repeta
+    65                                              
+    66                                              ;printf(format, edx)
+    67 00000067 52                                  push edx
+    68 00000068 68[09000000]                        push format_cifra
+    69 0000006D FF15[00000000]                      call [printf]
+    70 00000073 83C408                              add esp, 4 * 2
+    71                                              
+    72 00000076 EBA5                                jmp citire
+    73                                              
+    74                                          afara:
+    75                                              ;fclose(descriptor)
+    76 00000078 FF35[12000000]                      push dword [descriptor]
+    77 0000007E FF15[00000000]                      call [fclose]
+    78 00000084 83C404                              add esp, 4
+    79                                       
+    80                                          final:
+    81 00000087 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    82 00000089 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

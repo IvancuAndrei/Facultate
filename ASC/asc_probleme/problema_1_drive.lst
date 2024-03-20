@@ -1,0 +1,216 @@
+     1                                  bits 32 
+     2                                  
+     3                                  global start      
+     4                                  
+     5                                  
+     6                                  extern exit, fscanf, printf, fopen, fclose              
+     7                                  import exit msvcrt.dll
+     8                                  import fscanf msvcrt.dll
+     9                                  import printf msvcrt.dll
+    10                                  import fopen msvcrt.dll
+    11                                  import fclose msvcrt.dll    
+    12                                                           
+    13                                  segment data use32 class=data
+    14 00000000 612E74787400                a db "a.txt", 0
+    15 00000006 50726F706F7A697469-         mesaj db "Propozitia", 0
+    15 0000000F 6100               
+    16 00000011 4E7220637576696E74-         mesaj_2 db "Nr cuvinte: ", 0
+    16 0000001A 653A2000           
+    17 0000001E 2C205072696D756C20-         mesaj_3 db ", Primul cuvant ", 0
+    17 00000027 637576616E742000   
+    18 0000002F 2061726500                  mesaj_4 db " are", 0
+    19 00000034 206C69746572650A0D-         mesaj_5 db " litere", 10, 13, 0
+    19 0000003D 00                 
+    20 0000003E 257300                      format_s db "%s", 0
+    21 00000041 20256400                    format_n db " %d", 0
+    22 00000045 7200                        mod_a db "r", 0
+    23 00000047 00000000                    des_a dd 0
+    24 0000004B 3A00                        caracter db ":", 0
+    25 0000004D 00<rept>                    cuvant times 100 db 0
+    26 000000B1 00000000                    nr dd 0
+    27 000000B5 00<rept>                    cuvant_r times 100 db 0
+    28                                      
+    29                                  ; Se da un fisier care contine mai multe propozitii separate de caracterul ".". Sa se numere cate cuvinte are fiecare propozitie. 
+    30                                  ; Doar pentru primul cuvant se va numara cate litere are acesta si se va scrie inversat pe ecran.
+    31                                  segment code use32 class=code
+    32                                      start:
+    33                                          ;fopen(a.txt, mod_a)
+    34 00000000 68[45000000]                    push dword mod_a
+    35 00000005 68[00000000]                    push dword a
+    36 0000000A FF15[00000000]                  call [fopen]
+    37 00000010 83C408                          add esp, 2 * 4
+    38 00000013 A3[47000000]                    mov [des_a], eax
+    39 00000018 83F800                          cmp eax, 0
+    40 0000001B 0F848C010000                    je final
+    41 00000021 BB00000000                      mov ebx, 0
+    42                                          
+    43                                          
+    44                                          repeta:
+    45                                          
+    46 00000026 BA00000000                      mov edx, 0
+    47 0000002B 83C301                          add ebx, 1
+    48 0000002E C705[B1000000]0000-             mov dword[nr], 0
+    48 00000036 0000               
+    49 00000038 C605[B5000000]00                mov byte[cuvant_r], 0
+    50                                          
+    51                                          ;printf(mesaj)
+    52 0000003F 68[06000000]                    push dword mesaj
+    53 00000044 FF15[00000000]                  call [printf]
+    54 0000004A 83C404                          add esp, 4
+    55                                          
+    56                                          ;printf(format_n, ebx)
+    57 0000004D 53                              push ebx
+    58 0000004E 68[41000000]                    push dword format_n
+    59 00000053 FF15[00000000]                  call [printf]
+    60 00000059 83C408                          add esp, 2 * 4
+    61                                          
+    62                                          ;printf(caracter)
+    63 0000005C 68[4B000000]                    push dword caracter
+    64 00000061 FF15[00000000]                  call [printf]
+    65 00000067 83C404                          add esp, 4
+    66                                          
+    67                                          
+    68                                          citire_cuvinte:
+    69                                              
+    70                                              ;fscanf(des_a, format_s, cuvant)
+    71 0000006A 68[4D000000]                        push dword cuvant
+    72 0000006F 68[3E000000]                        push dword format_s
+    73 00000074 FF35[47000000]                      push dword [des_a]
+    74 0000007A 83C40C                              add esp, 4 * 3
+    75                                          
+    76 0000007D 83F800                              cmp eax, 0
+    77 00000080 E928010000                          jmp final
+    78                                          
+    79                                              ;printf(format_s, cuvant)
+    80 00000085 68[4D000000]                        push dword cuvant
+    81 0000008A 68[3E000000]                        push dword format_s
+    82 0000008F FF15[00000000]                      call [printf]
+    83 00000095 83C408                              add esp, 2 * 4
+    84                                              
+    85 00000098 83C201                              add edx, 1
+    86 0000009B BE[4D000000]                        mov esi, cuvant
+    87 000000A0 EB38                                jmp comparatie_1
+    88                                              
+    89                                          citire_cuvinte_2:
+    90                                              
+    91                                              ;fscanf(des_a, format_s, cuvant)
+    92 000000A2 68[4D000000]                        push dword cuvant
+    93 000000A7 68[3E000000]                        push dword format_s
+    94 000000AC FF35[47000000]                      push dword [des_a]
+    95 000000B2 83C40C                              add esp, 4 * 3
+    96                                          
+    97 000000B5 83F800                              cmp eax, 0
+    98 000000B8 E9F0000000                          jmp final
+    99                                          
+   100                                              ;printf(format_s, cuvant)
+   101 000000BD 68[4D000000]                        push dword cuvant
+   102 000000C2 68[3E000000]                        push dword format_s
+   103 000000C7 FF15[00000000]                      call [printf]
+   104 000000CD 83C408                              add esp, 2 * 4
+   105                                              
+   106 000000D0 83C201                              add edx, 1
+   107 000000D3 BE[4D000000]                        mov esi, cuvant
+   108 000000D8 EB33                                jmp comparatie_2
+   109                                          
+   110                                          comparatie_1:
+   111                                              
+   112 000000DA AC                                  lodsb 
+   113                                              
+   114 000000DB 83F82E                              cmp eax, "."
+   115 000000DE 743A                                je propozitie_1
+   116                                              
+   117 000000E0 83F800                              cmp eax, 0
+   118 000000E3 7409                                je continuare
+   119                                              
+   120 000000E5 8305[B1000000]01                    add dword[nr], 1
+   121 000000EC EBEC                                jmp comparatie_1
+   122                                              
+   123                                              continuare:
+   124                                                  
+   125 000000EE BE[4D000000]                            mov esi, cuvant
+   126 000000F3 0335[B1000000]                          add esi, [nr]
+   127 000000F9 BF[B5000000]                            mov edi, cuvant_r
+   128 000000FE 8B0D[B1000000]                          mov ecx, [nr]
+   129 00000104 FC                                      cld
+   130                                                  
+   131                                                  repp:
+   132 00000105 FD                                          std
+   133 00000106 AC                                          lodsb
+   134 00000107 FC                                          cld
+   135 00000108 AA                                          stosb
+   136 00000109 E2FA                                    loop repp 
+   137                                  
+   138 0000010B EB95                                    jmp citire_cuvinte_2
+   139                                                  
+   140                                          comparatie_2:
+   141                                              
+   142 0000010D AC                                  lodsb 
+   143 0000010E 83F82E                              cmp eax, "."
+   144 00000111 7427                                je propozitie_2
+   145 00000113 83F800                              cmp eax, 0
+   146 00000116 748A                                je citire_cuvinte_2
+   147 00000118 EBF3                                jmp comparatie_2
+   148                                          
+   149                                          propozitie_1:
+   150                                                  
+   151 0000011A BE[4D000000]                            mov esi, cuvant
+   152 0000011F 0335[B1000000]                          add esi, [nr]
+   153 00000125 BF[B5000000]                            mov edi, cuvant_r
+   154 0000012A 8B0D[B1000000]                          mov ecx, [nr]
+   155 00000130 83E901                                  sub ecx, 1
+   156 00000133 FC                                      cld
+   157                                                  
+   158                                                  repp1:
+   159 00000134 FD                                          std
+   160 00000135 AC                                          lodsb
+   161 00000136 FC                                          cld
+   162 00000137 AA                                          stosb
+   163 00000138 E2FA                                    loop repp1 
+   164                                          
+   165                                          propozitie_2:
+   166                                          
+   167                                                  ;printf(mesaj_2)
+   168 0000013A 68[11000000]                            push dword mesaj_2
+   169 0000013F FF15[00000000]                          call [printf]
+   170 00000145 83C404                                  add esp, 4
+   171                                          
+   172                                                  ;printf(format_n, edx)
+   173 00000148 52                                      push edx 
+   174 00000149 68[41000000]                            push dword format_n
+   175 0000014E FF15[00000000]                          call [printf]
+   176 00000154 83C408                                  add esp, 4 * 2
+   177                                          
+   178                                                  ;printf(mesaj_3)
+   179 00000157 68[1E000000]                            push dword mesaj_3
+   180 0000015C FF15[00000000]                          call [printf]
+   181 00000162 83C404                                  add esp, 4
+   182                                                  
+   183                                                  ;printf(format_s, cuvant_r)
+   184 00000165 68[3E000000]                            push dword format_s
+   185 0000016A 68[B5000000]                            push dword cuvant_r
+   186 0000016F FF15[00000000]                          call [printf]
+   187 00000175 83C408                                  add esp, 4 * 2
+   188                                                  
+   189                                                  ;printf(mesaj_4)
+   190 00000178 68[2F000000]                            push dword mesaj_4
+   191 0000017D FF15[00000000]                          call [printf]
+   192 00000183 83C404                                  add esp, 4
+   193                                                  
+   194                                                  ;printf(format_n, nr)
+   195 00000186 68[41000000]                            push dword format_n
+   196 0000018B FF35[B1000000]                          push dword [nr]
+   197 00000191 FF15[00000000]                          call [printf]
+   198 00000197 83C408                                  add esp, 4 * 2
+   199                                                  
+   200                                                  ;printf(mesaj_5)
+   201 0000019A 68[34000000]                            push dword mesaj_5
+   202 0000019F FF15[00000000]                          call [printf]
+   203 000001A5 83C404                                  add esp, 4
+   204                                                  
+   205 000001A8 E979FEFFFF                              jmp repeta
+   206                                         
+   207                                          
+   208                                          final:
+   209 000001AD 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   210 000001AF FF15[00000000]                  call    [exit]       ; call exit to terminate the program
+   211                                          

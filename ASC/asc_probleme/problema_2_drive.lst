@@ -1,0 +1,86 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  
+     5                                  extern exit, fopen, fclose, scanf, fprintf               
+     6                                  import exit msvcrt.dll
+     7                                  import fopen msvcrt.dll  
+     8                                  import fclose msvcrt.dll  
+     9                                  import scanf msvcrt.dll      
+    10                                  import fprintf msvcrt.dll  
+    11                                  
+    12                                  segment data use32 class=data
+    13 00000000 612E74787400                a db "a.txt", 0
+    14 00000006 256400                      format_n db "%d", 0
+    15 00000009 00000000                    descriptor dd 0
+    16 0000000D 7700                        mod_a db "w", 0
+    17 0000000F 00000000                    nr dd 0
+    18 00000013 25642000                    format_afisare db "%d ", 0
+    19 00000017 25782000                    format_hexa db "%x ", 0
+    20 0000001B 25640D0A00                  format_biti db "%d", 13, 10, 0
+    21                                      
+    22                                  ; Se citesc de la tastatura numere in baza 10 pana la citirea numarului 0. Sa se scrie in fisier fiecare numar citit in baza 10, 
+    23                                  ; in baza 16 si numarul de biti 1 din reprezentarea binara a acestuia.
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          
+    27                                          ;fopen(nume_fisier, mod_acces)
+    28 00000000 68[0D000000]                    push dword mod_a
+    29 00000005 68[00000000]                    push dword a
+    30 0000000A FF15[00000000]                  call [fopen]
+    31 00000010 83C408                          add esp, 2 * 4
+    32 00000013 83F800                          cmp eax, 0
+    33 00000016 0F8493000000                    je final
+    34 0000001C A3[09000000]                    mov [descriptor], eax
+    35                                          
+    36                                          citire:
+    37                                              
+    38                                              ;scanf(format, nr)
+    39 00000021 68[0F000000]                        push dword nr
+    40 00000026 68[06000000]                        push dword format_n
+    41 0000002B FF15[00000000]                      call [scanf]
+    42 00000031 83C408                              add esp, 2 * 4
+    43 00000034 833D[0F000000]00                    cmp dword[nr], 0
+    44 0000003B 7463                                je afara
+    45                                              
+    46                                              ;fprintf(des, format_afisare, nr)
+    47 0000003D FF35[0F000000]                      push dword [nr]
+    48 00000043 68[13000000]                        push dword format_afisare
+    49 00000048 FF35[09000000]                      push dword [descriptor]
+    50 0000004E FF15[00000000]                      call [fprintf]
+    51 00000054 83C40C                              add esp, 3 * 4
+    52                                              
+    53 00000057 A1[0F000000]                        mov eax, [nr]
+    54                                              ;fprintf(des, format_hexa, eax)
+    55 0000005C 50                                  push eax
+    56 0000005D 68[17000000]                        push dword format_hexa
+    57 00000062 FF35[09000000]                      push dword [descriptor]
+    58 00000068 FF15[00000000]                      call [fprintf]
+    59 0000006E 83C40C                              add esp, 4 * 3
+    60                                              
+    61 00000071 BA00000000                          mov edx, 0
+    62 00000076 A1[0F000000]                        mov eax, [nr]
+    63 0000007B B920000000                          mov ecx, 32
+    64                                              numar_biti:
+    65 00000080 D1E8                                    shr eax, 1
+    66 00000082 7303                                    jnc next
+    67 00000084 83C201                                  add edx, 1
+    68                                                  next:
+    69 00000087 E2F7                                loop numar_biti
+    70                                              
+    71                                              ;fprintf(des, format_biti, edx)
+    72 00000089 52                                  push edx
+    73 0000008A 68[1B000000]                        push dword format_biti
+    74 0000008F FF35[09000000]                      push dword [descriptor]
+    75 00000095 FF15[00000000]                      call [fprintf]
+    76 0000009B 83C40C                              add esp, 4 * 3
+    77                                              
+    78 0000009E EB81                                jmp citire    
+    79                                          afara:
+    80                                              ;fclose(descriptor)
+    81 000000A0 FF35[09000000]                      push dword [descriptor]
+    82 000000A6 FF15[00000000]                      call [fclose]
+    83 000000AC 83C404                              add esp, 4
+    84                                          final:
+    85 000000AF 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    86 000000B1 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

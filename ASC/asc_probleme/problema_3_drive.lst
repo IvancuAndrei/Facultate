@@ -1,0 +1,69 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, fscanf, fopen, fclose               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import fscanf msvcrt.dll                         ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  import fopen msvcrt.dll
+    12                                  import fclose msvcrt.dll
+    13                                  
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16 00000000 612E74787400                a db "a.txt", 0
+    17 00000006 00000000                    descriptor dd 0
+    18 0000000A 7200                        mod_a db "r", 0
+    19 0000000C 00000000                    caracter dd 0
+    20 00000010 256300                      format_c db "%c", 0
+    21                                  
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          
+    26                                          ;fopen(nume_fisier, mod_a)
+    27 00000000 68[0A000000]                    push dword mod_a
+    28 00000005 68[00000000]                    push dword a
+    29 0000000A FF15[00000000]                  call [fopen]
+    30 00000010 83C408                          add esp, 2 * 4
+    31 00000013 83F800                          cmp eax, 0
+    32 00000016 7458                            je final
+    33 00000018 A3[06000000]                    mov [descriptor], eax
+    34                                          
+    35                                          citire:
+    36                                              
+    37                                              ;fscanf(descriptor, format, caracter)
+    38 0000001D 68[0C000000]                        push dword caracter
+    39 00000022 68[10000000]                        push dword format_c
+    40 00000027 FF35[06000000]                      push dword [descriptor]
+    41 0000002D FF15[00000000]                      call [fscanf]
+    42 00000033 83C40C                              add esp, 4 * 3
+    43                                              
+    44 00000036 83F801                              cmp eax, 1
+    45 00000039 7526                                jne afara
+    46                                              
+    47 0000003B 833D[0C000000]20                    cmp dword[caracter], " "
+    48 00000042 7407                                je afisare
+    49 00000044 832D[0C000000]03                    sub dword[caracter], 3
+    50                                              
+    51                                              afisare:
+    52                                                  ;printf(format, caracter)
+    53 0000004B FF35[0C000000]                          push dword [caracter]
+    54 00000051 68[10000000]                            push dword format_c
+    55 00000056 FF15[00000000]                          call [printf]
+    56 0000005C 83C408                                  add esp, 4 * 2
+    57                                                  
+    58 0000005F EBBC                                jmp citire    
+    59                                          
+    60                                          afara:
+    61                                              ;fclose(descriptor)
+    62 00000061 FF35[06000000]                      push dword [descriptor]
+    63 00000067 FF15[00000000]                      call [fclose]
+    64 0000006D 83C404                              add esp, 4
+    65                                          
+    66                                          final:
+    67                                          
+    68 00000070 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    69 00000072 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

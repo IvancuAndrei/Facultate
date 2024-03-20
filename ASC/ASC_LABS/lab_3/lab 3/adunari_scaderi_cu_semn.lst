@@ -1,0 +1,42 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ;a - byte, b - word, c - double word, d - qword - Interpretare cu semn
+    14 00000000 0A                          a db 10
+    15 00000001 F9FF                        b dw -7
+    16 00000003 04000000                    c dd 4
+    17 00000007 FDFFFFFFFFFFFFFF            d dq -3
+    18                                      ;(c + b + b)-(c + a + d) = (c + b + b) - (c + a) - d  
+    19                                  segment code use32 class=code
+    20                                      start:
+    21 00000000 8B1D[03000000]                  mov ebx, [c]; ebx = c = 4
+    22 00000006 66A1[01000000]                  mov ax, [b]; ax = b = -7
+    23 0000000C 98                              cwde; conversie cu semn de la ax la eax
+    24 0000000D 01C3                            add ebx, eax; ebx = ebx + eax = c + b = -3
+    25 0000000F 01C3                            add ebx, eax; ebx = ebx + eax = c + b + b = -10
+    26                                          ; eax, ebx folosite
+    27 00000011 B800000000                      mov eax, 0; eax = 0
+    28 00000016 A0[00000000]                    mov al, [a]; al = a = 10
+    29 0000001B 6698                            cbw; conversie cu semn de la al la ax
+    30 0000001D 98                              cwde; conversie cu semn de la ax la eax
+    31 0000001E 8B0D[03000000]                  mov ecx, [c]; ecx = c = 4
+    32 00000024 01C1                            add ecx, eax; ecx = ecx + eax = c + a = 14
+    33 00000026 29CB                            sub ebx, ecx; ebx = ebx - ecx = (c + b + b) - (c + a) = -24
+    34                                          ; eax, ebx, ecx folosite
+    35 00000028 89D8                            mov eax, ebx; eax = ebx = (c + b + b) - (c + a) = -24
+    36 0000002A 99                              cdq; conversie cu semn de la eax la edx:eax
+    37 0000002B 8B1D[07000000]                  mov ebx, dword[d]
+    38 00000031 8B0D[0B000000]                  mov ecx, dword[d+4]; ecx:ebx = d = -3
+    39 00000037 29D8                            sub eax,ebx;
+    40 00000039 19CA                            sbb edx,ecx; edx:eax = edx:eax - ecx:ebx = (c + b + b) - (c + a) - d = -21
+    41 0000003B 6A00                            push    dword 0     
+    42 0000003D FF15[00000000]                  call    [exit]      
