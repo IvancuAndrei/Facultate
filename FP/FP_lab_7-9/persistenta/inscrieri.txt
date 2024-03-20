@@ -1,0 +1,10 @@
+0 Andrei Valcea 10 04.08 2h30 Untold
+0 Andrei Valcea 11 13.07 3h ElectricCastle
+0 Andrei Valcea 12 01.12 2h15 Hustle
+1 Teo Prahova 11 13.07 3h ElectricCastle
+1 Teo Prahova 10 04.08 2h30 Untold
+1 Teo Prahova 13 15.08 3h30 Neversea
+2 Ivancu Valcea 10 04.08 2h30 Untold
+2 Ivancu Valcea 11 13.07 3h ElectricCastle
+3 Rares SatuMare 10 04.08 2h30 Untold
+3 Rares SatuMare 14 28.08 2h Saga
