@@ -8,4 +8,5 @@
  - BD = [Baze de Date 🖥️]
  - PW = [Programare Web 🖱️]
  - RC = [Retele de Calculatoare 🌐]
+ - PLF = [Programare Logica si Functionala 🌵]
  - 
