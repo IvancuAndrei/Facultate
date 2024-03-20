@@ -10,5 +10,5 @@
  - RC = [Retele de Calculatoare 🌐]
  - PLF = [Programare Logica si Functionala 🌵]
  - PS = [Probabilitati si Statistica 🤓]
- - AI = [Inteligenta Artificiala 🤖]
+ - AI = [Inteligenta Artificiala 🤖](https://github.com/IvancuAndrei/Facultate/tree/main/AI)
    
