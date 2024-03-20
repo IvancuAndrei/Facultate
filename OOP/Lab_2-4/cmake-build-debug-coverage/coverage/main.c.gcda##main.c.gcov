@@ -1,0 +1,42 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab_2-4/main.c
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/main.c.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "oferta.h"
+        -:    2:#include "ui.h"
+        -:    3:#include "ofertaService.h"
+        -:    4:#include "ofertaRepo.h"
+        -:    5:#include "testOfertaRepo.h"
+        -:    6:#include "testOfertaService.h"
+        -:    7:#pragma warning(disable:4996)
+        -:    8:
+function testAll called 1 returned 100% blocks executed 100%
+        1:    9:void testAll(){
+        1:   10:    testAdaugareOferta();
+        1:   10-block  0
+call    0 returned 1
+        1:   11:    testStergereOferta();
+call    0 returned 1
+        1:   12:    testModificareOferta();
+call    0 returned 1
+        1:   13:    testAdaugaOfertaService();
+call    0 returned 1
+        1:   14:    testStergeOfertaService();
+call    0 returned 1
+        1:   15:    testModificaOfertaService();
+call    0 returned 1
+        1:   16:    testSortareDupaPretSiDestinatie();
+call    0 returned 1
+        1:   17:    testFiltrareDupaCriteriu();
+call    0 returned 1
+        1:   18:}
+        -:   19:
+function main called 1 returned 100% blocks executed 100%
+        1:   20:int main() {
+        1:   21:    testAll();
+        1:   21-block  0
+call    0 returned 1
+        -:   22:    //listaOferte *o = createOList();
+        -:   23:    //run(o);
+        -:   24:
+        -:   25:}

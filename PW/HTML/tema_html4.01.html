@@ -1,0 +1,208 @@
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    <html lang="ro">
+        <head>
+            <meta charset="UTF-8">
+        </head>
+
+        <body>
+            <form action="trimitere" method="post">
+                <fieldset style="width: 1000px;">
+                    <legend style ="background-color: coral; height:auto; width: auto;"  >Date Personale</legend>
+                    <table border="1 px" align="center" style="background-color: antiquewhite; max-width: 1000px;" >
+                        <tr>
+                            <th><label>Nume:</label></th>
+                            <td><input type="text" name="nume" size="30" title="Introduceți numele dumneavoastră"></td>
+                            <th><label>Prenume:</label></th>
+                            <td><input type="text" name="prenume" size="30" title="Introduceți prenumele dumneavoastră"><br></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Data Nașterii:</label></th>
+                            <td><input type="text" id="data" name="data nasterii" value="yyyy-mm-dd" maxlength="10"></td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label>Email:</label></th>
+                            <td><input type="text" name="email" size="30" title="Introduceți email-ul dumneavoastră"></td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label>Număr de telefon:</label></th>
+                            <td><input type="text" name="număr de telefon" size="30" title="Introduceți numărul dumneavoastră de telefon"></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Stare civilă:</label></th>
+                            <td><select name="stare civilă" title="Alegeți starea dumneavoastră civilă">
+                                <option value="necăsătorit(ă)">Necăsătorit(ă)</option>
+                                <option value="căsătorit(ă)">Căsătorit(ă)</option>
+                                <option value="văduv(ă)">Văduv(ă)</option>
+                                <option value="altul">Altul</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Mesaj:</label></th>
+                            <td><textarea name="mesaj" rows="10" cols="30" title="Introduceți un mesaj"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Gen:</label></th>
+                            <td><label>Feminin</label><input type="radio" name="gen" value="feminin"></td>
+                            <td><label>Masculin</label><input type="radio" name="gen" value="masculin"></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Judet:</label></th>
+                            <td><select name="judet">
+                                <option value="AB">Alba</option>
+                                <option value="AR">Arad</option>
+                                <option value="AG">Argeș</option>
+                                <option value="BC">Bacău</option>
+                                <option value="BH">Bihor</option>
+                                <option value="BN">Bistrița-Năsăud</option>
+                                <option value="BR">Brăila</option>
+                                <option value="BT">Botoșani</option>
+                                <option value="BV">Brașov</option>
+                                <option value="BZ">Buzău</option>
+                                <option value="CS">Caraș-Severin</option>
+                                <option value="CL">Călărași</option>
+                                <option value="CJ" selected>Cluj</option>
+                                <option value="CT">Constanța</option>
+                                <option value="CV">Covasna</option>
+                                <option value="DB">Dâmbovița</option>
+                                <option value="DJ">Dolj</option>
+                                <option value="GL">Galați</option>
+                                <option value="GR">Giurgiu</option>
+                                <option value="GJ">Gorj</option>
+                                <option value="HR">Harghita</option>
+                                <option value="HD">Hunedoara</option>
+                                <option value="IL">Ialomița</option>
+                                <option value="IS">Iași</option>
+                                <option value="IF">Ilfov</option>
+                                <option value="MM">Maramureș</option>
+                                <option value="MH">Mehedinți</option>
+                                <option value="MS">Mureș</option>
+                                <option value="NT">Neamț</option>
+                                <option value="OT">Olt</option>
+                                <option value="PH">Prahova</option>
+                                <option value="SM">Satu Mare</option>
+                                <option value="SJ">Sălaj</option>
+                                <option value="SB">Sibiu</option>
+                                <option value="SV">Suceava</option>
+                                <option value="TR">Teleorman</option>
+                                <option value="TM">Timiș</option>
+                                <option value="TL">Tulcea</option>
+                                <option value="VS">Vaslui</option>
+                                <option value="VL">Vâlcea</option>
+                                <option value="VN">Vrancea</option>
+                            </select></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Oras:</label></th>
+                            <td><input type="text" name="oras" title="Introduceti orasul dumneavoastra"></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Cod postal:</label></th>
+                            <td><input type="text" name="cod postal" title="Introduceti codul postal"></td>
+                        </tr>
+
+                    </table>
+
+                    
+                    
+                </fieldset>
+
+                <fieldset style="max-width: 1000px;">
+                    <legend>Experienta profesionala:</legend>
+                    <table border="1 px" align="center" style="background-color: antiquewhite; width: 1000px;">
+                        <tr>
+                            <th><label>Anul:</label></th>
+                            <td><input type="text" name="an" size="10" title="Introduceti anul"></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Locatie:</label></th>
+                            <td><input type="text" name="locatie" size="30" title="Introduceti locatia"></td>
+                        </tr>
+
+                        <tr>
+                            <th><label>Descriere</label></th>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <th><label>Tipul experientei:</label></th>
+                                        <td><select>
+                                            <option value="voluntariat">Voluntariat</option>
+                                            <option value="internship">Internship</option>
+                                            <option value="job">Job</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th><label>Descriere</label></th>
+                                        <td><textarea name="textdescriere" rows="10" cols="100"></textarea></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                </fieldset>       
+                <button type="submit" name="Salvează și trimite">Salvează și trimite</button>
+            </form>
+
+            <div style="background-color: yellow;">
+                <h2>Câte puțin despre firmă</h2>
+                <p>🎉Bine ați venit la "Vinerea Fentei" - acolo unde săptămâna începe cu un zâmbet și o fentă creativă!😄💊</p>
+                <p>Dacă căutați o echipă de IT care să vă ajute să "Fentați" standardele și să vă inoveze afacerea, atunci "Fent Friday" este partenerul perfect pentru dvs.!</p>
+                <p>Căutăm pasionați, aproape chiar dependenți de cod care au puterea să tragă tare!😤</p>
+                <a href="https://www.youtube.com/watch?v=MHryuYVyHhk">Imnul firmei aici</a>
+                
+            </div>
+
+            <div style="background-color: azure;">
+                <h2>Aici sunt competențele minime pentru a fi contactat mai departe:</h2>
+                <ul>
+                    <li>Programare
+                    <ul>
+                        <li>1. Java</li>
+                        <li>2. Python</li>
+                        <li>3. C++</li>
+                    </ul>
+                    </li>
+                    <li>Web Development
+                    <ul>
+                        <li>I. HTML</li>
+                        <li>II. CSS</li>
+                        <li>III. JavaScript</li>
+                        <li>IV. React</li>
+                    </ul>
+                    </li>
+                    <li>Baze de Date
+                    <ul>
+                        <li>a. SQL</li>
+                        <li>b. NoSQL</li>
+                    </ul>
+                    </li>
+                    <li>Testare și Debugging
+                    <ul>
+                        <li>X. Selenium</li>
+                        <li>Y. JUnit</li>
+                        <li>Z. Postman</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="up.jpg" alt="Thumbs up!">
+
+
+
+
+        </body>
+    </html>

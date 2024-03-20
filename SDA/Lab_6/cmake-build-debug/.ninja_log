@@ -1,0 +1,17 @@
+# ninja log v5
+8	989	7077867205717008	CMakeFiles/Lab_6.dir/IteratorMD.cpp.obj	a17733f35dac24d1
+1	1542	7077867211656998	CMakeFiles/Lab_6.dir/main.cpp.obj	37e3c1fd48afbf1
+22	1704	7077867213287045	CMakeFiles/Lab_6.dir/TestScurt.cpp.obj	e131efb7eefc89fb
+16	1802	7077867214277017	CMakeFiles/Lab_6.dir/MD.cpp.obj	a39035e031c7b3fa
+29	1809	7077867214357006	CMakeFiles/Lab_6.dir/TestExtins.cpp.obj	bdc1eb9bb8ee54fb
+1810	2109	7077867217326985	Lab_6.exe	4866c72899df52ec
+3	530	7077868207813362	CMakeFiles/Lab_6.dir/main.cpp.obj	37e3c1fd48afbf1
+530	656	7077868209044974	Lab_6.exe	4866c72899df52ec
+3	525	7077868335714108	CMakeFiles/Lab_6.dir/main.cpp.obj	37e3c1fd48afbf1
+526	656	7077868336983858	Lab_6.exe	4866c72899df52ec
+14	658	7078197506706884	CMakeFiles/Lab_6.dir/IteratorMD.cpp.obj	a17733f35dac24d1
+6	1657	7078197516601102	CMakeFiles/Lab_6.dir/main.cpp.obj	37e3c1fd48afbf1
+38	1961	7078197519760775	CMakeFiles/Lab_6.dir/TestScurt.cpp.obj	e131efb7eefc89fb
+24	2097	7078197521091350	CMakeFiles/Lab_6.dir/MD.cpp.obj	a39035e031c7b3fa
+32	2225	7078197522406103	CMakeFiles/Lab_6.dir/TestExtins.cpp.obj	bdc1eb9bb8ee54fb
+2226	2514	7078197525239634	Lab_6.exe	4866c72899df52ec

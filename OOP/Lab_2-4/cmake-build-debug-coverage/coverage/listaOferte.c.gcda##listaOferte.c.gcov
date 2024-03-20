@@ -1,0 +1,38 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab_2-4/listaOferte.c
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/listaOferte.c.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/listaOferte.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "listaOferte.h"
+        -:    2:#include <stdlib.h>
+        -:    3:
+function createOList called 12 returned 100% blocks executed 100%
+       12:    4:listaOferte *createOList() {
+       12:    5:    listaOferte *o = (listaOferte*) malloc(sizeof(listaOferte));
+       12:    6:    if(o){
+       12:    6-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 0
+       12:    7:        o->size = 0;
+       12:    8:        o->maxSize = 2;
+       12:    9:        o->lista = (oferta**)malloc(sizeof(oferta) * o->maxSize);
+       12:    9-block  0
+        -:   10:    }
+        -:   11:
+       12:   12:    return o;
+       12:   12-block  0
+        -:   13:
+        -:   14:}
+        -:   15:
+function deleteLista called 8 returned 100% blocks executed 100%
+        8:   16:void deleteLista(listaOferte *o){
+       19:   17:    for(int i = 0; i < o->size; i++)
+        8:   17-block  0
+       19:   17-block  1
+branch  0 taken 11
+branch  1 taken 8 (fallthrough)
+       11:   18:        deleteOferta(o->lista[i]);
+       11:   18-block  0
+call    0 returned 11
+        8:   19:    free(o->lista);
+        8:   20:    free(o);
+        8:   21:}

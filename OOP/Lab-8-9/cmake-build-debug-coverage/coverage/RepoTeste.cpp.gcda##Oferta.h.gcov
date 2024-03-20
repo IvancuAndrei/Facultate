@@ -1,0 +1,71 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/Oferta.h
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/RepoTeste.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/RepoTeste.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:#include <iostream>
+        -:    4:
+        -:    5:using std::string;
+        -:    6:using std::cout;
+        -:    7:
+        -:    8:class Oferta{
+        -:    9:    string denumire;
+        -:   10:    string destinatie;
+        -:   11:    string tip;
+        -:   12:    int pret;
+        -:   13:public:
+function _ZN6OfertaC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_i called 0 returned 0% blocks executed 0%
+    #####:   14:    Oferta(const string dr, const string d, const string t, int p):denumire{dr},destinatie{d},tip{t},pret{p}{}
+    %%%%%:   14-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   14-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   14-block  2
+    $$$$$:   14-block  3
+call    7 never executed
+    $$$$$:   14-block  4
+call    8 never executed
+        -:   15:
+        -:   16:    Oferta(const Oferta& o):denumire{o.denumire},destinatie{o.destinatie},tip{o.tip},pret{o.pret}{}
+        -:   17:
+        -:   18:    Oferta():denumire{""},destinatie{""},tip{""},pret{-1}{}
+        -:   19:
+function _ZNK6Oferta11getDenumireB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   20:    string getDenumire() const{
+    #####:   21:        return denumire;
+    %%%%%:   21-block  0
+call    0 never executed
+        -:   22:    }
+        -:   23:
+function _ZNK6Oferta13getDestinatieB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   24:    string getDestinatie() const{
+    #####:   25:        return destinatie;
+    %%%%%:   25-block  0
+call    0 never executed
+        -:   26:    }
+        -:   27:
+function _ZNK6Oferta6getTipB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   28:    string getTip() const{
+    #####:   29:        return tip;
+    %%%%%:   29-block  0
+call    0 never executed
+        -:   30:    }
+        -:   31:
+function _ZNK6Oferta7getPretEv called 0 returned 0% blocks executed 0%
+    #####:   32:    int getPret() const noexcept{
+    #####:   33:        return pret;
+    %%%%%:   33-block  0
+        -:   34:    }
+        -:   35:};
+        -:   36:
+        -:   37:bool cmpDenumire(const Oferta& o1, const Oferta& o2);
+        -:   38:
+        -:   39:bool cmpDestinatie(const Oferta& o1, const Oferta& o2);
+        -:   40:
+        -:   41:

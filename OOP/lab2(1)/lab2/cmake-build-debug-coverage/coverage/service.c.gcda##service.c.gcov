@@ -1,0 +1,182 @@
+        -:    0:Source:/mnt/c/Users/User/CLionProjects/lab2/service.c
+        -:    0:Graph:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/service.c.gcno
+        -:    0:Data:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/service.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "service.h"
+        -:    2:
+function service_create called 2 returned 100% blocks executed 100%
+        2:    3:Service* service_create(Repository* repository){
+        2:    4:    Service* service = malloc(sizeof(Service));
+        2:    5:    service->repository = repository;
+        2:    6:    return service;
+        2:    6-block  0
+        -:    7:}
+        -:    8:
+function service_length called 20 returned 100% blocks executed 100%
+       20:    9:int service_length(Service* service)
+        -:   10:{
+       20:   11:    return repository_get_length(service->repository);
+       20:   11-block  0
+call    0 returned 20
+        -:   12:}
+        -:   13:
+function service_element called 7 returned 100% blocks executed 80%
+        7:   14:Medicament* service_element(Service* service, int index)
+        -:   15:{
+       7*:   16:    if(service_length(service) == 0) return NULL;
+        7:   16-block  0
+call    0 returned 7
+branch  1 taken 0 (fallthrough)
+branch  2 taken 7
+    %%%%%:   16-block  1
+        7:   17:    return service->repository->elements[index];
+        7:   17-block  0
+        -:   18:}
+        -:   19:
+function service_add called 4 returned 100% blocks executed 100%
+        4:   20:int service_add(Service* service, char* cod, char* nume, double concentratie, int cantitate){
+        -:   21:    // 1. creez
+        4:   22:    Medicament* medicament = medicament_create(cod, nume, concentratie, cantitate);
+        4:   22-block  0
+call    0 returned 4
+        -:   23:    // 2. validez
+        4:   24:    int cod_eroare = validate_madicament(medicament);
+call    0 returned 4
+        4:   25:    if(cod_eroare != SUCCESS) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:   26:        medicament_delete(medicament);
+        1:   26-block  0
+call    0 returned 1
+        1:   27:        return cod_eroare;
+        -:   28:    }
+        -:   29:    // 3. adaug
+        3:   30:    int index = repository_index_of(service->repository, medicament);
+        3:   30-block  0
+call    0 returned 3
+        3:   31:    if(index == NOT_FOUND) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   32:        repository_add(service->repository, medicament);
+        2:   32-block  0
+call    0 returned 2
+        2:   33:        return SUCCESS;
+        -:   34:    }
+        -:   35:    else{
+        1:   36:        int cant_to_add = medicament_get_cantitate(medicament);
+        1:   36-block  0
+call    0 returned 1
+        1:   37:        medicament_delete(medicament);
+call    0 returned 1
+        1:   38:        Medicament* elem = repository_get_element_at(service->repository, index);
+call    0 returned 1
+        1:   39:        int cant = medicament_get_cantitate(elem);
+call    0 returned 1
+        1:   40:        medicament_set_cantitate(elem, cant+cant_to_add);
+call    0 returned 1
+        1:   41:        return SUCCESS;
+        -:   42:    }
+        -:   43:}
+        -:   44:
+function service_modify called 4 returned 100% blocks executed 89%
+        4:   45:int service_modify(Service* service, char* cod, char* nume, double conc, char* nounume, double nouaconc)
+        -:   46:{
+        4:   47:    Medicament* medicament = medicament_create(cod, nume, conc, 1);
+        4:   47-block  0
+call    0 returned 4
+        4:   48:    int result = validate_madicament(medicament);
+call    0 returned 4
+       4*:   49:    if(result != SUCCESS) { medicament_delete(medicament); return result;}
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4
+    %%%%%:   49-block  0
+call    2 never executed
+        4:   50:    result = validate_nume(nounume) + validate_concentratie(nouaconc);
+        4:   50-block  0
+call    0 returned 4
+call    1 returned 4
+        4:   51:    if(result != SUCCESS) { medicament_delete(medicament); return result;}
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:   51-block  0
+call    2 returned 2
+        -:   52:
+        2:   53:    int index = repository_index_of(service->repository, medicament);
+        2:   53-block  0
+call    0 returned 2
+        2:   54:    medicament_delete(medicament);
+call    0 returned 2
+        2:   55:    if(index == NOT_FOUND) return NOT_FOUND;
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   55-block  0
+        1:   56:    medicament = repository_get_element_at(service->repository, index);
+        1:   56-block  0
+call    0 returned 1
+        1:   57:    medicament_set_nume(medicament, nounume);
+call    0 returned 1
+        1:   58:    medicament_set_concentratie(medicament, nouaconc);
+call    0 returned 1
+        -:   59:    //repository_set_element_at(service->repository, index, medicament);
+        1:   60:    return SUCCESS;
+        -:   61:}
+        -:   62:
+function service_delete_cant called 2 returned 100% blocks executed 100%
+        2:   63:int service_delete_cant(Service* service, char* cod)
+        -:   64:{
+        2:   65:    Medicament* medicament = NULL;
+        5:   66:    for(int i=0;i< service_length(service);++i)
+        2:   66-block  0
+        5:   66-block  1
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        -:   67:    {
+        4:   68:        medicament = service_element(service, i);
+        4:   68-block  0
+call    0 returned 4
+        4:   69:        if(strcmp(medicament_get_cod(medicament), cod)==0)
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:   70:            break;
+        1:   70-block  0
+        3:   71:        medicament = NULL;
+        3:   71-block  0
+        -:   72:    }
+        2:   73:    if(medicament == NULL) return NOT_FOUND;
+        2:   73-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   73-block  1
+        1:   74:    medicament_set_cantitate(medicament, 0);
+        1:   74-block  0
+call    0 returned 1
+        1:   75:    return SUCCESS;
+        -:   76:}
+        -:   77:
+function service_delete called 2 returned 100% blocks executed 100%
+        2:   78:void service_delete(Service* service)
+        -:   79:{
+        4:   80:    for(int i=0;i< service_length(service);++i)
+        2:   80-block  0
+        2:   80-block  1
+        4:   80-block  2
+call    0 returned 4
+branch  1 taken 2
+branch  2 taken 2 (fallthrough)
+        -:   81:    {
+        2:   82:        Medicament* medicament = service_element(service, i);
+        2:   82-block  0
+call    0 returned 2
+        2:   83:        if(medicament!=NULL) medicament_delete(medicament);
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   83-block  0
+call    2 returned 2
+        -:   84:    }
+        2:   85:    repository_delete(service->repository);
+        2:   85-block  0
+call    0 returned 2
+        2:   86:    free(service);
+        2:   87:}

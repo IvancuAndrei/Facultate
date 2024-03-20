@@ -1,0 +1,52 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/Oferta.cpp
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/Oferta.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/Oferta.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Oferta.h"
+        -:    2:
+function _Z11cmpDenumireRK6OfertaS1_ called 6 returned 100% blocks executed 77%
+        6:    3:bool cmpDenumire(const Oferta& o1, const Oferta& o2){
+        6:    4:    return o1.getDenumire() < o2.getDenumire();
+        6:    4-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:    4-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:    4-block  2
+call    7 returned 6
+call    8 returned 6
+call    9 returned 6
+call   10 returned 6
+        6:    4-block  3
+    $$$$$:    4-block  4
+call   11 never executed
+    $$$$$:    4-block  5
+        -:    5:}
+        -:    6:
+function _Z13cmpDestinatieRK6OfertaS1_ called 6 returned 100% blocks executed 77%
+        6:    7:bool cmpDestinatie(const Oferta& o1, const Oferta& o2){
+        6:    8:    return o1.getDestinatie() < o2.getDestinatie();
+        6:    8-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:    8-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:    8-block  2
+call    7 returned 6
+call    8 returned 6
+call    9 returned 6
+call   10 returned 6
+        6:    8-block  3
+    $$$$$:    8-block  4
+call   11 never executed
+    $$$$$:    8-block  5
+        -:    9:}
+        -:   10:

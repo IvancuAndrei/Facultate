@@ -1,0 +1,43 @@
+;explore(x, node, level, children, l) = {  l, daca children e 0 
+;                                          NIL, daca l e vida
+;                                          level, daca x = node
+;                                          explore(x, l1, level + 1, l2, l3...ln) 
+;                                          explore(x, node, level, children - 1, explore (x, l1, level + 1, l2, l3...ln ) daca pasul de mai sus intoarce o lista
+                                           
+
+
+(defun explore (x node level children l)
+  (if (eq x node) level
+      ( cond
+       ((or (null l) (= children 0)) l)
+       (t(if (listp (explore x (car l) (+ level 1) (cadr l) (cddr l)))
+            (explore x node level (- children 1) (explore x (car l) (+ level 1) (cadr l) (cddr l)))
+            (explore x (car l) (+ level 1) (cadr l) (cddr l))
+            )
+        )
+       )
+      )
+  )
+
+(defun solve (x l)
+    (explore x (car l) 0 (cadr l) (cddr l))  
+)
+
+(print (solve 'D(list 'A 2 'B 1 'H 1 'I 1 'J 0 'C 2 'D 2 'F 1 'K 0 'G 0 'E 0 )))
+
+
+;replace (l, e, r) = { l, daca l = numar si e != l
+;                      r, daca l = numar si e = l
+;                      l1 + replace(l2...ln, e, r), daca l1 != e
+;                      r + replace(l2...ln, e, r), daca l1 = e  
+
+
+
+(defun _replace (l e r)
+    (cond
+        ((and (numberp l) (if (= l e) r l)))
+        ((listp l) (mapcar #'(lambda (a) (_replace a e r)) l))
+    )
+)
+
+(print (_replace '(1 2 (1 2 (3 1) 2)) 1 0))

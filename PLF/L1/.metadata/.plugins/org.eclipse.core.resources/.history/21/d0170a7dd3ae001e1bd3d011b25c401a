@@ -1,0 +1,132 @@
+;explore(x, node, level, children, l) = {  l, daca children e 0 
+;                                          NIL, daca l e vida
+;                                          level, daca x = node
+;                                          explore(x, l1, level + 1, l2, l3...ln) 
+;                                          explore(x, node, level, children - 1, explore (x, l1, level + 1, l2, l3...ln ) daca pasul de mai sus intoarce o lista
+                                           
+
+
+;(defun explore (x node level children l)
+;  (if (eq x node) level
+;      ( cond
+;       ((or (null l) (= children 0)) l)
+;       (t(if (listp (explore x (car l) (+ level 1) (cadr l) (cddr l)))
+;            (explore x node level (- children 1) (explore x (car l) (+ level 1) (cadr l) (cddr l)))
+;            (explore x (car l) (+ level 1) (cadr l) (cddr l))
+;            )
+;        )
+;       )
+;      )
+;  )
+
+;(defun solve (x l)
+;    (explore x (car l) 0 (cadr l) (cddr l))  
+;)
+
+;(print (solve 'D(list 'A 2 'B 1 'H 1 'I 1 'J 0 'C 2 'D 2 'F 1 'K 0 'G 0 'E 0 )))
+
+
+;replace (l, e, r) = { 
+
+
+
+(defun _replace (l e r)
+    (cond
+        ((and (numberp l) (if (= l e) r l)))
+        ((listp l) (mapcar #'(lambda (a) (_replace a e r)) l))
+    )
+)
+
+(print (_replace '(1 2 (1 2 (3 1) 2)) 1 0))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;suma(l1,l2,...ln) = { 0, daca l vida
+;                      l1 + suma(l2..ln) daca l1 este atom numeric
+;                      suma(l2..ln) daca l1 este atom
+;                      suma(l1) + suma (l2...ln) altfel
+
+(defun suma (l) 
+       (cond 
+         ((null l) 0)
+         ((numberp (car l))(+(car l)(suma(cdr l))))
+         ((atom (car l))(suma(cdr l)))
+         (T(+(suma(car l))(suma(cdr l))))
+         )
+  )
+
+(print (suma '(1 (2 a (3 4) b 5) c 1)))
+
+
+
+;adaug(l1..ln, x) = { x, daca l vida
+;                     l1 + adaug(l2..ln, x), altfel
+
+(defun adaug (x l)
+    (cond 
+      ((null l) (list x))
+      (T(cons (car l)(adaug x (cdr l))))
+      )
+ )
+  
+(print (adaug '3'(1 2)))
+
+
+
+;invers(l1...ln, col) = { col, daca l vida
+;                         invers(l2...ln, col) + adaug(col, l1), altfel
+
+(defun invers (l col)
+   (cond 
+     ((null l) col)
+     (T(invers(cdr l)(cons (car l) col)))
+     )
+  )
+
+(defun invers_aux (l)
+   (invers l ())
+  )
+
+(print (invers_aux '(1 2 3)))
+
+
+;perechi(e, l1...ln) = { NIL daca l vida
+;                        (e, l1) + perechi(e, l2...ln) altfel
+
+(defun perechi (e l)
+  (cond 
+    ((null l) NIL)
+    (T (cons (list e (car l))(perechi e (cdr l))))
+    )
+  )
+
+(print (perechi 'A'(B C D)))

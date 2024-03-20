@@ -1,0 +1,108 @@
+        -:    0:Source:/mnt/c/Users/User/CLionProjects/lab2/validator.c
+        -:    0:Graph:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/validator.c.gcno
+        -:    0:Data:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/validator.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "validator.h"
+        -:    2:
+function validate_cod called 12 returned 100% blocks executed 100%
+       12:    3:int validate_cod(char* cod){
+       12:    4:    if(cod == NULL)
+       12:    4-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 11
+        1:    5:        return EROARE_COD;
+        1:    5-block  0
+       11:    6:    if(strlen(cod) == 0)
+       11:    6-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 9
+        2:    7:        return EROARE_COD;
+        2:    7-block  0
+       41:    8:    for(int i=0; cod[i]; ++i)
+        9:    8-block  0
+       32:    8-block  1
+       41:    8-block  2
+branch  0 taken 33
+branch  1 taken 8 (fallthrough)
+       33:    9:        if(!isalnum(cod[i]))
+       33:    9-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 32
+        1:   10:            return EROARE_COD;
+        1:   10-block  0
+        8:   11:    return VALIDATOR_OK;
+        8:   11-block  0
+        -:   12:}
+function validate_nume called 16 returned 100% blocks executed 100%
+       16:   13:int validate_nume(char* nume){
+       16:   14:    if(nume==NULL)
+       16:   14-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 15
+        1:   15:        return EROARE_NUME;
+        1:   15-block  0
+       15:   16:    if(strlen(nume) == 0)
+       15:   16-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 14
+        1:   17:        return EROARE_NUME;
+        1:   17-block  0
+      107:   18:    for(int i=0; nume[i]; ++i)
+       14:   18-block  0
+       93:   18-block  1
+      107:   18-block  2
+branch  0 taken 95
+branch  1 taken 12 (fallthrough)
+       95:   19:        if(!isalpha(nume[i]) && !isblank(nume[i]))
+       95:   19-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 92
+        3:   19-block  1
+branch  2 taken 2 (fallthrough)
+branch  3 taken 1
+        2:   20:            return EROARE_NUME;
+        2:   20-block  0
+       12:   21:    return VALIDATOR_OK;
+       12:   21-block  0
+        -:   22:}
+function validate_concentratie called 16 returned 100% blocks executed 100%
+       16:   23:int validate_concentratie(double concentratie){
+       16:   24:    if(concentratie<=0 || concentratie>100.0)
+       16:   24-block  0
+branch  0 taken 13 (fallthrough)
+branch  1 taken 3
+       13:   24-block  1
+branch  2 taken 3 (fallthrough)
+branch  3 taken 10
+        6:   25:        return EROARE_CONC;
+        6:   25-block  0
+       10:   26:    return VALIDATOR_OK;
+       10:   26-block  0
+        -:   27:}
+function validate_cantitate called 11 returned 100% blocks executed 100%
+       11:   28:int validate_cantitate(int cantitate){
+       11:   29:    if(cantitate > 0)
+       11:   29-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 3
+        8:   30:        return VALIDATOR_OK;
+        8:   30-block  0
+        3:   31:    return EROARE_CANT;
+        3:   31-block  0
+        -:   32:}
+function validate_madicament called 9 returned 100% blocks executed 100%
+        9:   33:int validate_madicament(Medicament* medicament){
+        9:   34:    return  validate_cod(medicament_get_cod(medicament)) |
+        9:   34-block  0
+call    0 returned 9
+call    1 returned 9
+        9:   35:            validate_nume(medicament_get_nume(medicament)) |
+call    0 returned 9
+call    1 returned 9
+       18:   36:            validate_concentratie(medicament_get_concentratie(medicament)) |
+call    0 returned 9
+call    1 returned 9
+        9:   37:            validate_cantitate(medicament_get_cantitate(medicament));
+call    0 returned 9
+call    1 returned 9
+        -:   38:}

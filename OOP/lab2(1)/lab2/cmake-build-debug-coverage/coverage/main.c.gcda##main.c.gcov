@@ -1,0 +1,49 @@
+        -:    0:Source:/mnt/c/Users/User/CLionProjects/lab2/main.c
+        -:    0:Graph:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/main.c.gcno
+        -:    0:Data:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "tests.h"
+        -:    2:#include "ui.h"
+        -:    3:/**
+        -:    4: * set
+        -:    5: * @return
+        -:    6: */
+function main called 1 returned 100% blocks executed 56%
+        1:    7:int main() {
+        1:    8:    testall();
+        1:    8-block  0
+call    0 returned 1
+        1:    9:    Repository* undo_lista = repository_create(medicament_eq);
+call    0 returned 1
+        1:   10:    Repository* repository = repository_create(medicament_eq);
+call    0 returned 1
+        1:   11:    Service* s = service_create(repository);
+call    0 returned 1
+       1*:   12:    for(int i = 0; i < undo_lista->length; i++){
+        1:   12-block  0
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+    #####:   13:        for(int j = 0; j < repository_get_length(undo_lista->elements[i]); j++) {
+    %%%%%:   13-block  0
+    %%%%%:   13-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   14:            Medicament *medicament = repository_get_element_at(undo_lista->elements[i], j);
+    %%%%%:   14-block  0
+call    0 never executed
+    #####:   15:            medicament_delete(medicament);
+call    0 never executed
+        -:   16:        }
+    #####:   17:        repository_delete(undo_lista->elements[i]);
+    %%%%%:   17-block  0
+call    0 never executed
+        -:   18:    }
+        1:   19:    repository_delete(undo_lista);
+        1:   19-block  0
+call    0 returned 1
+        1:   20:    service_delete(s);
+call    0 returned 1
+        -:   21:
+        1:   22:    return 0;
+        -:   23:}

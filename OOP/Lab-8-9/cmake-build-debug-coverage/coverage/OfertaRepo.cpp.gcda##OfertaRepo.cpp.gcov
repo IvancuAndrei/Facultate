@@ -1,0 +1,291 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/OfertaRepo.cpp
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/OfertaRepo.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/OfertaRepo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "OfertaRepo.h"
+        -:    2:#include <iostream>
+        -:    3:#include <sstream>
+        -:    4:
+        -:    5:using std::ostream;
+        -:    6:using std::stringstream;
+        -:    7:
+function _ZN10OfertaRepo9addOfertaERK6Oferta called 18 returned 94% blocks executed 53%
+       18:    8:void OfertaRepo::addOferta(const Oferta& o)
+        -:    9:{
+       18:   10:    if (exist(o)) {
+       18:   10-block  0
+call    0 returned 18
+branch  1 taken 1 (fallthrough)
+branch  2 taken 17
+        1:   11:        throw OfertaRepoException("Exista deja oferta :" + o.getDenumire() + " cu destinatia :" + o.getDestinatie());
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   11-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   11-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   11-block  3
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   11-block  4
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   11-block  5
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   11-block  6
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 0
+    $$$$$:   11-block  7
+call   25 never executed
+    $$$$$:   11-block  8
+    $$$$$:   11-block  9
+call   26 never executed
+    $$$$$:   11-block 10
+    $$$$$:   11-block 11
+call   27 never executed
+    $$$$$:   11-block 12
+    $$$$$:   11-block 13
+call   28 never executed
+    $$$$$:   11-block 14
+    $$$$$:   11-block 15
+call   29 never executed
+    $$$$$:   11-block 16
+    $$$$$:   11-block 17
+call   30 never executed
+        -:   12:    }
+       17:   13:    all.push_back(o);
+       17:   13-block  0
+call    0 returned 17
+       17:   14:}
+        -:   15:
+function _ZN10OfertaRepo9popOfertaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 67% blocks executed 69%
+        3:   16:void OfertaRepo::popOferta(const string& denumire) {
+        3:   17:    int i = 0;
+        4:   18:    for (const auto& o : all) {
+        3:   18-block  0
+call    0 returned 3
+call    1 returned 3
+        3:   18-block  1
+call    2 returned 3
+        4:   18-block  2
+call    3 returned 4
+branch  4 taken 3
+branch  5 taken 1 (fallthrough)
+        3:   19:        if (o.getDenumire() == denumire) {
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   19-block  0
+call    3 returned 3
+call    4 returned 3
+branch  5 taken 2 (fallthrough)
+branch  6 taken 1
+        2:   20:            all.erase(all.begin()+i);
+        2:   20-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   20-block  1
+    $$$$$:   20-block  2
+    $$$$$:   20-block  3
+        2:   21:            return;
+        2:   21-block  0
+        2:   21-block  1
+        -:   22:        }
+        1:   23:        i++;
+        1:   23-block  0
+call    0 returned 1
+        -:   24:    }
+        -:   25:
+        1:   26:    throw OfertaRepoException("Denumire inexistenta!\n");
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   26-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   26-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 0
+    $$$$$:   26-block  3
+call   11 never executed
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+call   12 never executed
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+call   13 never executed
+        -:   27:}
+        -:   28:
+function _ZN10OfertaRepo9modOfertaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK6Oferta called 3 returned 67% blocks executed 72%
+        3:   29:void OfertaRepo::modOferta(const string& denumire, const Oferta& OfertaNoua) {
+        6:   30:    for (auto& o : all)
+        3:   30-block  0
+call    0 returned 3
+call    1 returned 3
+        5:   30-block  1
+call    2 returned 5
+        3:   30-block  2
+call    3 returned 3
+        6:   30-block  3
+call    4 returned 6
+branch  5 taken 5
+branch  6 taken 1 (fallthrough)
+        5:   31:        if (o.getDenumire() == denumire) {
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   31-block  0
+call    3 returned 5
+call    4 returned 5
+branch  5 taken 2 (fallthrough)
+branch  6 taken 3
+        2:   32:            o = OfertaNoua;
+        2:   32-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   33:            return;
+        2:   33-block  0
+        2:   33-block  1
+        -:   34:        }
+        -:   35:
+        1:   36:    throw OfertaRepoException("Denumire inexistenta!\n");
+        1:   36-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   36-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   36-block  2
+call    8 returned 1
+call    9 returned 1
+call   10 returned 0
+    $$$$$:   36-block  3
+call   11 never executed
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+call   12 never executed
+    $$$$$:   36-block  6
+    $$$$$:   36-block  7
+call   13 never executed
+        -:   37:}
+        -:   38:
+function _ZNK10OfertaRepo5existERK6Oferta called 18 returned 100% blocks executed 92%
+       18:   39:bool OfertaRepo::exist(const Oferta& o) const{
+        -:   40:    try {
+       35:   41:        find(o.getDenumire());
+       18:   41-block  0
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
+branch  2 taken 0 (throw)
+       18:   41-block  1
+call    3 returned 18
+branch  4 taken 1 (fallthrough)
+branch  5 taken 17 (throw)
+        1:   41-block  2
+call    6 returned 1
+       17:   41-block  3
+call    7 returned 17
+       17:   41-block  4
+        1:   42:        return true;
+        -:   43:    }
+       17:   44:    catch (OfertaRepoException& ) {
+       17:   44-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 17
+       17:   44-block  1
+call    2 returned 17
+       17:   45:        return false;
+       17:   46:    }
+        -:   47:}
+        -:   48:
+function _ZNK10OfertaRepo4findERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 18 returned 6% blocks executed 78%
+       18:   49:const Oferta& OfertaRepo::find(const string& denumire) const{
+       33:   50:    for (const auto& o : all) {
+       18:   50-block  0
+call    0 returned 18
+call    1 returned 18
+       16:   50-block  1
+call    2 returned 16
+       15:   50-block  2
+call    3 returned 15
+       33:   50-block  3
+call    4 returned 33
+branch  5 taken 16
+branch  6 taken 17 (fallthrough)
+       16:   51:        if (o.getDenumire() == denumire) {
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   51-block  0
+call    3 returned 16
+call    4 returned 16
+branch  5 taken 1 (fallthrough)
+branch  6 taken 15
+        1:   52:            return o;
+        1:   52-block  0
+        1:   52-block  1
+        -:   53:        }
+        -:   54:    }
+       17:   55:    throw OfertaRepoException("Nu exista oferta :" + denumire);
+       17:   55-block  0
+call    0 returned 17
+call    1 returned 17
+branch  2 taken 17 (fallthrough)
+branch  3 taken 0 (throw)
+       17:   55-block  1
+call    4 returned 17
+branch  5 taken 17 (fallthrough)
+branch  6 taken 0 (throw)
+       17:   55-block  2
+call    7 returned 17
+call    8 returned 0
+    $$$$$:   55-block  3
+call    9 never executed
+    $$$$$:   55-block  4
+    $$$$$:   55-block  5
+call   10 never executed
+        -:   56:}
+        -:   57:
+function _ZNK10OfertaRepo6getAllEv called 16 returned 100% blocks executed 100%
+       16:   58:const vector<Oferta>& OfertaRepo::getAll() const noexcept{
+       16:   59:    return all;
+       16:   59-block  0
+        -:   60:}
+        -:   61:
+        -:   62:
+function _ZlsRSoRK19OfertaRepoException called 0 returned 0% blocks executed 0%
+    #####:   63:ostream& operator<<(ostream& out, const OfertaRepoException& ex) {
+    #####:   64:    out << ex.msg;
+    %%%%%:   64-block  0
+call    0 never executed
+    #####:   65:    return out;
+        -:   66:}

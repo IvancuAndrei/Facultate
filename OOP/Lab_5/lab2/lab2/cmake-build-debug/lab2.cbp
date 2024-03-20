@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lab2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab2">
+				<Option output="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/lab2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab2"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab2/fast">
+				<Option output="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/lab2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab2/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/domain.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/domain.h">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/errors.h">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/main.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/repository.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/repository.h">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/service.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/service.h">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/tests.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/tests.h">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/ui.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/ui.h">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/validator.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/validator.h">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

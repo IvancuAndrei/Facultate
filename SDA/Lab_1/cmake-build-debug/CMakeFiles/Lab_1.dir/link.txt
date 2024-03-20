@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Lab_1.dir/Colectie.cpp.o CMakeFiles/Lab_1.dir/App.cpp.o CMakeFiles/Lab_1.dir/IteratorColectie.cpp.o CMakeFiles/Lab_1.dir/TestExtins.cpp.o CMakeFiles/Lab_1.dir/TestScurt.cpp.o -o Lab_1 

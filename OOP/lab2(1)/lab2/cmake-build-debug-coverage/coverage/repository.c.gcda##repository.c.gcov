@@ -1,0 +1,287 @@
+        -:    0:Source:/mnt/c/Users/User/CLionProjects/lab2/repository.c
+        -:    0:Graph:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/repository.c.gcno
+        -:    0:Data:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/repository.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "repository.h"
+        -:    2:
+function repository_create called 8 returned 100% blocks executed 100%
+        8:    3:Repository* repository_create(int (*eq)(void*, void*)){
+        8:    4:    Repository* repository = malloc(sizeof(Repository));
+        8:    5:    repository->capacity = 100;
+        8:    6:    repository->length = 0;
+        8:    7:    repository->elements = (void**) malloc(sizeof(void*) * repository->capacity);
+      808:    8:    for(int i=0;i<repository->capacity;++i)
+        8:    8-block  0
+      808:    8-block  1
+branch  0 taken 800
+branch  1 taken 8 (fallthrough)
+      800:    9:        repository->elements[i] = NULL;
+      800:    9-block  0
+        8:   10:    repository->elem_eq = eq;
+        8:   11:    return repository;
+        8:   11-block  0
+        -:   12:}
+        -:   13:
+function repository_get_length called 37 returned 100% blocks executed 100%
+       37:   14:int repository_get_length(Repository* repository){
+       37:   15:    return repository->length;
+       37:   15-block  0
+        -:   16:}
+function repository_get_capacity called 2 returned 100% blocks executed 100%
+        2:   17:int repository_get_capacity(Repository* repository) {
+        2:   18:    return repository->capacity;
+        2:   18-block  0
+        -:   19:}
+function repository_get_element_at called 34 returned 100% blocks executed 100%
+       34:   20:void* repository_get_element_at(Repository* repository, int index) {
+       34:   21:    if(index>=0 && index<repository->length)
+       34:   21-block  0
+branch  0 taken 34 (fallthrough)
+branch  1 taken 0
+       34:   21-block  1
+branch  2 taken 33 (fallthrough)
+branch  3 taken 1
+       33:   22:        return repository->elements[index];
+       33:   22-block  0
+        1:   23:    SET_ERROR(OUT_OF_RANGE);
+        1:   24:    return NULL;
+        1:   24-block  0
+        -:   25:}
+        -:   26:
+function repository_set_length called 3 returned 100% blocks executed 100%
+        3:   27:void repository_set_length(Repository* repository, int length) {
+        3:   28:    if(length>repository->capacity)
+        3:   28-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   29:        repository_set_capacity(repository, length);
+        1:   29-block  0
+call    0 returned 1
+        3:   30:    repository->length = length;
+        3:   31:}
+function repository_set_capacity called 2 returned 100% blocks executed 100%
+        2:   32:void repository_set_capacity(Repository* repository, int capacity) {
+        2:   33:    void** copy = malloc(sizeof(void*)*capacity);
+      207:   34:    for(int i=0;i<repository->capacity;++i) {
+        2:   34-block  0
+      207:   34-block  1
+branch  0 taken 205
+branch  1 taken 2 (fallthrough)
+      205:   35:        copy[i] = repository->elements[i];
+      205:   35-block  0
+        -:   36:    }
+        2:   37:    free(repository->elements);
+        2:   38:    repository->elements = copy;
+        2:   39:    repository->capacity = capacity;
+        2:   40:}
+function repository_set_element_at called 2 returned 100% blocks executed 86%
+        2:   41:void repository_set_element_at(Repository* repository, int index, void* value) {
+        2:   42:    if(index<repository->length && index >=0) {
+        2:   42-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   42-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+       1*:   43:        if(repository->elements[index] != NULL) free(repository->elements[index]);
+        1:   43-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   43-block  1
+        1:   44:        repository->elements[index] = value;
+        1:   44-block  0
+        -:   45:    }
+        1:   46:    else SET_ERROR(OUT_OF_RANGE);
+        1:   46-block  0
+        2:   47:}
+        -:   48:
+function repository_add called 8 returned 100% blocks executed 67%
+        8:   49:void repository_add(Repository* repository, void* value){
+       8*:   50:    if(repository->length > repository->capacity) repository_set_capacity(repository, repository->capacity *2);
+        8:   50-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 8
+    %%%%%:   50-block  1
+call    2 never executed
+        8:   51:    repository->elements[repository->length++] = value;
+        8:   52:}
+        -:   53:
+function repository_index_of called 7 returned 100% blocks executed 100%
+        7:   54:int repository_index_of(Repository* repository, void* value)
+        -:   55:{
+        7:   56:    int n = repository_get_length(repository);
+        7:   56-block  0
+call    0 returned 7
+       12:   57:    for(int i=0;i<n;++i)
+        5:   57-block  0
+       12:   57-block  1
+branch  0 taken 8
+branch  1 taken 4 (fallthrough)
+        8:   58:        if(repository->elem_eq(value, repository_get_element_at(repository, i)))
+        8:   58-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 3 (fallthrough)
+branch  3 taken 5
+        3:   59:            return i;
+        3:   59-block  0
+        4:   60:    return NOT_FOUND;
+        4:   60-block  0
+        -:   61:}
+        -:   62:
+function repository_swap called 2 returned 100% blocks executed 86%
+        2:   63:void repository_swap(Repository* repository, int index_i, int index_f)
+        -:   64:{
+        2:   65:    void* el1 = repository_get_element_at(repository, index_i);
+        2:   65-block  0
+call    0 returned 2
+        2:   66:    void* el2 = repository_get_element_at(repository, index_f);
+call    0 returned 2
+       2*:   67:    if(el1 == NULL || el2 == NULL) return;
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   67-block  0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2
+    %%%%%:   67-block  1
+        2:   68:    repository->elements[index_f] = el1;
+        2:   69:    repository->elements[index_i] = el2;
+        2:   69-block  0
+        -:   70:}
+        -:   71:
+function repository_sort called 2 returned 100% blocks executed 100%
+        2:   72:void repository_sort(Repository* repository, int(*compare)(void*,void*,int), int reversed)
+        -:   73:{
+        2:   74:    int n = repository_get_length(repository);
+        2:   74-block  0
+call    0 returned 2
+        4:   75:    for(int i=0;i<n-1;++i)
+        2:   75-block  0
+        4:   75-block  1
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        4:   76:        for(int j=i+1;j<n;++j)
+        2:   76-block  0
+        2:   76-block  1
+        4:   76-block  2
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        -:   77:        {
+        2:   78:            void* eli = repository_get_element_at(repository, i);
+        2:   78-block  0
+call    0 returned 2
+        2:   79:            void* elj = repository_get_element_at(repository, j);
+call    0 returned 2
+        2:   80:            if(compare(eli, elj, reversed)==GREATER) // daca nu sunt in ordine
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   81:                repository_swap(repository, i, j);
+        1:   81-block  0
+call    0 returned 1
+        -:   82:        }
+        2:   83:}
+        -:   84:
+function repository_filter called 2 returned 100% blocks executed 100%
+        2:   85:Repository* repository_filter(Repository* repository, void* filter_data, int (*filter)(void*,void*)){
+        2:   86:    int n = repository_get_length(repository);
+        2:   86-block  0
+call    0 returned 2
+        2:   87:    Repository* filtered = repository_create(repository->elem_eq);
+call    0 returned 2
+        6:   88:    for(int i=0;i<n;++i)
+        4:   88-block  0
+        6:   88-block  1
+branch  0 taken 4
+branch  1 taken 2 (fallthrough)
+        -:   89:    {
+        4:   90:        void* elem = repository_get_element_at(repository, i);
+        4:   90-block  0
+call    0 returned 4
+        4:   91:        if(filter(elem, filter_data))
+call    0 returned 4
+branch  1 taken 2 (fallthrough)
+branch  2 taken 2
+        2:   92:            repository_add(filtered, elem);
+        2:   92-block  0
+call    0 returned 2
+        -:   93:    }
+        2:   94:    return filtered;
+        2:   94-block  0
+        -:   95:}
+        -:   96:
+        -:   97:
+function repository_delete called 8 returned 100% blocks executed 100%
+        8:   98:void repository_delete(Repository* repository)
+        -:   99:{
+        8:  100:    free(repository->elements);
+        8:  101:    free(repository);
+        8:  102:}
+        -:  103:
+function copy_list called 0 returned 0% blocks executed 0%
+    #####:  104:Repository* copy_list(Repository* lista)
+        -:  105:{
+        -:  106:    //Functia creaza o copie la lista transmisa ca parametru
+    #####:  107:    Repository* copie_lista = repository_create(medicament_eq);
+    %%%%%:  107-block  0
+call    0 never executed
+    #####:  108:    for (int i = 0; i < lista->length; i++)
+    %%%%%:  108-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  109:    {
+    #####:  110:         Medicament *element = repository_get_element_at(lista, i);
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:        repository_add(copie_lista, copiaza_medicament(element));
+call    0 never executed
+call    1 never executed
+        -:  112:    }
+    #####:  113:    return copie_lista;
+    %%%%%:  113-block  0
+        -:  114:}
+        -:  115:
+function adauga_pas_undo called 0 returned 0% blocks executed 0%
+    #####:  116:void adauga_pas_undo(Repository * undo_stiva, Repository * lista)
+        -:  117:{
+    #####:  118:    if (undo_stiva->length == undo_stiva->capacity) repository_set_capacity(undo_stiva, undo_stiva->length*2);
+    %%%%%:  118-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  118-block  1
+call    2 never executed
+        -:  119:
+    #####:  120:    undo_stiva->elements[undo_stiva->length++] = copy_list(lista);
+    %%%%%:  120-block  0
+call    0 never executed
+        -:  121:
+    #####:  122:}
+        -:  123:
+function executa_pas_undo called 0 returned 0% blocks executed 0%
+    #####:  124:Repository* executa_pas_undo(Repository * undo_stiva, Repository * lista)
+        -:  125:{
+    #####:  126:    if (undo_stiva->length){
+    %%%%%:  126-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  127:        for(int i=0; i<lista->length;i++){
+    %%%%%:  127-block  0
+    %%%%%:  127-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  128:            medicament_delete(repository_get_element_at(lista, i));
+    %%%%%:  128-block  0
+call    0 never executed
+call    1 never executed
+        -:  129:
+        -:  130:        }
+    #####:  131:        repository_delete(lista);
+    %%%%%:  131-block  0
+call    0 never executed
+    #####:  132:        undo_stiva->length--;
+    #####:  133:        return undo_stiva->elements[undo_stiva->length];
+        -:  134:    }
+    #####:  135:    else return lista;
+    %%%%%:  135-block  0
+        -:  136:}
+        -:  137:

@@ -1,0 +1,5 @@
+D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/CMakeFiles/Lab_10_11.dir
+D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/CMakeFiles/Lab_10_11_autogen_timestamp_deps.dir
+D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/CMakeFiles/Lab_10_11_autogen.dir

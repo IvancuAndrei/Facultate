@@ -1,0 +1,15 @@
+# ninja log v5
+31	1983	7054998623593284	CMakeFiles/Lab_8_9.dir/Oferta.cpp.obj	37adc4dcb7a10099
+53	2000	7054998623664569	CMakeFiles/Lab_8_9.dir/OfertaTeste.cpp.obj	b834f56c79237cb2
+88	2370	7054998627198801	CMakeFiles/Lab_8_9.dir/TesteValidator.cpp.obj	962c2033fe4eaed7
+24	2625	7054998629747055	CMakeFiles/Lab_8_9.dir/OfertaRepo.cpp.obj	d8350b5ed64e1cfe
+17	3600	7054998639768232	CMakeFiles/Lab_8_9.dir/main.cpp.obj	d4bc8cc8d7668dc
+64	2634	7054998630008948	CMakeFiles/Lab_8_9.dir/RepoTeste.cpp.obj	b1d830a116868038
+9	3843	7054998642244405	CMakeFiles/Lab_8_9.dir/Agentie.cpp.obj	e188a37d8d23379
+42	3743	7054998641272713	CMakeFiles/Lab_8_9.dir/presentation.cpp.obj	e995e2a78939c624
+77	3717	7054998641012707	CMakeFiles/Lab_8_9.dir/ServiceTeste.cpp.obj	774faa1741b7dc19
+2001	4158	7054998645377279	CMakeFiles/Lab_8_9.dir/CosService.cpp.obj	2fd61be4ff5f94a2
+1986	3329	7054998637093171	CMakeFiles/Lab_8_9.dir/CosRepo.cpp.obj	b9a4e73fd00a8549
+100	2574	7054998629463936	CMakeFiles/Lab_8_9.dir/validator.cpp.obj	99cfeb94249c600a
+2370	3632	7054998640129151	CMakeFiles/Lab_8_9.dir/OfertaRepoFis.cpp.obj	4a713f6921248f8d
+4159	4746	7054998651237530	Lab_8_9.exe	bf9580e4ded8297f

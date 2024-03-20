@@ -1,0 +1,36 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab_2-4/oferta.c
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/oferta.c.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/oferta.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "oferta.h"
+        -:    2:#include <stdlib.h>
+        -:    3:#include <string.h>
+        -:    4:
+function createOferta called 17 returned 100% blocks executed 100%
+       17:    5:oferta* createOferta(int id, char *tip, char *destinatie, char *data_plecare, int pret){
+       17:    6:    oferta *o = (oferta*)malloc(sizeof(oferta));
+       17:    7:    if (o){
+       17:    7-block  0
+branch  0 taken 17 (fallthrough)
+branch  1 taken 0
+       17:    8:        o->id = id;
+       17:    9:        o->tip = (char*)malloc((strlen(tip) + 1) * sizeof(char));
+       17:   10:        strcpy(o->tip,tip);
+       17:   11:        o->destinatie = (char*)malloc((strlen(destinatie) + 1) * sizeof(char));
+       17:   12:        strcpy(o->destinatie, destinatie);
+       17:   13:        o->data_plecare = (char*)malloc((strlen(data_plecare) + 1) * sizeof(char));
+       17:   14:        strcpy(o->data_plecare, data_plecare);
+       17:   15:        o->pret = pret;
+       17:   15-block  0
+        -:   16:    }
+       17:   17:    return o;
+       17:   17-block  0
+        -:   18:}
+        -:   19:
+function deleteOferta called 17 returned 100% blocks executed 100%
+       17:   20:void deleteOferta(oferta *o){
+       17:   21:    free(o->tip);
+       17:   22:    free(o->destinatie);
+       17:   23:    free(o->data_plecare);
+       17:   24:    free(o);
+       17:   25:}

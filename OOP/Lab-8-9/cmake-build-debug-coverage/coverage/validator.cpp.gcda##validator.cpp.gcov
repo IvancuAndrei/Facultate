@@ -1,0 +1,168 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/validator.cpp
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/validator.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/validator.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "validator.h"
+        -:    2:#include <sstream>
+        -:    3:
+function _ZN15OfertaValidator14validateOfertaERK6Oferta called 14 returned 93% blocks executed 65%
+       14:    4:void OfertaValidator::validateOferta(const Oferta& o) {
+       14:    5:    vector<string> msgs;
+       14:    5-block  0
+call    0 returned 14
+       14:    6:    if (o.getPret() < 0) msgs.push_back("Pret negativ!!!");
+call    0 returned 14
+branch  1 taken 1 (fallthrough)
+branch  2 taken 13
+        1:    6-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:    6-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:    6-block  2
+call   10 returned 1
+call   11 returned 1
+    $$$$$:    6-block  3
+call   12 never executed
+    $$$$$:    6-block  4
+    $$$$$:    6-block  5
+call   13 never executed
+    $$$$$:    6-block  6
+       14:    7:    if (o.getTip().size() == 0) msgs.push_back("Tip vid!!!");
+       14:    7-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+       14:    7-block  1
+call    3 returned 14
+call    4 returned 14
+branch  5 taken 1 (fallthrough)
+branch  6 taken 13
+        1:    7-block  2
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:    7-block  3
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:    7-block  4
+call   14 returned 1
+call   15 returned 1
+    $$$$$:    7-block  5
+call   16 never executed
+    $$$$$:    7-block  6
+    $$$$$:    7-block  7
+call   17 never executed
+    $$$$$:    7-block  8
+       14:    8:    if (o.getDestinatie().size() == 0) msgs.push_back("Destinatie vida!!!");
+       14:    8-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+       14:    8-block  1
+call    3 returned 14
+call    4 returned 14
+branch  5 taken 1 (fallthrough)
+branch  6 taken 13
+        1:    8-block  2
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:    8-block  3
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:    8-block  4
+call   14 returned 1
+call   15 returned 1
+    $$$$$:    8-block  5
+call   16 never executed
+    $$$$$:    8-block  6
+    $$$$$:    8-block  7
+call   17 never executed
+    $$$$$:    8-block  8
+       14:    9:    if (o.getDenumire().size() == 0) msgs.push_back("Denumire vida!!!");
+       14:    9-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+       14:    9-block  1
+call    3 returned 14
+call    4 returned 14
+branch  5 taken 1 (fallthrough)
+branch  6 taken 13
+        1:    9-block  2
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:    9-block  3
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:    9-block  4
+call   14 returned 1
+call   15 returned 1
+    $$$$$:    9-block  5
+call   16 never executed
+    $$$$$:    9-block  6
+    $$$$$:    9-block  7
+call   17 never executed
+    $$$$$:    9-block  8
+       14:   10:    if (msgs.size() > 0) {
+       14:   10-block  0
+call    0 returned 14
+branch  1 taken 1 (fallthrough)
+branch  2 taken 13
+        1:   11:        throw ValidateException(msgs);
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   11-block  1
+call    4 returned 1
+    $$$$$:   11-block  2
+call    5 never executed
+        -:   12:    }
+       14:   13:}
+       13:   13-block  0
+call    0 returned 13
+        1:   13-block  1
+call    1 returned 1
+        -:   14:
+function _ZlsRSoRK17ValidateException called 1 returned 100% blocks executed 100%
+        1:   15:ostream& operator<<(ostream& out, const ValidateException& ex) {
+        5:   16:    for (const auto& msg : ex.msgs) {
+        1:   16-block  0
+call    0 returned 1
+call    1 returned 1
+        4:   16-block  1
+call    2 returned 4
+        4:   16-block  2
+call    3 returned 4
+        5:   16-block  3
+call    4 returned 5
+branch  5 taken 4
+branch  6 taken 1 (fallthrough)
+        4:   17:        out << msg<<" ";
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   17-block  0
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   18:    }
+        1:   19:    return out;
+        1:   19-block  0
+        1:   19-block  1
+        -:   20:}
+        -:   21:

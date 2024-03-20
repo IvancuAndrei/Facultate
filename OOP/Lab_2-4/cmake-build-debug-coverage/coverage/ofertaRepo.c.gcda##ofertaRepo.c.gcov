@@ -1,0 +1,106 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab_2-4/ofertaRepo.c
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/ofertaRepo.c.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/ofertaRepo.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "oferta.h"
+        -:    2:#include <stdio.h>
+        -:    3:#include <stdlib.h>
+        -:    4:#include "listaOferte.h"
+        -:    5:
+function adauga_oferta called 22 returned 100% blocks executed 100%
+       22:    6:int adauga_oferta(listaOferte *o, oferta *OfertaNoua){
+       34:    7:    for(int i = 0; i < o->size; i++)
+       22:    7-block  0
+       12:    7-block  1
+       34:    7-block  2
+branch  0 taken 13
+branch  1 taken 21 (fallthrough)
+       13:    8:        if(o->lista[i]->id == OfertaNoua->id){
+       13:    8-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 12
+        1:    9:            deleteOferta(OfertaNoua);
+        1:    9-block  0
+call    0 returned 1
+        1:   10:            return -1;
+        -:   11:        }
+        -:   12:
+       21:   13:    if(o->size == o->maxSize) {
+       21:   13-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 18
+        3:   14:        o->maxSize = o->maxSize * 2;
+        3:   15:        oferta **auxO = (oferta **) malloc(sizeof(oferta) * o->maxSize);
+        9:   16:        for (int i = 0; i < o->size; i++)
+        3:   16-block  0
+        9:   16-block  1
+branch  0 taken 6
+branch  1 taken 3 (fallthrough)
+        6:   17:            auxO[i] = o->lista[i];
+        6:   17-block  0
+        3:   18:        free(o->lista);
+        3:   19:        o->lista = auxO;
+        3:   19-block  0
+        -:   20:    }
+       21:   21:    o->lista[o->size] = OfertaNoua;
+       21:   22:    o->size++;
+       21:   23:    return 0;
+       21:   23-block  0
+        -:   24:
+        -:   25:}
+        -:   26:
+function modifica_oferta called 3 returned 100% blocks executed 100%
+        3:   27:int modifica_oferta(listaOferte *o, oferta *OfertaNoua){
+        4:   28:    for(int i = 0; i < o->size; i++)
+        3:   28-block  0
+        1:   28-block  1
+        4:   28-block  2
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        3:   29:        if(o->lista[i]->id == OfertaNoua->id) {
+        3:   29-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   30:            deleteOferta(o->lista[i]);
+        2:   30-block  0
+call    0 returned 2
+        2:   31:            o->lista[i] = OfertaNoua;
+        2:   32:            return 0;
+        -:   33:        }
+        1:   34:    deleteOferta(OfertaNoua);
+        1:   34-block  0
+call    0 returned 1
+        1:   35:    return -1;
+        -:   36:
+        -:   37:}
+        -:   38:
+function sterge_oferta called 3 returned 100% blocks executed 100%
+        3:   39:int sterge_oferta(listaOferte *o, oferta *Oferta_de_sters){
+        4:   40:    for(int i= 0; i < o->size; i++) {
+        3:   40-block  0
+        1:   40-block  1
+        4:   40-block  2
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        3:   41:        if (o->lista[i]->id == Oferta_de_sters->id) {
+        3:   41-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   42:            deleteOferta(o->lista[i]);
+        2:   42-block  0
+call    0 returned 2
+        3:   43:            for (int j = i; j < o->size - 1; j++)
+        3:   43-block  0
+branch  0 taken 1
+branch  1 taken 2 (fallthrough)
+        1:   44:                o->lista[j] = o->lista[j + 1];
+        1:   44-block  0
+        2:   45:            o->size--;
+        2:   46:            return 0;
+        2:   46-block  0
+        -:   47:        }
+        -:   48:    }
+        1:   49:        return -1;
+        1:   49-block  0
+        -:   50:}
+        -:   51:

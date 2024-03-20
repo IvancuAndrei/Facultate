@@ -1,0 +1,515 @@
+        -:    0:Source:/mnt/c/Users/User/CLionProjects/lab2/ui.c
+        -:    0:Graph:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/ui.c.gcno
+        -:    0:Data:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/ui.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:
+function medicament_print called 0 returned 0% blocks executed 0%
+    #####:    3:void medicament_print(Medicament* medicament){
+    #####:    4:    printf("Cod: %s\tNume: %s\tConcentratie: %0.2f\tCantitate: %d\n",
+    %%%%%:    4-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+        -:    5:           medicament_get_cod(medicament),
+        -:    6:           medicament_get_nume(medicament),
+        -:    7:           medicament_get_concentratie(medicament),
+        -:    8:           medicament_get_cantitate(medicament)
+        -:    9:    );
+    #####:   10:}
+        -:   11:
+function citire_conc called 0 returned 0% blocks executed 0%
+    #####:   12:void citire_conc(double* nr)
+        -:   13:{
+        -:   14:    char* endptr;
+        -:   15:    char sconc[10];
+    #####:   16:    printf("Concentratie:");
+    %%%%%:   16-block  0
+call    0 never executed
+    #####:   17:    scanf("%s", sconc);
+call    0 never executed
+    #####:   18:    *nr = strtod(sconc, &endptr);
+call    0 never executed
+    #####:   19:    if(IS_ERROR(ERANGE)) {
+branch  0 never executed
+branch  1 never executed
+    #####:   20:        printf("Concentratie introdusa gresit!\n");
+    %%%%%:   20-block  0
+call    0 never executed
+    #####:   21:        CLEAR_ERRORS;
+    #####:   22:        *nr = EROARE_CONC;
+        -:   23:    }
+    #####:   24:}
+        -:   25:
+function medicament_scan called 0 returned 0% blocks executed 0%
+    #####:   26:Medicament* medicament_scan(){
+        -:   27:    char nume[LGMAX_NUME], cod[LGMAX_COD], scant[10], sconc[10];
+        -:   28:    double conc;
+    #####:   29:    int cant=0;
+    #####:   30:    printf("Cod:");
+    %%%%%:   30-block  0
+call    0 never executed
+    #####:   31:    scanf("%s", cod);
+call    0 never executed
+    #####:   32:    printf("Nume:");
+call    0 never executed
+    #####:   33:    scanf("%s", nume);
+call    0 never executed
+    #####:   34:    printf("Concentratie:");
+call    0 never executed
+    #####:   35:    scanf("%s", sconc);
+call    0 never executed
+    #####:   36:    printf("Cantitate:");
+call    0 never executed
+    #####:   37:    scanf("%s", scant);
+call    0 never executed
+        -:   38:    // convert strings to numeric
+    #####:   39:    for(int i=0;sconc[i];++i)
+    %%%%%:   39-block  0
+    %%%%%:   39-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   40:        if(!(isdigit(sconc[i]) || sconc[i]=='.')) {
+    %%%%%:   40-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   40-block  1
+branch  2 never executed
+branch  3 never executed
+    #####:   41:            printf("Concentratie introdusa gresit!\n");
+    %%%%%:   41-block  0
+call    0 never executed
+    #####:   42:            return NULL;
+        -:   43:        }
+    #####:   44:    for(int i=0;scant[i];++i)
+    %%%%%:   44-block  0
+    %%%%%:   44-block  1
+    %%%%%:   44-block  2
+branch  0 never executed
+branch  1 never executed
+    #####:   45:        if(!isdigit(scant[i])){
+    %%%%%:   45-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   46:            printf("Cantitate introdusa gresit!\n");
+    %%%%%:   46-block  0
+call    0 never executed
+    #####:   47:            return NULL;
+        -:   48:        }
+        -:   49:    char *endptr1, *endptr2;
+    #####:   50:    conc = strtod(sconc, &endptr1);
+    %%%%%:   50-block  0
+call    0 never executed
+    #####:   51:    if(IS_ERROR(ERANGE)) {
+branch  0 never executed
+branch  1 never executed
+    #####:   52:        printf("Concentratie introdusa gresit!\n");
+    %%%%%:   52-block  0
+call    0 never executed
+    #####:   53:        CLEAR_ERRORS;
+    #####:   54:        return NULL;
+        -:   55:    }
+    #####:   56:    cant = strtol(scant, &endptr2, 10);
+    %%%%%:   56-block  0
+call    0 never executed
+    #####:   57:    if(IS_ERROR(ERANGE)){
+branch  0 never executed
+branch  1 never executed
+    #####:   58:        printf("Cantitate introdusa gresit!\n");
+    %%%%%:   58-block  0
+call    0 never executed
+    #####:   59:        CLEAR_ERRORS;
+    #####:   60:        return NULL;
+        -:   61:    }
+    #####:   62:    Medicament* rez = medicament_create(cod, nume, conc, cant);
+    %%%%%:   62-block  0
+call    0 never executed
+    #####:   63:    return rez;
+        -:   64:}
+        -:   65:
+function repo_print called 0 returned 0% blocks executed 0%
+    #####:   66:void repo_print(Repository* repository)
+        -:   67:{
+    #####:   68:    int length = repository_get_length(repository);
+    %%%%%:   68-block  0
+call    0 never executed
+    #####:   69:    for(int i=0; i<length;++i)
+    %%%%%:   69-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   70:        medicament_print(repository_get_element_at(repository, i));
+    %%%%%:   70-block  0
+call    0 never executed
+call    1 never executed
+    #####:   71:}
+        -:   72:
+function print_errs called 0 returned 0% blocks executed 0%
+    #####:   73:void print_errs(int cod_eroare){
+    #####:   74:    if(cod_eroare>=EROARE_CANT)
+    %%%%%:   74-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   75:        printf("Cantitatea introdusa gresit!\n"),
+    %%%%%:   75-block  0
+call    0 never executed
+    #####:   76:        cod_eroare -= EROARE_CANT;
+    #####:   77:    if(cod_eroare>=EROARE_CONC)
+    %%%%%:   77-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   78:        printf("Concentratie introdusa gresit!\n"),
+    %%%%%:   78-block  0
+call    0 never executed
+    #####:   79:        cod_eroare -= EROARE_CONC;
+    #####:   80:    if(cod_eroare>=EROARE_NUME)
+    %%%%%:   80-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   81:        printf("Nume introdus gresit!\n"),
+    %%%%%:   81-block  0
+call    0 never executed
+    #####:   82:        cod_eroare -= EROARE_NUME;
+    #####:   83:    if(cod_eroare>=EROARE_COD)
+    %%%%%:   83-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   84:        printf("Cod introdus gresit!\n"),
+    %%%%%:   84-block  0
+call    0 never executed
+    #####:   85:        cod_eroare -= EROARE_COD;
+    #####:   86:}
+        -:   87:
+function menu called 0 returned 0% blocks executed 0%
+    #####:   88:void menu(Service* service, Repository* undo_lista){
+    #####:   89:    start:
+    #####:   90:    printf("\tMeniu:\n\na) Adaugare de noi medicamente. Daca medicamentul este deja in stoc trebuie actualizat cantitatea\n"
+    %%%%%:   90-block  0
+call    0 never executed
+        -:   91:           "b) Actualizare medicamente (modificare nume, concentratie pentru un medicament din stoc)\n"
+        -:   92:           "c) Stergerea intregului stoc dintr-un medicament dat\n"
+        -:   93:           "d) Vizualizare medicamente din stoc, ordonat dupa nume, cantitate (crescator/descrescator)\n"
+        -:   94:           "e) Vizualizare lista de medicamente filtrate dupa un criteriu (stoc/nume/concentratie).\n"
+        -:   95:           "f) Undo.\n"
+        -:   96:           "i) Iesire din aplicatie\n\n");
+    #####:   97:    read:
+    #####:   98:    printf("Introduceti comanda:");
+    %%%%%:   98-block  0
+call    0 never executed
+        -:   99:    char cmd;
+    #####:  100:    scanf("%c", &cmd);
+call    0 never executed
+    #####:  101:    cmd = tolower(cmd);
+    #####:  102:    if(isblank(cmd) || cmd=='\n' || cmd == '\0' || cmd == ' ') goto read;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  102-block  0
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  102-block  1
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  102-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  102-block  3
+    #####:  103:    else if(cmd=='a') opt1(service, undo_lista);
+    %%%%%:  103-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  103-block  1
+call    2 never executed
+    #####:  104:    else if(cmd=='b') opt2(service, undo_lista);
+    %%%%%:  104-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  104-block  1
+call    2 never executed
+    #####:  105:    else if(cmd=='c') opt3(service, undo_lista);
+    %%%%%:  105-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  105-block  1
+call    2 never executed
+    #####:  106:    else if(cmd=='d') opt4(service);
+    %%%%%:  106-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  106-block  1
+call    2 never executed
+    #####:  107:    else if(cmd=='e') opt5(service);
+    %%%%%:  107-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  107-block  1
+call    2 never executed
+    #####:  108:    else if(cmd =='f') opt6(service, undo_lista);
+    %%%%%:  108-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  108-block  1
+call    2 never executed
+    #####:  109:    else if(cmd=='i') goto end;
+    %%%%%:  109-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  109-block  1
+    #####:  110:    else printf("Comanda invalida!\n\n");
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:    goto start;
+    %%%%%:  111-block  0
+    #####:  112:    end:
+    #####:  113:    return;
+    %%%%%:  113-block  0
+        -:  114:}
+function opt1 called 0 returned 0% blocks executed 0%
+    #####:  115:void opt1(Service* service, Repository *undo_lista){
+    #####:  116:    adauga_pas_undo(undo_lista, service->repository);
+    %%%%%:  116-block  0
+call    0 never executed
+    #####:  117:    Medicament* medicament = medicament_scan();
+call    0 never executed
+    #####:  118:    if(medicament==NULL) return;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  118-block  0
+    #####:  119:    int result = service_add(service, medicament_get_cod(medicament), medicament_get_nume(medicament),
+    %%%%%:  119-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+        -:  120:                             medicament_get_concentratie(medicament), medicament_get_cantitate(medicament));
+    #####:  121:    medicament_delete(medicament);
+call    0 never executed
+    #####:  122:    if(result != SUCCESS)
+branch  0 never executed
+branch  1 never executed
+    #####:  123:        print_errs(result);
+    %%%%%:  123-block  0
+call    0 never executed
+        -:  124:    else
+    #####:  125:        printf("Operatie efectuata cu succes!\n");
+    %%%%%:  125-block  0
+call    0 never executed
+        -:  126:
+        -:  127:}
+        -:  128:
+function opt2 called 0 returned 0% blocks executed 0%
+    #####:  129:void opt2(Service* service, Repository *undo_lista){
+    #####:  130:    adauga_pas_undo(undo_lista, service->repository);
+    %%%%%:  130-block  0
+call    0 never executed
+        -:  131:    char nume[LGMAX_NUME], nounume[LGMAX_NUME], cod[LGMAX_COD];
+        -:  132:    double conc, nouaconc;
+    #####:  133:    printf("Cod:");
+call    0 never executed
+    #####:  134:    scanf("%s", cod);
+call    0 never executed
+    #####:  135:    printf("Nume:");
+call    0 never executed
+    #####:  136:    scanf("%s", nume);
+call    0 never executed
+    #####:  137:    citire_conc(&conc);
+call    0 never executed
+    #####:  138:    if(conc == EROARE_CONC) return;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  138-block  0
+    %%%%%:  138-block  1
+        -:  139:    // noi
+    #####:  140:    printf("Nume nou:");
+    %%%%%:  140-block  0
+call    0 never executed
+    #####:  141:    scanf("%s", nounume);
+call    0 never executed
+    #####:  142:    citire_conc(&nouaconc);
+call    0 never executed
+    #####:  143:    if(nouaconc == EROARE_CONC) return;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  143-block  0
+        -:  144:    // service
+    #####:  145:    int result = service_modify(service, cod, nume, conc, nounume, nouaconc);
+    %%%%%:  145-block  0
+call    0 never executed
+    #####:  146:    if(result == SUCCESS)
+branch  0 never executed
+branch  1 never executed
+        -:  147:    {
+    #####:  148:        printf("Operatie efectuata cu succes!\n");
+    %%%%%:  148-block  0
+call    0 never executed
+    #####:  149:        return;
+        -:  150:    }
+    #####:  151:    if(result == NOT_FOUND)
+    %%%%%:  151-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  152:    {
+    #####:  153:        printf("Medicamentul nu a fost gasit!\n");
+    %%%%%:  153-block  0
+call    0 never executed
+    #####:  154:        return;
+        -:  155:    }
+    #####:  156:    print_errs(result);
+    %%%%%:  156-block  0
+call    0 never executed
+        -:  157:}
+        -:  158:
+function opt3 called 0 returned 0% blocks executed 0%
+    #####:  159:void opt3(Service* service, Repository *undo_lista){
+    #####:  160:    adauga_pas_undo(undo_lista, service->repository);
+    %%%%%:  160-block  0
+call    0 never executed
+        -:  161:    char cod[LGMAX_COD];
+    #####:  162:    printf("Cod:");
+call    0 never executed
+    #####:  163:    scanf("%s", cod);
+call    0 never executed
+    #####:  164:    int result = service_delete_cant(service, cod);
+call    0 never executed
+    #####:  165:    if(result == NOT_FOUND)
+branch  0 never executed
+branch  1 never executed
+    #####:  166:        printf("Medicamentul nu a fost gasit!\n");
+    %%%%%:  166-block  0
+call    0 never executed
+        -:  167:    else
+    #####:  168:        printf("Operatie efectuata cu succes!\n");
+    %%%%%:  168-block  0
+call    0 never executed
+        -:  169:
+        -:  170:
+    #####:  171:}
+        -:  172:
+function opt4 called 0 returned 0% blocks executed 0%
+    #####:  173:void opt4(Service* service){
+        -:  174:    char ordine[20];
+    #####:  175:    printf("Introduceti ordinea:");
+    %%%%%:  175-block  0
+call    0 never executed
+    #####:  176:    scanf("%s", ordine);
+call    0 never executed
+    #####:  177:    if(tolower(ordine[0])=='c') // crescator
+branch  0 never executed
+branch  1 never executed
+    #####:  178:        repository_sort(service->repository, medicament_compare, NORMAL);
+    %%%%%:  178-block  0
+call    0 never executed
+    #####:  179:    else if(tolower(ordine[0])=='d') // descrescator
+    %%%%%:  179-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  180:        repository_sort(service->repository, medicament_compare, REVERSED);
+    %%%%%:  180-block  0
+call    0 never executed
+        -:  181:    else{
+    #####:  182:        printf("Comanda invalida! Introduceti crescator sau descrescator!\n");
+    %%%%%:  182-block  0
+call    0 never executed
+    #####:  183:        return;
+        -:  184:    }
+    #####:  185:    repo_print(service->repository);
+    %%%%%:  185-block  0
+call    0 never executed
+        -:  186:}
+        -:  187:
+function opt5 called 0 returned 0% blocks executed 0%
+    #####:  188:void opt5(Service* service){
+        -:  189:    char sfiltru[20];
+    #####:  190:    printf("Introduceti filtrul:");
+    %%%%%:  190-block  0
+call    0 never executed
+    #####:  191:    scanf("%s", sfiltru);
+call    0 never executed
+    #####:  192:    if(tolower(sfiltru[0]) == 's') // cantitate
+branch  0 never executed
+branch  1 never executed
+        -:  193:    {
+    #####:  194:        printf("Introduceti stocul maxim:");
+    %%%%%:  194-block  0
+call    0 never executed
+        -:  195:        int stoc_max;
+    #####:  196:        scanf("%d", &stoc_max);
+call    0 never executed
+    #####:  197:        Medicament* filtru = medicament_create_default();
+call    0 never executed
+    #####:  198:        medicament_set_cantitate(filtru, stoc_max);
+call    0 never executed
+    #####:  199:        Repository* filtrate = repository_filter(service->repository, filtru, filtru_cantitate);
+call    0 never executed
+    #####:  200:        repo_print(filtrate);
+call    0 never executed
+    #####:  201:        medicament_delete(filtru);
+call    0 never executed
+    #####:  202:        repository_delete(filtrate);
+call    0 never executed
+    #####:  203:        return;
+        -:  204:    }
+    #####:  205:    if(tolower(sfiltru[0])=='n') // nume
+    %%%%%:  205-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  206:    {
+    #####:  207:        printf("Introduceti caracterul cu care sa inceapa numele:");
+    %%%%%:  207-block  0
+call    0 never executed
+    #####:  208:        char lit[]="%";
+    #####:  209:        scanf(" %c", &lit[0]);
+call    0 never executed
+    #####:  210:        Medicament* filtru = medicament_create_default();
+call    0 never executed
+    #####:  211:        medicament_set_nume(filtru, lit);
+call    0 never executed
+    #####:  212:        Repository* filtrate = repository_filter(service->repository, filtru, filtru_nume);
+call    0 never executed
+    #####:  213:        repo_print(filtrate);
+call    0 never executed
+    #####:  214:        medicament_delete(filtru);
+call    0 never executed
+    #####:  215:        repository_delete(filtrate);
+call    0 never executed
+    #####:  216:        return;
+        -:  217:    }
+    #####:  218:    if(tolower(sfiltru[0]) == 'c')//concentratie
+    %%%%%:  218-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  219:    {
+    #####:  220:        printf("Introduceti concentratia maxima:");
+    %%%%%:  220-block  0
+call    0 never executed
+        -:  221:        double conc_max;
+    #####:  222:        scanf("%lf", &conc_max);
+call    0 never executed
+    #####:  223:        Medicament* filtru = medicament_create_default();
+call    0 never executed
+    #####:  224:        medicament_set_concentratie(filtru, conc_max);
+call    0 never executed
+    #####:  225:        Repository* filtrate = repository_filter(service->repository, filtru, filtru_concentratie);
+call    0 never executed
+    #####:  226:        repo_print(filtrate);
+call    0 never executed
+    #####:  227:        medicament_delete(filtru);
+call    0 never executed
+    #####:  228:        repository_delete(filtrate);
+call    0 never executed
+    #####:  229:        return;
+        -:  230:    }
+    #####:  231:    printf("Comanda invalida! Introduceti stoc sau nume!\n");
+    %%%%%:  231-block  0
+call    0 never executed
+        -:  232:}
+        -:  233:
+function opt6 called 0 returned 0% blocks executed 0%
+    #####:  234:void opt6(Service *service, Repository *undo_lista){
+    #####:  235:    service->repository = executa_pas_undo(undo_lista, service->repository);
+    %%%%%:  235-block  0
+call    0 never executed
+    #####:  236:    printf("Operatia a fost efectuata cu succes!\n");
+call    0 never executed
+    #####:  237:}

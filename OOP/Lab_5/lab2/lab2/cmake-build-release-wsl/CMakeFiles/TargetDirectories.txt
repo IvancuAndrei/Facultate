@@ -1,0 +1,3 @@
+/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-release-wsl/CMakeFiles/lab2.dir
+/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-release-wsl/CMakeFiles/edit_cache.dir
+/mnt/d/OOP_laboratoare/Lab_5/lab2/lab2/cmake-build-release-wsl/CMakeFiles/rebuild_cache.dir

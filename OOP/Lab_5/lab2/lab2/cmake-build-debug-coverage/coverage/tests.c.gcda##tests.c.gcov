@@ -1,0 +1,851 @@
+        -:    0:Source:D:/OOP_laboratoare/Lab_5/lab2/lab2/tests.c
+        -:    0:Graph:D:\OOP_laboratoare\Lab_5\lab2\lab2\cmake-build-debug-coverage\CMakeFiles\lab2.dir\tests.c.gcno
+        -:    0:Data:D:\OOP_laboratoare\Lab_5\lab2\lab2\cmake-build-debug-coverage\CMakeFiles\lab2.dir\tests.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "tests.h"
+        -:    2:
+function test_medicament_getters called 1 returned 100% blocks executed 64%
+        1:    3:void test_medicament_getters(){
+        1:    4:    Medicament* medicament = medicament_create_default();
+        1:    4-block  0
+call    0 returned 1
+        -:    5:
+       1*:    6:    assert(medicament_get_cod(medicament) == NULL);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:    6-block  0
+call    3 never executed
+        1:    6-block  1
+       1*:    7:    assert(medicament_get_nume(medicament) == NULL);
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:    7-block  1
+call    3 never executed
+        1:    7-block  2
+       1*:    8:    assert(medicament_get_concentratie(medicament) == 0.0);
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:    8-block  1
+call    3 never executed
+        1:    8-block  2
+       1*:    9:    assert(medicament_get_cantitate(medicament) == 0);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:    9-block  1
+call    3 never executed
+        1:    9-block  2
+        -:   10:
+        1:   11:    medicament_delete(medicament);
+        1:   11-block  0
+call    0 returned 1
+        1:   12:    medicament = medicament_create("1234", "Fasconal", 30.0, 10);
+call    0 returned 1
+       1*:   13:    assert(strcmp(medicament_get_cod(medicament), "1234")==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   13-block  0
+call    3 never executed
+        1:   13-block  1
+       1*:   14:    assert(strcmp(medicament_get_nume(medicament), "Fasconal")==0);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   14-block  1
+call    3 never executed
+        1:   14-block  2
+       1*:   15:    assert(medicament_get_concentratie(medicament) == 30.0);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   15-block  1
+call    3 never executed
+        1:   15-block  2
+       1*:   16:    assert(medicament_get_cantitate(medicament) == 10);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   16-block  1
+call    3 never executed
+        1:   16-block  2
+        -:   17:
+        1:   18:    medicament_delete(medicament);
+        1:   18-block  0
+call    0 returned 1
+        1:   19:}
+        -:   20:
+function test_medicament_setters called 1 returned 100% blocks executed 70%
+        1:   21:void test_medicament_setters(){
+        1:   22:    Medicament* medicament = medicament_create_default();
+        1:   22-block  0
+call    0 returned 1
+        1:   23:    medicament_set_cod(medicament, "1234");
+call    0 returned 1
+        1:   24:    medicament_set_nume(medicament, "Fasconal");
+call    0 returned 1
+        1:   25:    medicament_set_concentratie(medicament, 30.0);
+call    0 returned 1
+        1:   26:    medicament_set_cantitate(medicament, 10);
+call    0 returned 1
+        -:   27:
+       1*:   28:    assert(strcmp(medicament_get_cod(medicament), "1234")==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   28-block  0
+call    3 never executed
+        1:   28-block  1
+       1*:   29:    assert(strcmp(medicament_get_nume(medicament), "Fasconal")==0);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   29-block  1
+call    3 never executed
+        1:   29-block  2
+       1*:   30:    assert(medicament_get_concentratie(medicament) == 30.0);
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   30-block  1
+call    3 never executed
+        1:   30-block  2
+       1*:   31:    assert(medicament_get_cantitate(medicament) == 10);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   31-block  1
+call    3 never executed
+        1:   31-block  2
+        -:   32:
+        1:   33:    medicament_delete(medicament);
+        1:   33-block  0
+call    0 returned 1
+        1:   34:}
+        -:   35:
+function test_medicament_externs called 1 returned 100% blocks executed 70%
+        1:   36:void test_medicament_externs(){
+        1:   37:    Medicament *medicament1 = medicament_create_default(),
+        1:   37-block  0
+call    0 returned 1
+        1:   38:    *medicament2 = medicament_create("1234", "Fasconal", 30.0, 10);
+call    0 returned 1
+        -:   39:    // eq
+        1:   40:    medicament_set_cod(medicament1, "1234");
+call    0 returned 1
+        1:   41:    medicament_set_nume(medicament1, "Fasconal");
+call    0 returned 1
+        1:   42:    medicament_set_concentratie(medicament1, 30.0);
+call    0 returned 1
+        1:   43:    medicament_set_cantitate(medicament1, 10);
+call    0 returned 1
+       1*:   44:    assert(medicament_eq(medicament1, medicament2));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   44-block  0
+call    3 never executed
+        1:   44-block  1
+       1*:   45:    assert(medicament_eq(medicament1, medicament1));
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   45-block  1
+call    3 never executed
+        1:   45-block  2
+        -:   46:    // sterge stoc
+        1:   47:    medicament_sterge_stoc(medicament1);
+        1:   47-block  0
+call    0 returned 1
+       1*:   48:    assert(medicament_get_cantitate(medicament1) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   48-block  0
+call    3 never executed
+        1:   48-block  1
+        -:   49:
+        -:   50:    // compare
+       1*:   51:    assert(medicament_compare(medicament1, medicament2, 1) == LESS);
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   51-block  1
+call    3 never executed
+        1:   51-block  2
+        1:   52:    medicament_set_cantitate(medicament1, 10);
+        1:   52-block  0
+call    0 returned 1
+       1*:   53:    assert(medicament_compare(medicament1, medicament2, 1) == EQUAL);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   53-block  0
+call    3 never executed
+        1:   53-block  1
+        1:   54:    medicament_set_nume(medicament2, "paracetamol");
+        1:   54-block  0
+call    0 returned 1
+       1*:   55:    assert(medicament_compare(medicament1, medicament2, -1) == GREATER);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   55-block  0
+call    3 never executed
+        1:   55-block  1
+        -:   56:
+        -:   57:    // filtru
+        1:   58:    Medicament* filtru = medicament_create_default();
+        1:   58-block  0
+call    0 returned 1
+        1:   59:    medicament_set_nume(filtru, "F");
+call    0 returned 1
+       1*:   60:    assert(filtru_nume(medicament1, filtru) == INFILTER);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   60-block  0
+call    3 never executed
+        1:   60-block  1
+       1*:   61:    assert(filtru_nume(medicament2, filtru) == !INFILTER);
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   61-block  1
+call    3 never executed
+        1:   61-block  2
+        1:   62:    medicament_set_cantitate(medicament2, 15);
+        1:   62-block  0
+call    0 returned 1
+        1:   63:    medicament_set_cantitate(filtru, 13);
+call    0 returned 1
+       1*:   64:    assert(filtru_cantitate(medicament1, filtru) == INFILTER);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   64-block  0
+call    3 never executed
+        1:   64-block  1
+       1*:   65:    assert(filtru_cantitate(medicament2, filtru) == !INFILTER);
+        1:   65-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   65-block  1
+call    3 never executed
+        1:   65-block  2
+        -:   66:
+        1:   67:    medicament_delete(filtru);
+        1:   67-block  0
+call    0 returned 1
+        1:   68:    medicament_delete(medicament1);
+call    0 returned 1
+        1:   69:    medicament_delete(medicament2);
+call    0 returned 1
+        1:   70:}
+        -:   71:
+function test_validator called 1 returned 100% blocks executed 62%
+        1:   72:void test_validator(){
+       1*:   73:    assert(validate_nume("abC def") == VALIDATOR_OK);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   73-block  1
+call    3 never executed
+        1:   73-block  2
+       1*:   74:    assert(validate_nume("asfswd%") == EROARE_NUME);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   74-block  1
+call    3 never executed
+        1:   74-block  2
+       1*:   75:    assert(validate_nume("") == EROARE_NUME);
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   75-block  1
+call    3 never executed
+        1:   75-block  2
+       1*:   76:    assert(validate_cod("Abc123") == VALIDATOR_OK);
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   76-block  1
+call    3 never executed
+        1:   76-block  2
+       1*:   77:    assert(validate_cod("ned$wbu") == EROARE_COD);
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   77-block  1
+call    3 never executed
+        1:   77-block  2
+       1*:   78:    assert(validate_cod("") == EROARE_COD);
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   78-block  1
+call    3 never executed
+        1:   78-block  2
+       1*:   79:    assert(validate_cantitate(3) == VALIDATOR_OK);
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   79-block  1
+call    3 never executed
+        1:   79-block  2
+       1*:   80:    assert(validate_cantitate(-2) == EROARE_CANT);
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   80-block  1
+call    3 never executed
+        1:   80-block  2
+       1*:   81:    assert(validate_concentratie(82.123) == VALIDATOR_OK);
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   81-block  1
+call    3 never executed
+        1:   81-block  2
+       1*:   82:    assert(validate_concentratie(-39.1) == EROARE_CONC);
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   82-block  1
+call    3 never executed
+        1:   82-block  2
+       1*:   83:    assert(validate_concentratie(120.0) == EROARE_CONC);
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   83-block  1
+call    3 never executed
+        1:   83-block  2
+        -:   84:
+        1:   85:    Medicament* medicament = medicament_create("", "acb", 0, 0);
+        1:   85-block  0
+call    0 returned 1
+       1*:   86:    assert(validate_madicament(medicament) == (EROARE_COD | EROARE_CONC | EROARE_CANT));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   86-block  0
+call    3 never executed
+        1:   86-block  1
+        1:   87:    medicament_delete(medicament);
+        1:   87-block  0
+call    0 returned 1
+        1:   88:}
+        -:   89:
+function test_repo_getters called 1 returned 100% blocks executed 70%
+        1:   90:void test_repo_getters(){
+        1:   91:    Repository* repository = repository_create(medicament_eq);
+        1:   91-block  0
+call    0 returned 1
+       1*:   92:    assert(repository_get_length(repository) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   92-block  0
+call    3 never executed
+        1:   92-block  1
+       1*:   93:    assert(repository_get_capacity(repository) == 100);
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   93-block  1
+call    3 never executed
+        1:   93-block  2
+        -:   94:
+        1:   95:    Medicament* medicament = repository_get_element_at(repository, 1);
+        1:   95-block  0
+call    0 returned 1
+       1*:   96:    assert(IS_ERROR(OUT_OF_RANGE));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   96-block  0
+call    3 never executed
+        1:   96-block  1
+        1:   97:    CLEAR_ERRORS;
+        1:   97-block  0
+call    0 returned 1
+        -:   98:
+        1:   99:    medicament = medicament_create_default();
+call    0 returned 1
+        1:  100:    repository->length=1;
+        1:  101:    repository->elements[0] = medicament;
+       1*:  102:    assert(medicament_eq(medicament,
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  102-block  0
+call    4 never executed
+        1:  102-block  1
+        -:  103:                         repository_get_element_at(repository, 0)));
+        1:  104:    int index = repository_index_of(repository, medicament);
+        1:  104-block  0
+call    0 returned 1
+       1*:  105:    assert(index == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  105-block  0
+call    2 never executed
+        1:  105-block  1
+        1:  106:    Medicament* med2 = medicament_create("1", "2", 3.7, 4);
+        1:  106-block  0
+call    0 returned 1
+        1:  107:    index = repository_index_of(repository, med2);
+call    0 returned 1
+       1*:  108:    assert(index == NOT_FOUND);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  108-block  0
+call    2 never executed
+        1:  108-block  1
+        -:  109:
+        1:  110:    medicament_delete(medicament);
+        1:  110-block  0
+call    0 returned 1
+        1:  111:    medicament_delete(med2);
+call    0 returned 1
+        1:  112:    repository_delete(repository);
+call    0 returned 1
+        1:  113:}
+        -:  114:
+function test_repo_setters called 1 returned 100% blocks executed 74%
+        1:  115:void test_repo_setters(){
+        1:  116:    Repository* repository = repository_create(medicament_eq);
+        1:  116-block  0
+call    0 returned 1
+        1:  117:    Medicament *m1 = medicament_create_default(), *m2 = medicament_create("1234", "Fasconal", 30.0, 10);
+call    0 returned 1
+call    1 returned 1
+        1:  118:    repository_add(repository, m1);
+call    0 returned 1
+       1*:  119:    assert(repository_get_length(repository)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  119-block  0
+call    3 never executed
+        1:  119-block  1
+       1*:  120:    assert(medicament_eq(m1, repository_get_element_at(repository, 0)));
+        1:  120-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  120-block  1
+call    4 never executed
+        1:  120-block  2
+        -:  121:
+        1:  122:    repository_set_length(repository, 105);
+        1:  122-block  0
+call    0 returned 1
+       1*:  123:    assert(repository_get_length(repository) == 105);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  123-block  0
+call    3 never executed
+        1:  123-block  1
+        -:  124:
+        1:  125:    repository_set_capacity(repository, 110);
+        1:  125-block  0
+call    0 returned 1
+       1*:  126:    assert(repository_get_capacity(repository) == 110);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  126-block  0
+call    3 never executed
+        1:  126-block  1
+        -:  127:
+        1:  128:    repository_set_length(repository, 2);
+        1:  128-block  0
+call    0 returned 1
+       1*:  129:    assert(repository_get_length(repository) == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  129-block  0
+call    3 never executed
+        1:  129-block  1
+        1:  130:    repository_set_element_at(repository, 1, m2);
+        1:  130-block  0
+call    0 returned 1
+       1*:  131:    assert(medicament_eq(m2, repository_get_element_at(repository, 1)));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  131-block  0
+call    4 never executed
+        1:  131-block  1
+        -:  132:
+        1:  133:    repository_set_element_at(repository, 3, m1);
+        1:  133-block  0
+call    0 returned 1
+       1*:  134:    assert(IS_ERROR(OUT_OF_RANGE));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  134-block  0
+call    3 never executed
+        1:  134-block  1
+        1:  135:    CLEAR_ERRORS;
+        1:  135-block  0
+call    0 returned 1
+        -:  136:
+        1:  137:    repository_set_length(repository, 100);
+call    0 returned 1
+        1:  138:    repository_add(repository, m2);
+call    0 returned 1
+        -:  139:
+        1:  140:    medicament_delete(m1);
+call    0 returned 1
+        1:  141:    medicament_delete(m2);
+call    0 returned 1
+        1:  142:    repository_delete(repository);
+call    0 returned 1
+        1:  143:}
+        -:  144:
+function test_repo_externs called 1 returned 100% blocks executed 74%
+        1:  145:void test_repo_externs(){
+        1:  146:    Repository* repository = repository_create(medicament_eq);
+        1:  146-block  0
+call    0 returned 1
+        1:  147:    Medicament *m1 = medicament_create("1234", "Paracetamol", 30.0, 15), *m2 = medicament_create("1234", "Fasconal", 30.0, 10);
+call    0 returned 1
+call    1 returned 1
+        1:  148:    repository_add(repository, m1);
+call    0 returned 1
+        1:  149:    repository_add(repository, m2);
+call    0 returned 1
+        -:  150:    // swap
+        1:  151:    repository_swap(repository, 0, 1);
+call    0 returned 1
+       1*:  152:    assert(medicament_eq(repository_get_element_at(repository, 0), m2));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  152-block  0
+call    4 never executed
+        1:  152-block  1
+       1*:  153:    assert(medicament_eq(repository_get_element_at(repository, 1), m1));
+        1:  153-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  153-block  1
+call    4 never executed
+        1:  153-block  2
+        -:  154:    // filter
+        1:  155:    Medicament* filter = medicament_create("-", "P", 7.8, 11);
+        1:  155-block  0
+call    0 returned 1
+        1:  156:    Repository* filtered = repository_filter(repository, filter, filtru_nume);
+call    0 returned 1
+       1*:  157:    assert(repository_get_length(filtered) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  157-block  0
+call    3 never executed
+        1:  157-block  1
+       1*:  158:    assert(medicament_eq(repository_get_element_at(filtered, 0), m1));
+        1:  158-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  158-block  1
+call    4 never executed
+        1:  158-block  2
+        1:  159:    repository_delete(filtered);
+        1:  159-block  0
+call    0 returned 1
+        1:  160:    filtered = repository_filter(repository, filter, filtru_cantitate);
+call    0 returned 1
+       1*:  161:    assert(repository_get_length(filtered) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  161-block  0
+call    3 never executed
+        1:  161-block  1
+       1*:  162:    assert(medicament_eq(repository_get_element_at(filtered, 0), m2));
+        1:  162-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  162-block  1
+call    4 never executed
+        1:  162-block  2
+        1:  163:    repository_delete(filtered);
+        1:  163-block  0
+call    0 returned 1
+        -:  164:    // sort
+        1:  165:    repository_sort(repository, medicament_compare, NORMAL);
+call    0 returned 1
+       1*:  166:    assert(medicament_eq(repository_get_element_at(repository, 0), m2));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  166-block  0
+call    4 never executed
+        1:  166-block  1
+       1*:  167:    assert(medicament_eq(repository_get_element_at(repository, 1), m1));
+        1:  167-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  167-block  1
+call    4 never executed
+        1:  167-block  2
+        1:  168:    repository_sort(repository, medicament_compare, REVERSED);
+        1:  168-block  0
+call    0 returned 1
+       1*:  169:    assert(medicament_eq(repository_get_element_at(repository, 0), m1));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  169-block  0
+call    4 never executed
+        1:  169-block  1
+       1*:  170:    assert(medicament_eq(repository_get_element_at(repository, 1), m2));
+        1:  170-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  170-block  1
+call    4 never executed
+        1:  170-block  2
+        1:  171:    medicament_delete(m1);
+        1:  171-block  0
+call    0 returned 1
+        1:  172:    medicament_delete(m2);
+call    0 returned 1
+        1:  173:    medicament_delete(filter);
+call    0 returned 1
+        1:  174:    repository_delete(repository);
+call    0 returned 1
+        1:  175:}
+        -:  176:
+function test_service called 1 returned 100% blocks executed 64%
+        1:  177:void test_service()
+        -:  178:{
+        1:  179:    Repository* repository = repository_create(medicament_eq);
+        1:  179-block  0
+call    0 returned 1
+        1:  180:    Service* service = service_create(repository);
+call    0 returned 1
+        1:  181:    Medicament* m2 = medicament_create("1234", "Fasconal", 30.0, 10);
+call    0 returned 1
+       1*:  182:    assert(service_length(service) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  182-block  0
+call    3 never executed
+        1:  182-block  1
+        -:  183:    // ADAUGARE
+        -:  184:    // eroare
+        1:  185:    int result = service_add(service, NULL, NULL, 0.0, 0);
+        1:  185-block  0
+call    0 returned 1
+       1*:  186:    assert(result != SUCCESS);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  186-block  0
+call    2 never executed
+        1:  186-block  1
+        -:  187:    // un elem
+        1:  188:    result = service_add(service, "1234", "Fasconal", 30.0, 10);
+        1:  188-block  0
+call    0 returned 1
+       1*:  189:    assert(result == SUCCESS);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  189-block  0
+call    2 never executed
+        1:  189-block  1
+       1*:  190:    assert(service_length(service) == 1);
+        1:  190-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  190-block  1
+call    3 never executed
+        1:  190-block  2
+       1*:  191:    assert(medicament_eq(service_element(service, 0), m2));
+        1:  191-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  191-block  1
+call    4 never executed
+        1:  191-block  2
+        -:  192:    // 2 elemente de acelasi tip
+        1:  193:    medicament_set_cantitate(m2, 5);
+        1:  193-block  0
+call    0 returned 1
+        1:  194:    result = service_add(service, "1234", "Fasconal", 30.0, 5);
+call    0 returned 1
+       1*:  195:    assert(result == SUCCESS);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  195-block  0
+call    2 never executed
+        1:  195-block  1
+       1*:  196:    assert(service_length(service) == 1);
+        1:  196-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  196-block  1
+call    3 never executed
+        1:  196-block  2
+        -:  197:    // alt elem diferit
+        1:  198:    result = service_add(service, "abc", "Fasconal", 30.0, 10);
+        1:  198-block  0
+call    0 returned 1
+       1*:  199:    assert(result == SUCCESS);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  199-block  0
+call    2 never executed
+        1:  199-block  1
+       1*:  200:    assert(service_length(service) == 2);
+        1:  200-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  200-block  1
+call    3 never executed
+        1:  200-block  2
+        -:  201:
+        -:  202:    // MODIFICARE
+        1:  203:    result = service_modify(service, "abc", "Fasconal", 30.0, "Parasinus", 25.0);
+        1:  203-block  0
+call    0 returned 1
+       1*:  204:    assert(result == SUCCESS);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  204-block  0
+call    2 never executed
+        1:  204-block  1
+        1:  205:    result = service_modify(service, "dac", "Fasconal", 30.0, "Parasinus", 25.0);
+        1:  205-block  0
+call    0 returned 1
+       1*:  206:    assert(result == NOT_FOUND);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  206-block  0
+call    2 never executed
+        1:  206-block  1
+        1:  207:    result = service_modify(service, "abc", "Fasconal", 30.0, "^%^&%*", 120.0);
+        1:  207-block  0
+call    0 returned 1
+       1*:  208:    assert(result == EROARE_NUME + EROARE_CONC);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  208-block  0
+call    2 never executed
+        1:  208-block  1
+        1:  209:    result = service_modify(service, "abc", "Fasconal", 30.0, "med", 120.0);
+        1:  209-block  0
+call    0 returned 1
+       1*:  210:    assert(result == EROARE_CONC);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  210-block  0
+call    2 never executed
+        1:  210-block  1
+        -:  211:
+        -:  212:    // stergere cantitate
+        1:  213:    result = service_delete_cant(service, "abc");
+        1:  213-block  0
+call    0 returned 1
+       1*:  214:    assert(result == SUCCESS);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  214-block  0
+call    2 never executed
+        1:  214-block  1
+        1:  215:    result = service_delete_cant(service, "dac");
+        1:  215-block  0
+call    0 returned 1
+       1*:  216:    assert(result == NOT_FOUND);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  216-block  0
+call    2 never executed
+        1:  216-block  1
+        -:  217:
+        1:  218:    medicament_delete(m2);
+        1:  218-block  0
+call    0 returned 1
+        1:  219:    service_delete(service);
+call    0 returned 1
+        1:  220:}
+        -:  221:
+function testall called 1 returned 100% blocks executed 100%
+        1:  222:void testall() {
+        1:  223:    test_medicament_getters();
+        1:  223-block  0
+call    0 returned 1
+        1:  224:    test_medicament_setters();
+call    0 returned 1
+        1:  225:    test_validator();
+call    0 returned 1
+        1:  226:    test_repo_getters();
+call    0 returned 1
+        1:  227:    test_medicament_externs();
+call    0 returned 1
+        1:  228:    test_repo_setters();
+call    0 returned 1
+        1:  229:    test_repo_externs();
+call    0 returned 1
+        1:  230:    test_service();
+call    0 returned 1
+        1:  231:}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Lab_2_4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Lab_2_4">
+				<Option output="/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Lab_2_4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 Lab_2_4"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Lab_2_4/fast">
+				<Option output="/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Lab_2_4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 Lab_2_4/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-release-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/listaOferte.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/listaOferte.h">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/main.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/oferta.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/oferta.h">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/ofertaRepo.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/ofertaRepo.h">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/ofertaService.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/ofertaService.h">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/testOfertaRepo.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/testOfertaRepo.h">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/testOfertaService.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/testOfertaService.h">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/ui.c">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/ui.h">
+			<Option target="Lab_2_4"/>
+		</Unit>
+		<Unit filename="/mnt/d/OOP_laboratoare/Lab_2-4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

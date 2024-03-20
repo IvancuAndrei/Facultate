@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Lab_2_4.dir/main.c.o CMakeFiles/Lab_2_4.dir/ofertaRepo.c.o CMakeFiles/Lab_2_4.dir/ofertaService.c.o CMakeFiles/Lab_2_4.dir/ui.c.o CMakeFiles/Lab_2_4.dir/testOfertaRepo.c.o CMakeFiles/Lab_2_4.dir/testOfertaService.c.o CMakeFiles/Lab_2_4.dir/oferta.c.o CMakeFiles/Lab_2_4.dir/listaOferte.c.o -o Lab_2_4 

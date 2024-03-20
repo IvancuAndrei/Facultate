@@ -1,0 +1,26 @@
+        -:    0:Source:D:/OOP_laboratoare/Lab_5/lab2/lab2/main.c
+        -:    0:Graph:D:\OOP_laboratoare\Lab_5\lab2\lab2\cmake-build-debug-coverage\CMakeFiles\lab2.dir\main.c.gcno
+        -:    0:Data:D:\OOP_laboratoare\Lab_5\lab2\lab2\cmake-build-debug-coverage\CMakeFiles\lab2.dir\main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "tests.h"
+        -:    2:#include "ui.h"
+        -:    3:/**
+        -:    4: * set
+        -:    5: * @return
+        -:    6: */
+function main called 1 returned 0% blocks executed 71%
+        1:    7:int main() {
+        1:    8:    testall();
+        1:    8-block  0
+call    0 returned 1
+        1:    9:    Repository* repository = repository_create(medicament_eq);
+call    0 returned 1
+        1:   10:    Service* s = service_create(repository);
+call    0 returned 1
+        1:   11:    menu(s);
+call    0 returned 0
+    #####:   12:    service_delete(s);
+call    0 never executed
+        -:   13:
+    #####:   14:    return 0;
+        -:   15:}

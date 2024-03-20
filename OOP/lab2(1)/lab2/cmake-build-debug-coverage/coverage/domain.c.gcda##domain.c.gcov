@@ -1,0 +1,229 @@
+        -:    0:Source:/mnt/c/Users/User/CLionProjects/lab2/domain.c
+        -:    0:Graph:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/domain.c.gcno
+        -:    0:Data:/mnt/c/Users/User/CLionProjects/lab2/cmake-build-debug-coverage/CMakeFiles/lab2.dir/domain.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <math.h>
+        -:    2:#include "domain.h"
+        -:    3:
+function medicament_create_default called 6 returned 100% blocks executed 100%
+        6:    4:Medicament* medicament_create_default(){
+        6:    5:    Medicament* medicament = malloc(sizeof(Medicament));
+        6:    6:    medicament->cod = NULL;
+        6:    7:    medicament->nume = NULL;
+        6:    8:    medicament->concentratie = 0.0;
+        6:    9:    medicament->cantitate = 0;
+        6:   10:    return medicament;
+        6:   10-block  0
+        -:   11:}
+        -:   12:
+function medicament_create called 17 returned 100% blocks executed 100%
+       17:   13:Medicament* medicament_create(char* cod, char* nume, double concentratie, int cantitate){
+       17:   14:    Medicament* medicament = malloc(sizeof(Medicament));
+       17:   15:    if(cod==NULL) medicament->cod = NULL;
+       17:   15-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 16
+        1:   15-block  1
+        -:   16:    else {
+       16:   17:        medicament->cod = malloc(sizeof(char) * (strlen(cod) + 1));
+       16:   18:        strcpy(medicament->cod, cod);
+       16:   18-block  0
+        -:   19:    }
+       17:   20:    if(nume==NULL) medicament->nume = NULL;
+       17:   20-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 16
+        1:   20-block  1
+        -:   21:    else {
+       16:   22:        medicament->nume = malloc(sizeof(char) * (strlen(nume)+1));
+       16:   23:        strcpy(medicament->nume, nume);
+       16:   23-block  0
+        -:   24:    }
+       17:   25:    medicament->concentratie = concentratie;
+       17:   26:    medicament->cantitate = cantitate;
+       17:   27:    return medicament;
+       17:   27-block  0
+        -:   28:}
+        -:   29:
+function medicament_get_cod called 16 returned 100% blocks executed 100%
+       16:   30:char* medicament_get_cod(Medicament* medicament){
+       16:   31:    return medicament->cod;
+       16:   31-block  0
+        -:   32:}
+function medicament_get_nume called 30 returned 100% blocks executed 100%
+       30:   33:char* medicament_get_nume(Medicament* medicament){
+       30:   34:    return medicament->nume;
+       30:   34-block  0
+        -:   35:}
+function medicament_get_concentratie called 12 returned 100% blocks executed 100%
+       12:   36:double medicament_get_concentratie(Medicament* medicament){
+       12:   37:    return medicament->concentratie;
+       12:   37-block  0
+        -:   38:}
+function medicament_get_cantitate called 27 returned 100% blocks executed 100%
+       27:   39:int medicament_get_cantitate(Medicament* medicament){
+       27:   40:    return medicament->cantitate;
+       27:   40-block  0
+        -:   41:}
+        -:   42:
+function medicament_set_cod called 2 returned 100% blocks executed 67%
+        2:   43:void medicament_set_cod(Medicament* medicament, char* cod){
+       2*:   44:    if(medicament->cod) free(medicament->cod);
+        2:   44-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    %%%%%:   44-block  1
+        2:   45:    medicament->cod = malloc(sizeof(char)*(strlen(cod)+1));
+        2:   46:    strcpy(medicament->cod, cod);
+        2:   47:}
+function medicament_set_nume called 5 returned 100% blocks executed 100%
+        5:   48:void medicament_set_nume(Medicament* medicament, char* nume){
+        5:   49:    if(medicament->nume) free(medicament->nume);
+        5:   49-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 3
+        2:   49-block  1
+        5:   50:    medicament->nume = malloc(sizeof(char)*(strlen(nume)+1));
+        5:   51:    strcpy(medicament->nume, nume);
+        5:   52:}
+function medicament_set_concentratie called 3 returned 100% blocks executed 100%
+        3:   53:void medicament_set_concentratie(Medicament* medicament, double concentratie){
+        3:   54:    medicament->concentratie = concentratie;
+        3:   55:}
+function medicament_set_cantitate called 8 returned 100% blocks executed 100%
+        8:   56:void medicament_set_cantitate(Medicament* medicament, int cantitate){
+        8:   57:    medicament->cantitate = cantitate;
+        8:   58:}
+        -:   59:
+function medicament_eq called 22 returned 100% blocks executed 79%
+       22:   60:int medicament_eq(void* m1, void* m2){
+       22:   61:    Medicament* medicament1 = (Medicament*)m1;
+       22:   62:    Medicament* medicament2 = (Medicament*)m2;
+       22:   63:    if(medicament1->cod == NULL || medicament2->cod == NULL) return medicament1->cod == medicament2->cod;
+       22:   63-block  0
+branch  0 taken 19 (fallthrough)
+branch  1 taken 3
+       19:   63-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 18
+        4:   63-block  2
+       18:   64:    if(strcmp(medicament1->cod, medicament2->cod) !=0) return 0;
+       18:   64-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 14
+        4:   64-block  1
+        -:   65:
+      14*:   66:    if(medicament1->nume == NULL || medicament2->cod == NULL) return medicament1->nume == medicament2->nume;
+       14:   66-block  0
+branch  0 taken 14 (fallthrough)
+branch  1 taken 0
+       14:   66-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 14
+    %%%%%:   66-block  2
+      14*:   67:    if(strcmp(medicament1->nume, medicament2->nume) !=0) return 0;
+       14:   67-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 14
+    %%%%%:   67-block  1
+        -:   68:
+      14*:   69:    if(fabs(medicament1->concentratie-medicament2->concentratie)>=1e-6) return 0;
+       14:   69-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 14
+    %%%%%:   69-block  1
+       14:   70:    return 1;
+       14:   70-block  0
+        -:   71:}
+        -:   72:
+function medicament_sterge_stoc called 1 returned 100% blocks executed 100%
+        1:   73:void medicament_sterge_stoc(Medicament* medicament){
+        1:   74:    medicament->cantitate = 0;
+        1:   75:}
+        -:   76:
+function medicament_compare called 5 returned 100% blocks executed 86%
+        5:   77:int medicament_compare(void* medicament1, void* medicament2, int reversed){
+        5:   78:    Medicament* m1 = medicament1, *m2 = medicament2;
+        5:   79:    int cmpnume = strcmp(medicament_get_nume(m1), medicament_get_nume(m2));
+        5:   79-block  0
+call    0 returned 5
+call    1 returned 5
+        5:   80:    if(cmpnume<0) return -1*reversed;
+branch  0 taken 3 (fallthrough)
+branch  1 taken 2
+        3:   80-block  0
+       2*:   81:    if(cmpnume>0) return 1*reversed;
+        2:   81-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    %%%%%:   81-block  1
+        -:   82:    // altfel, numele sunt egale
+        2:   83:    int cmpcant = medicament_get_cantitate(m1) - medicament_get_cantitate(m2);
+        2:   83-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   84:    if(cmpcant<0) return -1*reversed;
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   84-block  0
+       1*:   85:    if(cmpcant>0) return 1*reversed;
+        1:   85-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   85-block  1
+        1:   86:    return EQUAL; // altfel, sunt egale
+        1:   86-block  0
+        -:   87:}
+        -:   88:
+function filtru_nume called 4 returned 100% blocks executed 100%
+        4:   89:int filtru_nume(void* medicament, void* filtru){
+        4:   90:    char c = medicament_get_nume(filtru)[0];
+        4:   90-block  0
+call    0 returned 4
+        4:   91:    return c == medicament_get_nume(medicament)[0];
+call    0 returned 4
+        -:   92:}
+        -:   93:
+function filtru_cantitate called 4 returned 100% blocks executed 100%
+        4:   94:int filtru_cantitate(void* medicament, void* filtru){
+        8:   95:    return medicament_get_cantitate(medicament)<
+        4:   95-block  0
+call    0 returned 4
+        4:   96:            medicament_get_cantitate(filtru);
+call    0 returned 4
+        -:   97:}
+        -:   98:
+function filtru_concentratie called 0 returned 0% blocks executed 0%
+    #####:   99:int filtru_concentratie(void* medicament, void* filtru){
+    #####:  100:    return medicament_get_concentratie(medicament) < medicament_get_concentratie(filtru);
+    %%%%%:  100-block  0
+call    0 never executed
+call    1 never executed
+        -:  101:}
+        -:  102:
+function medicament_delete called 23 returned 100% blocks executed 100%
+       23:  103:void medicament_delete(Medicament* medicament)
+        -:  104:{
+       23:  105:    if(medicament->cod != NULL) free(medicament->cod);
+       23:  105-block  0
+branch  0 taken 18 (fallthrough)
+branch  1 taken 5
+       18:  105-block  1
+       23:  106:    if(medicament->nume != NULL) free(medicament->nume);
+       23:  106-block  0
+branch  0 taken 19 (fallthrough)
+branch  1 taken 4
+       19:  106-block  1
+       23:  107:    free(medicament);
+       23:  108:    medicament=NULL;
+       23:  109:}
+        -:  110:
+function copiaza_medicament called 0 returned 0% blocks executed 0%
+    #####:  111:Medicament * copiaza_medicament(Medicament * medicament)
+        -:  112:{
+        -:  113:    //Functia creaza o copie a unui medicament trimis ca paramametru
+    #####:  114:    Medicament * copie_medicament = medicament_create((*medicament).cod, (*medicament).nume, (*medicament).concentratie, (*medicament).cantitate);
+    %%%%%:  114-block  0
+call    0 never executed
+    #####:  115:    return copie_medicament;
+        -:  116:}

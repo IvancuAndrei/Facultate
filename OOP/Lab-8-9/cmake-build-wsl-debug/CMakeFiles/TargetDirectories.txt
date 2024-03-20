@@ -1,0 +1,3 @@
+/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-wsl-debug/CMakeFiles/Lab_8_9.dir
+/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-wsl-debug/CMakeFiles/edit_cache.dir
+/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-wsl-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,33 @@
+
+           
+           |- n, m = n
+cmmdc(n) = |- cmmdc(n, m-n), n < m
+           |- cmmdc(n-m,m), n > m
+		
+
+pentru 12, 36
+	
+12 < 36 -> cmmdc(12, 24)
+
+12 < 24 -> cmmdc(12, 12)
+
+12 = 12 -> 12
+
+
+pentru 7, 5
+
+7 > 5 -> cmmdc(2, 5)
+
+2 < 5 -> cmmdc(2, 3)
+
+2 < 3 -> cmmdc(2, 1)
+
+2 > 1 -> cmmdc(1, 1)
+
+1 = 1 -> 1
+
+
+             | F, daca n = 0			
+exista(l, E)=|	
+             |
+

@@ -1,0 +1,61 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/Agentie.h
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/presentation.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/presentation.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:#include "Oferta.h"
+        -:    4:#include "OfertaRepo.h"
+        -:    5:#include <string>
+        -:    6:#include <vector>
+        -:    7:
+        -:    8:#include <functional>
+        -:    9:#include "validator.h"
+        -:   10:
+        -:   11:using std::vector;
+        -:   12:using std::function;
+        -:   13:
+        -:   14:class Agentie {
+        -:   15:    OfertaRepo& rep;
+        -:   16:    OfertaValidator& val;
+        -:   17:
+        -:   18:    vector<Oferta> generalSort(bool (*maiMicF)(const Oferta&, const Oferta&));
+        -:   19:
+        -:   20:    vector<Oferta> filtreaza(function<bool(const Oferta&)> const &fct);
+        -:   21:public:
+        -:   22:    Agentie(OfertaRepo& rep, OfertaValidator& val) :rep{ rep }, val{ val } {
+        -:   23:    }
+        -:   24:
+        -:   25:    Agentie(const Agentie& ot) = delete;
+        -:   26:
+function _ZN7Agentie6getAllEv called 3 returned 100% blocks executed 100%
+        3:   27:    const vector<Oferta>& getAll() noexcept {
+        3:   28:        return rep.getAll();
+        3:   28-block  0
+call    0 returned 3
+        -:   29:    }
+        -:   30:
+        -:   31:    void addOferta(const string& denumire, const string& destinatie, const string& tip, int price);
+        -:   32:
+        -:   33:    void popOferta(const string& denumire);
+        -:   34:
+        -:   35:    void modOferta(const string& denumire, const string& distanta, const string& tip, int pret);
+        -:   36:
+        -:   37:
+        -:   38:    vector<Oferta> sortByDenumire();
+        -:   39:
+        -:   40:
+        -:   41:    vector<Oferta> sortByDestinatie();
+        -:   42:
+        -:   43:
+        -:   44:
+        -:   45:    vector<Oferta> sortByTipPret();
+        -:   46:
+        -:   47:
+        -:   48:    vector<Oferta> filtrareDestinatie(const string& destinatie);
+        -:   49:
+        -:   50:
+        -:   51:    vector<Oferta> filtrarePret(int pretMax);
+        -:   52:
+        -:   53:};
+        -:   54:

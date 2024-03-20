@@ -1,0 +1,26 @@
+# ninja log v5
+26	277	7088735036372515	Lab_10_11_autogen/timestamp	31818ca1cdb795be
+257	1383	7087285244251861	CMakeFiles/Lab_10_11.dir/OfertaTeste.cpp.obj	8e66e524228bd9ac
+26	277	7088735036372515	Lab_10_11_autogen/mocs_compilation.cpp	31818ca1cdb795be
+26	277	7088735036372515	D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/Lab_10_11_autogen/timestamp	31818ca1cdb795be
+7360	8797	7088735114128579	Lab_10_11.exe	9f0e53cfbb1cf3
+26	277	7088735036372515	D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/Lab_10_11_autogen/mocs_compilation.cpp	31818ca1cdb795be
+208	325	7087285233951898	CMakeFiles/Lab_10_11.dir/Lab_10_11_autogen/mocs_compilation.cpp.obj	177ba3aff82dc46b
+315	3841	7088735072002543	CMakeFiles/Lab_10_11.dir/presentation.cpp.obj	50625fa35138b172
+299	6841	7088735102072770	CMakeFiles/Lab_10_11.dir/main.cpp.obj	1773c38eff334d7b
+237	1367	7087285244061894	CMakeFiles/Lab_10_11.dir/Oferta.cpp.obj	133559c1626be3e4
+211	1736	7087285247961879	CMakeFiles/Lab_10_11.dir/CosRepo.cpp.obj	83f9a923d981bf1c
+244	1838	7087285249051884	CMakeFiles/Lab_10_11.dir/RepoTeste.cpp.obj	6b119e68189ea520
+307	4163	7088735075252565	CMakeFiles/Lab_10_11.dir/CosService.cpp.obj	b09dbdf817ecfd58
+225	1786	7087285248461877	CMakeFiles/Lab_10_11.dir/OfertaRepo.cpp.obj	7b1308c9ba0712cc
+291	4096	7088735074572518	CMakeFiles/Lab_10_11.dir/Agentie.cpp.obj	9d7534c70d5fec00
+339	2451	7088735058012518	CMakeFiles/Lab_10_11.dir/TesteValidator.cpp.obj	eb493e742c101966
+331	3930	7088735072922537	CMakeFiles/Lab_10_11.dir/ServiceTeste.cpp.obj	c074377f81d39eae
+323	2329	7088735056592668	CMakeFiles/Lab_10_11.dir/validator.cpp.obj	418dd34b14f49b23
+355	7360	7088735107193388	CMakeFiles/Lab_10_11.dir/gui.cpp.obj	3271385473c65f
+7	792	7088767685407023	build.ninja	8147211da1002eca
+347	6797	7088735101592775	CMakeFiles/Lab_10_11.dir/guiCartCrud.cpp.obj	cb76250b21aa5571
+29	201	7088767774477514	Lab_10_11_autogen/timestamp	31818ca1cdb795be
+29	201	7088767774477514	Lab_10_11_autogen/mocs_compilation.cpp	31818ca1cdb795be
+29	201	7088767774477514	D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/Lab_10_11_autogen/timestamp	31818ca1cdb795be
+29	201	7088767774477514	D:/OOP_laboratoare/Lab 10-11/cmake-build-debug/Lab_10_11_autogen/mocs_compilation.cpp	31818ca1cdb795be

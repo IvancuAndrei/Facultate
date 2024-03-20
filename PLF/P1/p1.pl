@@ -1,0 +1,52 @@
+% a
+%                                             - list, n = 0
+% Model recursiv: inserare(l1...ln, list) =  |
+%                                             -
+%                                             l1+inserare(l2...ln,list), altfel
+%
+%
+% inserare(L:list, List:list, R:list)
+% inserare(i, i, o)
+
+inserare([], L, L).
+inserare([H|T], L, [H|R]):- inserare(T, L, R).
+
+% Model recursiv:
+%                                    - [], n = 0
+% inlocuire_elem(l1...ln, e, list) = - inlocuire_elem(inserare(list, l2...ln), e, list), l1 = e
+%                                    - l1 + inlocuire_elem(l2...ln, e,list), l1!= e
+%
+% inlocuire_elem(L:list, E:number,List:list, R:list)
+% inlocuire_elem(i, i, i, o)
+
+inlocuire_elem([], _, _, []).
+inlocuire_elem([H|T], E, List, R) :- H =:= E,
+    inlocuire_elem(T, E, List, RI),
+    inserare(List, RI, R).
+inlocuire_elem([H|T], E, List, [H|R]) :- H =\= E,
+    inlocuire_elem(T, E, List, R).
+
+
+
+
+% b
+%                                        - [], n = 0
+% Model recursiv: sterge_n(l1...ln, k) = - l2...ln, k = 1
+%                                        - l1 + sterge_n(l2...ln, k -1), altfel
+%
+%
+%
+%
+% sterge_n(L:list, K:number, R:list)
+% sterge_n(i, i, o)
+
+sterge_n([], _, []):-!.
+sterge_n([_|T], 1, T).
+sterge_n([H|T], K, [H|R]) :-
+    K1 is K - 1,
+    sterge_n(T, K1, R).
+
+
+
+
+

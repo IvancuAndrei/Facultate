@@ -1,0 +1,595 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/presentation.cpp
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/presentation.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/presentation.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "presentation.h"
+        -:    2:
+        -:    3:#include "Oferta.h"
+        -:    4:#include <iostream>
+        -:    5:#include <string>
+        -:    6:
+        -:    7:using std::cout;
+        -:    8:using std::cin;
+        -:    9:
+function _ZN9ConsoleUI9tiparesteERKSt6vectorI6OfertaSaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:   10:void ConsoleUI::tipareste(const vector<Oferta>& oferte) {
+    #####:   11:    cout << "Oferte:\n";
+    %%%%%:   11-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   12:    vector <Oferta> l = oferte;
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   13:    for (const auto& o: l) {
+    %%%%%:   13-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   13-block  1
+call    2 never executed
+    %%%%%:   13-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   14:        cout << ' ' << o.getDenumire() << ' ' << o.getDestinatie() << ' ' << o.getTip() << ' ' << o.getPret() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   14-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   14-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   14-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   14-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   14-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   14-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   14-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   14-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   14-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   14-block  9
+call   30 never executed
+call   31 never executed
+branch 32 never executed
+branch 33 never executed
+    %%%%%:   14-block 10
+call   34 never executed
+branch 35 never executed
+branch 36 never executed
+    %%%%%:   14-block 11
+call   37 never executed
+call   38 never executed
+call   39 never executed
+call   40 never executed
+    $$$$$:   14-block 12
+call   41 never executed
+    $$$$$:   14-block 13
+    $$$$$:   14-block 14
+call   42 never executed
+    $$$$$:   14-block 15
+    $$$$$:   14-block 16
+call   43 never executed
+    $$$$$:   14-block 17
+        -:   15:    }
+    #####:   16:}
+    %%%%%:   16-block  0
+call    0 never executed
+    $$$$$:   16-block  1
+call    1 never executed
+        -:   17:
+        -:   18:
+function _ZN9ConsoleUI8adaugaUIEv called 0 returned 0% blocks executed 0%
+    #####:   19:void ConsoleUI::adaugaUI() {
+    #####:   20:    string dr, d, t;
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   21:    int pret;
+    #####:   22:    cout << "Dati denumire:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:    cin >> dr;
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:    cout << "Dati destinatie:";
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   25:    cin >> d;
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   26:    cout << "Dati tip:";
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   27:    cin >> t;
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   28:    cout << "Dati pret:";
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   29:    cin >> pret;
+    %%%%%:   29-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   30:    ctr.addOferta(dr, d, t, pret);
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   31:    cout << "Adaugat cu succes\n";
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:}
+    %%%%%:   32-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   32-block  1
+call    3 never executed
+    $$$$$:   32-block  2
+call    4 never executed
+    $$$$$:   32-block  3
+call    5 never executed
+        -:   33:
+function _ZN9ConsoleUI8stergeUIEv called 0 returned 0% blocks executed 0%
+    #####:   34:void ConsoleUI::stergeUI(){
+    #####:   35:    string denumire;
+    %%%%%:   35-block  0
+call    0 never executed
+    #####:   36:    cout<<"Dati denumirea:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   37:    cin>>denumire;
+    %%%%%:   37-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   38:    ctr.popOferta(denumire);
+    %%%%%:   38-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   39:    cout<<"Sters cu succes\n";
+    %%%%%:   39-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   40:
+    #####:   41:}
+    %%%%%:   41-block  0
+call    0 never executed
+    $$$$$:   41-block  1
+call    1 never executed
+        -:   42:
+function _ZN9ConsoleUI10modificaUIEv called 0 returned 0% blocks executed 0%
+    #####:   43:void ConsoleUI::modificaUI() {
+    #####:   44:    string dr, d, t;
+    %%%%%:   44-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   45:    int p;
+    #####:   46:    cout <<"Dati denumirea: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   47:    cin >> dr;
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   48:    cout << "Dati destinatie:";
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   49:    cin >> d;
+    %%%%%:   49-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   50:    cout << "Dati tip:";
+    %%%%%:   50-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   51:    cin >> t;
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   52:    cout << "Dati pret:";
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   53:    cin >> p;
+    %%%%%:   53-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   54:    ctr.modOferta(dr, d, t, p);
+    %%%%%:   54-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   55:    cout << "Modificat cu succes\n";
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   56:}
+    %%%%%:   56-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   56-block  1
+call    3 never executed
+    $$$$$:   56-block  2
+call    4 never executed
+    $$$$$:   56-block  3
+call    5 never executed
+        -:   57:
+function _ZN9ConsoleUI16sortByDenumireUIEv called 0 returned 0% blocks executed 0%
+    #####:   58:void ConsoleUI::sortByDenumireUI() {
+    #####:   59:    tipareste(ctr.sortByDenumire());
+    %%%%%:   59-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   59-block  1
+call    4 never executed
+    $$$$$:   59-block  2
+call    5 never executed
+        -:   60:
+    #####:   61:}
+        -:   62:
+function _ZN9ConsoleUI18sortByDestinatieUIEv called 0 returned 0% blocks executed 0%
+    #####:   63:void ConsoleUI::sortByDestinatieUI() {
+    #####:   64:    tipareste(ctr.sortByDestinatie());
+    %%%%%:   64-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   64-block  1
+call    4 never executed
+    $$$$$:   64-block  2
+call    5 never executed
+    #####:   65:}
+        -:   66:
+function _ZN9ConsoleUI15sortByTipPretUIEv called 0 returned 0% blocks executed 0%
+    #####:   67:void ConsoleUI::sortByTipPretUI() {
+    #####:   68:    tipareste(ctr.sortByTipPret());
+    %%%%%:   68-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   68-block  1
+call    4 never executed
+    $$$$$:   68-block  2
+call    5 never executed
+    #####:   69:}
+        -:   70:
+function _ZN9ConsoleUI20filtrareDestinatieUIEv called 0 returned 0% blocks executed 0%
+    #####:   71:void ConsoleUI::filtrareDestinatieUI() {
+    #####:   72:    string d;
+    %%%%%:   72-block  0
+call    0 never executed
+    #####:   73:    cout << "Dati destinatie:";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   74:    cin >> d;
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   75:    tipareste(ctr.filtrareDestinatie(d));
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   75-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   75-block  2
+call    6 never executed
+    $$$$$:   75-block  3
+call    7 never executed
+    $$$$$:   75-block  4
+    #####:   76:}
+call    0 never executed
+    $$$$$:   76-block  0
+call    1 never executed
+        -:   77:
+function _ZN9ConsoleUI14filtrarePretUIEv called 0 returned 0% blocks executed 0%
+    #####:   78:void ConsoleUI::filtrarePretUI() {
+        -:   79:    int p;
+    #####:   80:    cout << "Dati pretul:";
+    %%%%%:   80-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   81:    cin >> p;
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   82:    tipareste(ctr.filtrarePret(p));
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   82-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   82-block  2
+call    6 never executed
+    $$$$$:   82-block  3
+call    7 never executed
+    $$$$$:   82-block  4
+    #####:   83:}
+        -:   84:
+function _ZN9ConsoleUI5spaceEv called 0 returned 0% blocks executed 0%
+    #####:   85:void ConsoleUI::space() {
+    #####:   86:    cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    %%%%%:   86-block  0
+call    0 never executed
+    #####:   87:}
+        -:   88:
+function _ZN9ConsoleUI5startEv called 0 returned 0% blocks executed 0%
+    #####:   89:void ConsoleUI::start() {
+        -:   90:    while (true) {
+    #####:   91:        cout << "Meniu:\n";
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   92:        cout << "1 Adauga oferta\n2 Sterge oferta\n3 Modifica oferta\n4 Tipareste oferte\n5 Sorteaza dupa denumire ofertele\n"
+        -:   93:                "6 Sorteaza dupa destinatie ofertele\n7 Sorteaza dupa tip si pret ofertele\n"
+    #####:   94:                "8 Filtreaza dupa destinatie ofertele\n9 Filtreaza dupa pret ofertele\n0 Iesire\nDati comanda:";
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   95:        int cmd;
+    #####:   96:        cin >> cmd;
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   97:        try {
+    #####:   98:            switch (cmd) {
+    %%%%%:   98-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+branch  8 never executed
+branch  9 never executed
+branch 10 never executed
+    #####:   99:                case 1:
+    #####:  100:                    space();
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  101:                    adaugaUI();
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  102:                    break;
+    %%%%%:  102-block  0
+    #####:  103:                case 2:
+    #####:  104:                    space();
+    %%%%%:  104-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  105:                    stergeUI();
+    %%%%%:  105-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  106:                    break;
+    %%%%%:  106-block  0
+    #####:  107:                case 3:
+    #####:  108:                    space();
+    %%%%%:  108-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  109:                    modificaUI();
+    %%%%%:  109-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  110:                    break;
+    %%%%%:  110-block  0
+    #####:  111:                case 4:
+    #####:  112:                    space();
+    %%%%%:  112-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  113:                    tipareste(ctr.getAll());
+    %%%%%:  113-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  114:                    break;
+    %%%%%:  114-block  0
+    #####:  115:                case 5:
+    #####:  116:                    space();
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  117:                    sortByDenumireUI();
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  118:                    break;
+    %%%%%:  118-block  0
+    #####:  119:                case 6:
+    #####:  120:                    space();
+    %%%%%:  120-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  121:                    sortByDestinatieUI();
+    %%%%%:  121-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  122:                    break;
+    %%%%%:  122-block  0
+    #####:  123:                case 7:
+    #####:  124:                    space();
+    %%%%%:  124-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  125:                    sortByTipPretUI();
+    %%%%%:  125-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  126:                    break;
+    %%%%%:  126-block  0
+    #####:  127:                case 8:
+    #####:  128:                    space();
+    %%%%%:  128-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  129:                    filtrareDestinatieUI();
+    %%%%%:  129-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  130:                    break;
+    %%%%%:  130-block  0
+    #####:  131:                case 9:
+    #####:  132:                    space();
+    %%%%%:  132-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  133:                    filtrarePretUI();
+    %%%%%:  133-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  134:                    break;
+    %%%%%:  134-block  0
+    #####:  135:                case 0:
+    #####:  136:                    return;
+    %%%%%:  136-block  0
+    %%%%%:  136-block  1
+    #####:  137:                default:
+    #####:  138:                    cout << "Comanda invalida\n";
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  139:            }
+        -:  140:        }
+    =====:  141:        catch (const OfertaRepoException& ex) {
+    $$$$$:  141-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  141-block  1
+call    3 never executed
+    =====:  142:            cout << ex <<'\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  142-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  143:        }
+    $$$$$:  143-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  143-block  1
+call    3 never executed
+    =====:  144:        catch (const ValidateException& ex) {
+    $$$$$:  144-block  0
+call    0 never executed
+    =====:  145:            cout << ex << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  145-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  146:        }
+    $$$$$:  146-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  146-block  1
+call    3 never executed
+    #####:  147:    }
+    %%%%%:  147-block  0
+        -:  148:}

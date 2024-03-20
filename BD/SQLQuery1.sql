@@ -1,0 +1,71 @@
+USE [Jocuri Video]
+
+CREATE TABLE Firme
+(
+ id_firma INT PRIMARY KEY IDENTITY,
+ nume VARCHAR(50),
+ adresa VARCHAR(50)
+);
+
+
+CREATE TABLE Angajati
+(
+ id_angajat INT PRIMARY KEY IDENTITY,
+ nume VARCHAR(20),
+ prenume VARCHAR(20),
+ salariu INT,
+ id_firma INT FOREIGN KEY REFERENCES Firme(id_firma) ON UPDATE CASCADE ON DELETE CASCADE
+ );
+
+CREATE TABLE Echipe
+(
+id_echipa INT PRIMARY KEY IDENTITY,
+nr_persoane INT
+);
+
+CREATE TABLE Jocuri_Video
+(
+id_joc INT PRIMARY KEY IDENTITY,
+nume VARCHAR(30),
+id_firma INT FOREIGN KEY REFERENCES Firme(id_firma) ON UPDATE CASCADE ON DELETE CASCADE,
+platforma VARCHAR(30),
+gen VARCHAR(30),
+pret INT
+);
+
+CREATE TABLE Angajat_Echipa
+(
+id_angajat INT FOREIGN KEY REFERENCES Angajati(id_angajat) ON UPDATE CASCADE ON DELETE CASCADE,
+id_echipa INT FOREIGN KEY REFERENCES Echipe(id_echipa) ON UPDATE CASCADE ON DELETE CASCADE,
+PRIMARY KEY(id_angajat, id_echipa)
+);
+
+CREATE TABLE Echipa_Joc
+(
+id_joc INT FOREIGN KEY REFERENCES Jocuri_Video(id_joc) ON UPDATE CASCADE ON DELETE CASCADE ,
+id_echipa INT FOREIGN KEY REFERENCES Echipe(id_echipa) ON UPDATE CASCADE ON DELETE CASCADE,
+PRIMARY KEY(id_joc, id_echipa)
+);
+
+CREATE TABLE Cumparatori
+(
+id_cumparator INT PRIMARY KEY IDENTITY,
+nume VARCHAR(30),
+prenume VARCHAR(30)
+);
+
+CREATE TABLE Joc__cumparator
+(
+id_joc INT FOREIGN KEY REFERENCES Jocuri_Video(id_joc) ON UPDATE CASCADE ON DELETE CASCADE ,
+id_cumparator INT FOREIGN KEY REFERENCES Cumparatori(id_cumparator) ON UPDATE CASCADE ON DELETE CASCADE,
+PRIMARY KEY(id_joc, id_cumparator)
+);
+
+CREATE TABLE Reviews
+(
+id_review INT PRIMARY KEY IDENTITY,
+id_joc INT FOREIGN KEY REFERENCES Jocuri_Video(id_joc) ON UPDATE CASCADE ON DELETE CASCADE,
+id_cumparator INT FOREIGN KEY REFERENCES Cumparatori(id_cumparator) ON UPDATE CASCADE ON DELETE CASCADE,
+numar_stele INT
+);
+

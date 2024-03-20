@@ -1,0 +1,3 @@
+/mnt/d/AlgoritmicaGrafurilor_proiecte/Lab_1/cmake-build-debug/CMakeFiles/Lab_1.dir
+/mnt/d/AlgoritmicaGrafurilor_proiecte/Lab_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/AlgoritmicaGrafurilor_proiecte/Lab_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,31 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/validator.h
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/validator.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/validator.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:#include "Oferta.h"
+        -:    4:#include <vector>
+        -:    5:
+        -:    6:using std::vector;
+        -:    7:using std::string;
+        -:    8:using std::ostream;
+        -:    9:
+        -:   10:class ValidateException {
+        -:   11:    vector<string> msgs;
+        -:   12:public:
+function _ZN17ValidateExceptionC2ERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EE called 1 returned 100% blocks executed 100%
+        1:   13:    ValidateException(const vector<string>& errors) :msgs{ errors } {}
+        1:   13-block  0
+call    0 returned 1
+        -:   14:    //functie friend (vreau sa folosesc membru privat msg)
+        -:   15:    friend ostream& operator<<(ostream& out, const ValidateException& ex);
+        -:   16:};
+        -:   17:
+        -:   18:ostream& operator<<(ostream& out, const ValidateException& ex);
+        -:   19:
+        -:   20:class OfertaValidator {
+        -:   21:public:
+        -:   22:    void validateOferta(const Oferta& o);
+        -:   23:};
+        -:   24:

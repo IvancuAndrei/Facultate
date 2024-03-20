@@ -1,0 +1,228 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/main.cpp
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "presentation.h"
+        -:    2:#include "Agentie.h"
+        -:    3:#include "OfertaRepo.h"
+        -:    4:#include "validator.h"
+        -:    5:#include "OfertaTeste.h"
+        -:    6:#include "RepoTeste.h"
+        -:    7:#include "ServiceTeste.h"
+        -:    8:#include "TesteValidator.h"
+        -:    9:
+        -:   10:
+function _Z12adaugaCatevaR7Agentie called 0 returned 0% blocks executed 0%
+    #####:   11:void adaugaCateva(Agentie& ctr) {
+    #####:   12:    ctr.addOferta("a", "zz","qqq", 10);
+    %%%%%:   12-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   12-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   12-block  2
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   12-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   12-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:   12-block  5
+call   21 never executed
+    $$$$$:   12-block  6
+    $$$$$:   12-block  7
+call   22 never executed
+    $$$$$:   12-block  8
+    $$$$$:   12-block  9
+call   23 never executed
+    $$$$$:   12-block 10
+    $$$$$:   12-block 11
+call   24 never executed
+    $$$$$:   12-block 12
+    $$$$$:   12-block 13
+call   25 never executed
+    $$$$$:   12-block 14
+    $$$$$:   12-block 15
+call   26 never executed
+    $$$$$:   12-block 16
+call   27 never executed
+    #####:   13:    ctr.addOferta("b", "aa","eee", 100);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   13-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   13-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   13-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   13-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:   13-block  4
+call   21 never executed
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+call   22 never executed
+    $$$$$:   13-block  7
+    $$$$$:   13-block  8
+call   23 never executed
+    $$$$$:   13-block  9
+    $$$$$:   13-block 10
+call   24 never executed
+    $$$$$:   13-block 11
+    $$$$$:   13-block 12
+call   25 never executed
+    $$$$$:   13-block 13
+    $$$$$:   13-block 14
+call   26 never executed
+    $$$$$:   13-block 15
+call   27 never executed
+    #####:   14:    ctr.addOferta("z", "cc","ttt", 50);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   14-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   14-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   14-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   14-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:   14-block  4
+call   21 never executed
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+call   22 never executed
+    $$$$$:   14-block  7
+    $$$$$:   14-block  8
+call   23 never executed
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+call   24 never executed
+    $$$$$:   14-block 11
+    $$$$$:   14-block 12
+call   25 never executed
+    $$$$$:   14-block 13
+    $$$$$:   14-block 14
+call   26 never executed
+    $$$$$:   14-block 15
+call   27 never executed
+    #####:   15:    ctr.addOferta("c", "bb","vvv", 70);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   15-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   15-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   15-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   15-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+    $$$$$:   15-block  4
+call   21 never executed
+    $$$$$:   15-block  5
+    $$$$$:   15-block  6
+call   22 never executed
+    $$$$$:   15-block  7
+    $$$$$:   15-block  8
+call   23 never executed
+    $$$$$:   15-block  9
+    $$$$$:   15-block 10
+call   24 never executed
+    $$$$$:   15-block 11
+    $$$$$:   15-block 12
+call   25 never executed
+    $$$$$:   15-block 13
+    $$$$$:   15-block 14
+call   26 never executed
+    #####:   16:}
+        -:   17:
+        -:   18:
+        -:   19:
+function _Z7testAllv called 1 returned 100% blocks executed 100%
+        1:   20:void testAll() {
+        1:   21:    testOferta();
+        1:   21-block  0
+call    0 returned 1
+        1:   22:    testAllRepo();
+call    0 returned 1
+        1:   23:    testAllService();
+call    0 returned 1
+        1:   24:    testValidator();
+call    0 returned 1
+        1:   25:}
+        -:   26:
+        -:   27:
+        -:   28:
+function main called 1 returned 100% blocks executed 100%
+        1:   29:int main() {
+        1:   30:    testAll();
+        1:   30-block  0
+call    0 returned 1
+        -:   31:/*
+        -:   32:    OfertaRepo rep;
+        -:   33:    OfertaValidator val;
+        -:   34:    Agentie ctr{ rep,val };
+        -:   35:    adaugaCateva(ctr);
+        -:   36:    ConsoleUI ui{ ctr };
+        -:   37:    ui.start();
+        -:   38:*/
+        1:   39:}

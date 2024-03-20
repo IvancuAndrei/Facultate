@@ -1,0 +1,258 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab_2-4/ui.c
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/ui.c.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab_2-4/cmake-build-debug-coverage/CMakeFiles/Lab_2_4.dir/ui.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <string.h>
+        -:    3:#include "ofertaRepo.h"
+        -:    4:#include "ofertaService.h"
+        -:    5:#include <stdlib.h>
+        -:    6:#include "listaOferte.h"
+        -:    7:
+function printMeniu called 0 returned 0% blocks executed 0%
+    #####:    8:void printMeniu() {
+    #####:    9:    printf("* Adaugarea de noi oferte				      - add, [id], [tip], [destinatie], [data_plecarii], [pret]\n");
+    %%%%%:    9-block  0
+call    0 never executed
+    #####:   10:    printf("* Stergere oferte				 	      - pop, [id]\n");
+call    0 never executed
+    #####:   11:    printf("* Modificare oferta					      - mod, [id], [tip], [destinatie], [data_plecarii], [pret]\n");
+call    0 never executed
+    #####:   12:    printf("* Vizualizare oferete ordonat dupa pret, tip    - srt\n");
+call    0 never executed
+    #####:   13:    printf("* Vizualizare oferta filtrate dupa un criteriu		      - fil, [criteriu], [argument]\n");
+call    0 never executed
+    #####:   14:    printf("* Vizualizare oferte                            - print\n");
+call    0 never executed
+    #####:   15:    printf("* Iesire                                        -  exit\n\n");
+call    0 never executed
+    #####:   16:}
+        -:   17:
+function clearScreen called 0 returned 0% blocks executed 0%
+    #####:   18:void clearScreen() {
+    #####:   19:    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    %%%%%:   19-block  0
+call    0 never executed
+    #####:   20:}
+        -:   21:
+function printareOferte called 0 returned 0% blocks executed 0%
+    #####:   22:void printareOferte(listaOferte *o) {
+    #####:   23:    for (int i = 0; i < o->size; i++) {
+    %%%%%:   23-block  0
+    %%%%%:   23-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   24:        printf("id: %d, tip: %s, destinatie: %s, data plecarii: %s, pret: %d\n",
+    #####:   25:               o->lista[i]->id, o->lista[i]->tip, o->lista[i]->destinatie, o->lista[i]->data_plecare, o->lista[i]->pret);
+    %%%%%:   25-block  0
+call    0 never executed
+    #####:   26:        printf("\n");
+call    0 never executed
+        -:   27:    }
+    #####:   28:}
+        -:   29:
+function run called 0 returned 0% blocks executed 0%
+    #####:   30:void run(listaOferte *o) {
+        -:   31:    int id, pret;
+        -:   32:    char tip[25], destinatie[25], data_plecarii[25], criteriu[25], argument[25];
+        -:   33:
+    #####:   34:    while (1) {
+    %%%%%:   34-block  0
+    #####:   35:        printMeniu();
+    %%%%%:   35-block  0
+call    0 never executed
+        -:   36:        char comanda[200];
+    #####:   37:        fgets(comanda, sizeof(comanda), stdin);
+call    0 never executed
+    #####:   38:        comanda[strcspn(comanda, "\n")] = '\0';
+    #####:   39:        clearScreen();
+call    0 never executed
+        -:   40:
+    #####:   41:        if (strcmp(comanda, "") == 0)
+branch  0 never executed
+branch  1 never executed
+    #####:   42:            continue;
+    %%%%%:   42-block  0
+    %%%%%:   42-block  1
+    #####:   43:        else if (strcmp(comanda, "exit") == 0) {
+    %%%%%:   43-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   44:            deleteLista(o);
+    %%%%%:   44-block  0
+call    0 never executed
+    #####:   45:            return;
+        -:   46:        }
+        -:   47:
+        -:   48:        char parti[100][100];
+    #####:   49:        char *token = strtok(comanda, ", ");
+    %%%%%:   49-block  0
+call    0 never executed
+    #####:   50:        int i = 0;
+    #####:   51:        while (token != NULL) {
+    %%%%%:   51-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   52:            strcpy(parti[i++], token);
+    #####:   53:            token = strtok(NULL, ", ");
+    %%%%%:   53-block  0
+call    0 never executed
+        -:   54:        }
+    #####:   55:        char *nume_comanda = parti[0];
+    #####:   56:        int num_params = i - 1;
+        -:   57:
+    #####:   58:        if (strcmp(nume_comanda, "add") == 0) {
+    %%%%%:   58-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   59:            if (num_params != 5) {
+    %%%%%:   59-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   60:                printf("Numar parametrii invalid!\n");
+    %%%%%:   60-block  0
+call    0 never executed
+    #####:   61:                continue;
+        -:   62:            }
+        -:   63:
+    #####:   64:            id = atoi(parti[1]);
+    #####:   65:            strcpy(tip, parti[2]);
+    #####:   66:            strcpy(destinatie, parti[3]);
+    #####:   67:            strcpy(data_plecarii, parti[4]);
+    #####:   68:            pret = atoi(parti[5]);
+    #####:   69:            if(adauga_oferta_service(o, id, tip, destinatie, data_plecarii, pret) == -1){
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   70:                printf("Oferta existenta!\n");
+    %%%%%:   70-block  0
+call    0 never executed
+    #####:   71:                continue;
+        -:   72:            }
+        -:   73:
+        -:   74:
+        -:   75:
+        -:   76:        }
+    #####:   77:        else if (strcmp(nume_comanda, "pop") == 0) {
+    %%%%%:   77-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   78:            if (num_params != 1) {
+    %%%%%:   78-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   79:                printf("Numar parametrii invalid!\n");
+    %%%%%:   79-block  0
+call    0 never executed
+    #####:   80:                continue;
+        -:   81:            }
+    #####:   82:            id = atoi(parti[1]);
+    #####:   83:            if(sterge_oferta_service(o, id) == -1){
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:                printf("Oferta nu exista!\n");
+    %%%%%:   84-block  0
+call    0 never executed
+    #####:   85:                continue;
+        -:   86:            }
+        -:   87:        }
+    #####:   88:        else if (strcmp(nume_comanda, "mod") == 0) {
+    %%%%%:   88-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   89:            if (num_params != 5) {
+    %%%%%:   89-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   90:                printf("Numar parametrii invalid!\n");
+    %%%%%:   90-block  0
+call    0 never executed
+    #####:   91:                continue;
+        -:   92:            }
+    #####:   93:            id = atoi(parti[1]);
+    #####:   94:            strcpy(tip, parti[2]);
+    #####:   95:            strcpy(destinatie, parti[3]);
+    #####:   96:            strcpy(data_plecarii, parti[4]);
+    #####:   97:            pret = atoi(parti[5]);
+    #####:   98:            if(modifica_oferta_service(o, id, tip, destinatie, data_plecarii, pret)==-1){
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   99:                printf("Oferta nu exista!\n");
+    %%%%%:   99-block  0
+call    0 never executed
+    #####:  100:                continue;
+        -:  101:            }
+        -:  102:        }
+    #####:  103:        else if (strcmp(nume_comanda, "fil") == 0) {
+    %%%%%:  103-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  104:            if (num_params != 2) {
+    %%%%%:  104-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  105:                printf("Numar parametrii invalid!\n");
+    %%%%%:  105-block  0
+call    0 never executed
+    #####:  106:                continue;
+        -:  107:            }
+    #####:  108:            strcpy(criteriu, parti[1]);
+    #####:  109:            strcpy(argument, parti[2]);
+    #####:  110:            listaOferte* o_filtrat = createOList();
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:            filtrareDupaCriteriu(o, o_filtrat, criteriu, argument);
+call    0 never executed
+    #####:  112:            printareOferte(o_filtrat);
+call    0 never executed
+    #####:  113:            free(o_filtrat->lista);
+    #####:  114:            free(o_filtrat);
+        -:  115:        }
+    #####:  116:        else if(strcmp(nume_comanda, "srt") == 0){
+    %%%%%:  116-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  117:            if (num_params != 0) {
+    %%%%%:  117-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  118:                printf("Numar parametrii invalid!\n");
+    %%%%%:  118-block  0
+call    0 never executed
+    #####:  119:                continue;
+        -:  120:            }
+    #####:  121:            listaOferte* o_ordonat = createOList();
+    %%%%%:  121-block  0
+call    0 never executed
+    #####:  122:            sortareDupaPretsiDestinatie(o, o_ordonat);
+call    0 never executed
+    #####:  123:            printareOferte(o_ordonat);
+call    0 never executed
+    #####:  124:            free(o_ordonat->lista);
+    #####:  125:            free(o_ordonat);
+        -:  126:        }
+    #####:  127:        else if(strcmp(nume_comanda, "print") == 0) {
+    %%%%%:  127-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  128:            if (num_params != 0) {
+    %%%%%:  128-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  129:                printf("Numar parametrii invalid!\n");
+    %%%%%:  129-block  0
+call    0 never executed
+    #####:  130:                continue;
+        -:  131:            }
+    #####:  132:            printareOferte(o);
+    %%%%%:  132-block  0
+call    0 never executed
+        -:  133:        }
+        -:  134:
+        -:  135:    }
+        -:  136:}

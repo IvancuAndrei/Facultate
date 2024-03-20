@@ -1,0 +1,50 @@
+        -:    0:Source:/mnt/d/OOP_laboratoare/Lab-8-9/OfertaRepo.h
+        -:    0:Graph:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/RepoTeste.cpp.gcno
+        -:    0:Data:/mnt/d/OOP_laboratoare/Lab-8-9/cmake-build-debug-coverage/CMakeFiles/Lab_8_9.dir/RepoTeste.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "Oferta.h"
+        -:    3:#include <vector>
+        -:    4:#include <string>
+        -:    5:#include <ostream>
+        -:    6:
+        -:    7:using std::vector;
+        -:    8:using std::string;
+        -:    9:using std::ostream;
+        -:   10:using std::exception;
+        -:   11:
+        -:   12:class OfertaRepo {
+        -:   13:    vector<Oferta> all;
+        -:   14:
+        -:   15:
+        -:   16:    bool exist(const Oferta& o) const;
+        -:   17:public:
+function _ZN10OfertaRepoC2Ev called 8 returned 100% blocks executed 100%
+        8:   18:    OfertaRepo() = default;
+        8:   18-block  0
+call    0 returned 8
+        -:   19:
+        -:   20:    OfertaRepo(const OfertaRepo& ot) = delete;
+        -:   21:
+        -:   22:    void addOferta(const Oferta& o);
+        -:   23:
+        -:   24:    void popOferta(const string& denumire);
+        -:   25:
+        -:   26:    void modOferta(const string& denumire, const Oferta& OfertaNoua);
+        -:   27:
+        -:   28:    const Oferta& find(const string& denumire) const;
+        -:   29:
+        -:   30:    const vector<Oferta>& getAll() const noexcept;
+        -:   31:
+        -:   32:};
+        -:   33:
+        -:   34:class OfertaRepoException {
+        -:   35:    string msg;
+        -:   36:public:
+        -:   37:    OfertaRepoException(string m) :msg{ m } {}
+        -:   38:
+        -:   39:    friend ostream& operator<<(ostream& out, const OfertaRepoException& ex);
+        -:   40:};
+        -:   41:
+        -:   42:ostream& operator<<(ostream& out, const OfertaRepoException& ex);
+        -:   43:

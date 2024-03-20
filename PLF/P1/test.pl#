@@ -1,0 +1,37 @@
+%inserare = L, daca L2 este vida
+%           l1 + inserare(L, l2...ln) altfel
+%
+%inserare(L: list, L2: list, Rez: List)
+%inserare: (i,i,o), (i,i,i), (o,i,i), (i,o,i)
+
+inserare(L,[],L ).
+inserare(L, [H|T], [H|Rez]):-
+    inserare(L, T, Rez).
+
+
+%inserare_lista ( L: list, L2: list, Rez: list)
+%inserare_lista (i,i,o), (i,i,i), (o,
+
+
+inserare_lista(L, L2, Rez):-
+    inserare(L2, L, Rez).
+
+
+%adauga_lista = vida, daca L este vida
+%               L2 + adauga_lista(E, l2...ln, L2)
+%                                       daca l1 == E
+%               l1+ adauga_lista(E, l2...ln, L2) daca l1 != E
+%               
+%adauga_lista(E : element, L: list, L2: list, Rez: list)
+%adauga_lista(i,i,i,o)
+%
+adauga_lista(_, [], _, []).
+adauga_lista(E, [H|T], L2 , Rez):-
+    H =:= E,
+    inserare_lista(L2, RezN, Rez),
+    adauga_lista(E, T, L2, RezN).
+adauga_lista(E, [H|T], L2 , [H|Rez]):-
+             H =\= E,
+             adauga_lista(E, T, L2, Rez).
+
+
