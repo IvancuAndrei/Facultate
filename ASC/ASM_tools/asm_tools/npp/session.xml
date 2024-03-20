@@ -1,9 +1,0 @@
-<NotepadPlus>
-    <Session activeView="0">
-        <mainView activeIndex="1">
-            <File firstVisibleLine="42" xOffset="0" scrollWidth="1836" startPos="950" endPos="950" selMode="0" lang="Assembly" encoding="-1" filename="C:\Users\x\AppData\Local\Temp\7zOCF4BC710\problema_20.asm" backupFilePath="" originalFileLastModifTimestamp="1675875897" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="384" startPos="0" endPos="0" selMode="0" lang="Assembly" encoding="-1" filename="C:\Users\x\AppData\Local\Temp\7zOCF417160\problema_20_modul.asm" backupFilePath="" originalFileLastModifTimestamp="1675875902" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
-        </mainView>
-        <subView activeIndex="0" />
-    </Session>
-</NotepadPlus>
