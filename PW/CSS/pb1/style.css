@@ -1,0 +1,27 @@
+#parinte{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border:2px solid black;
+    align-items: center;
+}
+
+#d1{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    align-items: center;
+}
+
+#d2{
+    display: flex;
+    width: 200px;
+    height: auto;
+    align-items: center;
+}
+
+#imagine{
+    max-width: 200px;
+    height: 300px;
+    display: block;
+}

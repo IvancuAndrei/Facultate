@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: red;
+    height: 100px;
+  }
+  
+  menu {
+    background-color: yellow;
+    list-style-type: none;
+    height:25px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  div {
+    background-color: green;
+    min-height: calc(100% - 185px);
+    margin: 0;
+    padding: 0;
+    align-items: left;
+    flex-direction: column;
+  }
+
+  
+  footer {
+    background-color: pink;
+    height: 60px;
+    margin-top: auto;
+  }
+  
+  header, footer, menu {
+    justify-content: center;
+  }
+
+  header, footer, div{
+    display: flex;
+  }
