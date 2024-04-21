@@ -31,26 +31,21 @@ namespace Lab1
 
             
             int firm_id = int.Parse(dataGridView1.Rows[0].Cells[0].Value.ToString());
-            da.SelectCommand = new SqlCommand($"SELECT nume, platforma, pret FROM Jocuri_Video WHERE Jocuri_Video.id_firma = {firm_id}", cs);
+            da.SelectCommand = new SqlCommand($"SELECT id_joc, nume, platforma, pret FROM Jocuri_Video WHERE Jocuri_Video.id_firma = {firm_id}", cs);
             dsChild.Clear();
             da.Fill(dsChild);
             dataGridChildView.DataSource = dsChild.Tables[0];
             bsChild.DataSource = dsChild.Tables[0];
-            textBoxName.Text = dataGridChildView.Rows[0].Cells[0].Value.ToString();
-            textBoxPlatform.Text = dataGridChildView.Rows[0].Cells[1].Value.ToString();
-            textBoxPrice.Text = dataGridChildView.Rows[0].Cells[2].Value.ToString();
-           // textBoxGenre.Text = dataGridChildView.Rows[0].Cells[4].Value.ToString();
+            textBoxName.Text = dataGridChildView.Rows[0].Cells[1].Value.ToString();
+            textBoxPlatform.Text = dataGridChildView.Rows[0].Cells[2].Value.ToString();
+            textBoxPrice.Text = dataGridChildView.Rows[0].Cells[3].Value.ToString();
+    
 
             labelRecord.Text = "Record " + (bs.Position + 1) + " of " + bs.Count; 
         }
 
 
-      //  private void Form1_Load(object sender, EventArgs e)
-        //{
-              
-                 
-          
-       // }
+ 
 
         private void records()
         {
@@ -73,10 +68,10 @@ namespace Lab1
             da.Fill(dsChild);
             dataGridChildView.DataSource = dsChild.Tables[0];
             bsChild.DataSource = dsChild.Tables[0];
-            textBoxName.Text = dataGridChildView.Rows[0].Cells[0].Value.ToString();
-            textBoxPlatform.Text = dataGridChildView.Rows[0].Cells[1].Value.ToString();
-            textBoxPrice.Text = dataGridChildView.Rows[0].Cells[2].Value.ToString();
-            //textBoxGenre.Text = dataGridChildView.Rows[0].Cells[4].Value.ToString();
+            textBoxName.Text = dataGridChildView.Rows[0].Cells[1].Value.ToString();
+            textBoxPlatform.Text = dataGridChildView.Rows[0].Cells[2].Value.ToString();
+            textBoxPrice.Text = dataGridChildView.Rows[0].Cells[3].Value.ToString();
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,11 +92,10 @@ namespace Lab1
             dataGridChildView.ClearSelection();
             bsChild.Position = e.RowIndex;
             dataGridChildView.Rows[e.RowIndex].Selected = true;
-            textBoxName.Text = dataGridChildView.Rows[0].Cells[0].Value.ToString();
-            textBoxPlatform.Text = dataGridChildView.Rows[0].Cells[1].Value.ToString();
-            textBoxPrice.Text = dataGridChildView.Rows[0].Cells[2].Value.ToString();
-           // textBoxGenre.Text = dataGridChildView.Rows[0].Cells[4].Value.ToString();
-            //recordsChild();
+            textBoxName.Text = dataGridChildView.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBoxPlatform.Text = dataGridChildView.Rows[e.RowIndex].Cells[2].Value.ToString();
+            textBoxPrice.Text = dataGridChildView.Rows[e.RowIndex].Cells[3].Value.ToString();
+           
         }
 
 
@@ -180,12 +174,16 @@ namespace Lab1
                 da.InsertCommand.Parameters.Add("@fid", SqlDbType.BigInt).Value = int.Parse(ds.Tables[0].Rows[bs.Position][0].ToString());
                 da.InsertCommand.Parameters.Add("@plat", SqlDbType.VarChar).Value = textBoxPlatform.Text;
                 da.InsertCommand.Parameters.Add("@p", SqlDbType.BigInt).Value = textBoxPrice.Text;
-               // da.InsertCommand.Parameters.Add("@g", SqlDbType.BigInt).Value = textBoxGenre.Text;
                 cs.Open();
                 da.InsertCommand.ExecuteNonQuery();
                 cs.Close();
                 dsChild.Clear();
                 da.Fill(dsChild);
+                textBoxName.Text = "";
+                textBoxPlatform.Text = "";
+                textBoxPrice.Text = "";
+
+
             }
         }
 
@@ -193,17 +191,19 @@ namespace Lab1
         {
             if (validateTextBoxes())
             {
-                da.UpdateCommand = new SqlCommand("update Jocuri_Video set nume = @n,  platforma = @plat, pret = @p,  where id_joc = @id_joc", cs);
+                da.UpdateCommand = new SqlCommand("update Jocuri_Video set nume = @n,  platforma = @plat, pret = @p  where id_joc = @id_joc", cs);
                 da.UpdateCommand.Parameters.Add("@n", SqlDbType.VarChar).Value = textBoxName.Text;
                 da.UpdateCommand.Parameters.Add("@p", SqlDbType.BigInt).Value = textBoxPrice.Text;
                 da.UpdateCommand.Parameters.Add("@plat", SqlDbType.VarChar).Value = textBoxPlatform.Text;
-               // da.UpdateCommand.Parameters.Add("@g", SqlDbType.BigInt).Value = textBoxGenre.Text;
                 da.UpdateCommand.Parameters.Add("@id_joc", SqlDbType.BigInt).Value = dsChild.Tables[0].Rows[bsChild.Position][0];
                 cs.Open();
                 da.UpdateCommand.ExecuteNonQuery();
                 cs.Close();
                 dsChild.Clear();
                 da.Fill(dsChild);
+                textBoxName.Text = "";
+                textBoxPlatform.Text = "";
+                textBoxPrice.Text = "";
             }
         }
 
@@ -216,6 +216,9 @@ namespace Lab1
             cs.Close();
             dsChild.Clear();
             da.Fill(dsChild);
+            textBoxName.Text = "";
+            textBoxPlatform.Text = "";
+            textBoxPrice.Text = "";
         }
 
       

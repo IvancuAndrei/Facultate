@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|d:\\facultate - github\\facultate\\sgbd\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\lab1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|solutionrelative:lab1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|d:\\facultate - github\\facultate\\sgbd\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|d:\\facultate - github\\facultate\\sgbd\\lab1\\lab1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|d:\\facultate - github\\facultate\\sgbd\\lab1\\lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3B1D10-2C16-4B32-A213-EC3ADB2AFB4E}|Lab1\\Lab1.csproj|solutionrelative:lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Lab1\\Form1.Designer.cs",
-              "ToolTip": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form1.Designer.cs",
-              "RelativeToolTip": "Lab1\\Form1.Designer.cs",
-              "ViewState": "AQIAAFoAAAAAzMzMzMz8v/MAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T15:56:19.807Z",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\App.config",
+              "RelativeDocumentMoniker": "Lab1\\App.config",
+              "ToolTip": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\App.config",
+              "RelativeToolTip": "Lab1\\App.config",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-09T16:16:31.099Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form1.cs",
-              "RelativeDocumentMoniker": "Lab1\\Form1.cs",
-              "ToolTip": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form1.cs [Design]",
-              "RelativeToolTip": "Lab1\\Form1.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Program.cs",
+              "RelativeDocumentMoniker": "Lab1\\Program.cs",
+              "ToolTip": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Program.cs",
+              "RelativeToolTip": "Lab1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T16:37:47.5Z",
+              "WhenOpened": "2024-04-09T16:38:37.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form2.cs",
+              "RelativeDocumentMoniker": "Lab1\\Form2.cs",
+              "ToolTip": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form2.cs [Design]",
+              "RelativeToolTip": "Lab1\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T16:01:53.828Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form1.cs",
-              "RelativeDocumentMoniker": "Lab1\\Form1.cs",
-              "ToolTip": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form1.cs",
-              "RelativeToolTip": "Lab1\\Form1.cs",
-              "ViewState": "AQIAAGEAAAAAzczMzMwswMoAAAAQAAAA",
+              "DocumentIndex": 2,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form2.cs",
+              "RelativeDocumentMoniker": "Lab1\\Form2.cs",
+              "ToolTip": "D:\\Facultate - Github\\Facultate\\SGBD\\Lab1\\Lab1\\Form2.cs",
+              "RelativeToolTip": "Lab1\\Form2.cs",
+              "ViewState": "AQIAAJoAAAAAaGZmZmYSwJ0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T14:47:33.106Z",
+              "WhenOpened": "2024-04-09T13:39:40.295Z",
               "EditorCaption": ""
             }
           ]

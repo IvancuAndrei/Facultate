@@ -23,3 +23,5 @@ D:\Facultate - Github\Facultate\SGBD\Lab1\Lab1\obj\Debug\net8.0-windows\refint\L
 D:\Facultate - Github\Facultate\SGBD\Lab1\Lab1\obj\Debug\net8.0-windows\Lab1.pdb
 D:\Facultate - Github\Facultate\SGBD\Lab1\Lab1\obj\Debug\net8.0-windows\Lab1.genruntimeconfig.cache
 D:\Facultate - Github\Facultate\SGBD\Lab1\Lab1\obj\Debug\net8.0-windows\ref\Lab1.dll
+D:\Facultate - Github\Facultate\SGBD\Lab1\Lab1\obj\Debug\net8.0-windows\Lab1.Form2.resources
+D:\Facultate - Github\Facultate\SGBD\Lab1\Lab1\bin\Debug\net8.0-windows\Lab1.dll.config
