@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,11 +25,14 @@ namespace Lab1
         public static string childForeignKey = ConfigurationManager.AppSettings["childForeignKey"];
         public static string childPrimaryKey = ConfigurationManager.AppSettings["childPrimaryKey"];
 
-        DataSet dataSet = new DataSet();
+        public static string SelectQueryParent = ConfigurationManager.AppSettings["SelectQueryParent"];
+        public static string SelectQueryChild = ConfigurationManager.AppSettings["SelectQueryChild"];
+
+        DataSet dataSetParent = new DataSet();
         SqlDataAdapter parentDataAdapter = new SqlDataAdapter();
         BindingSource parentBindingSource = new BindingSource();
 
-
+        DataSet dataSetChild = new DataSet();
         SqlDataAdapter childDataAdapter = new SqlDataAdapter();
         BindingSource childBindingSource = new BindingSource();
 
@@ -45,26 +49,27 @@ namespace Lab1
                 {
 
                     conn.Open();
-                    parentDataAdapter.SelectCommand = new SqlCommand($"SELECT * FROM {parentTable}", conn);
-                    childDataAdapter.SelectCommand = new SqlCommand($"SELECT * FROM  {childTable}", conn);
-                    dataSet.Clear();
-                    parentDataAdapter.Fill(dataSet, parentTable);
-                    childDataAdapter.Fill(dataSet, childTable);
-
-                    DataColumn parentPK = dataSet.Tables[parentTable].Columns[parentPrimaryKey];
-                    DataColumn childFK = dataSet.Tables[childTable].Columns[childForeignKey];
-                    DataRelation relation = new DataRelation("fk_parent_child", parentPK, childFK);
-                    dataSet.Relations.Add(relation);
-
-                    parentBindingSource.DataSource = dataSet;
-                    parentBindingSource.DataMember = parentTable;
-                    childBindingSource.DataSource = parentBindingSource;
-                    childBindingSource.DataMember = "fk_parent_child";
-                    dataGridViewParent.DataSource = parentBindingSource;
-                    dataGridViewChild.DataSource = childBindingSource;
+                    
+                    parentDataAdapter.SelectCommand = new SqlCommand(SelectQueryParent, conn);
+                    dataSetParent.Clear();
+                    parentDataAdapter.Fill(dataSetParent);
+                    dataGridViewParent.DataSource = dataSetParent.Tables[0];
+                    parentBindingSource.DataSource = dataSetParent.Tables[0];
+                    
 
 
-                    foreach (DataColumn column in dataSet.Tables[childTable].Columns)
+                    pFKid = int.Parse(dataGridViewParent.Rows[0].Cells[0].Value.ToString());
+                    SqlCommand selectCommandChild = new SqlCommand(SelectQueryChild, conn);
+                    selectCommandChild.Parameters.AddWithValue("@childForeignKey", pFKid);
+
+                    childDataAdapter.SelectCommand = selectCommandChild;
+                    dataSetChild.Clear();
+                    childDataAdapter.Fill(dataSetChild);
+                    dataGridViewChild.DataSource = dataSetChild.Tables[0];
+                    childBindingSource.DataSource = dataSetChild.Tables[0];
+
+
+                    foreach (DataColumn column in dataSetChild.Tables[0].Columns)
                     {
                         if (column.ColumnName != parentPrimaryKey && column.ColumnName != childPrimaryKey)
                             childColumnNames.Add(column.ColumnName);
@@ -96,6 +101,50 @@ namespace Lab1
 
         }
 
+        private void dataGridChildViewUpdate()
+        {
+            SqlConnection conn = new SqlConnection(cs);
+
+            pFKid = int.Parse(dataGridViewParent.SelectedRows[0].Cells[0].Value.ToString());
+            SqlCommand selectCommandChild = new SqlCommand(SelectQueryChild, conn);
+            selectCommandChild.Parameters.AddWithValue("@childForeignKey", pFKid);
+
+            childDataAdapter.SelectCommand = selectCommandChild;
+            dataSetChild.Clear();
+            childDataAdapter.Fill(dataSetChild);
+            dataGridViewChild.DataSource = dataSetChild.Tables[0];
+            childBindingSource.DataSource = dataSetChild.Tables[0];
+
+
+            int pointX = 30;
+            int pointY = 30;
+            foreach (string column in childColumnNames)
+            {
+                System.Windows.Forms.TextBox a = new System.Windows.Forms.TextBox();
+                a.Text = column;
+                a.Name = column;
+                a.Location = new Point(pointX, pointY);
+                a.Visible = true;
+                a.Parent = panel1;
+                panel1.Show();
+                pointY += 30;
+
+            }
+        }
+
+        private void dataGridViewParent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+        
+            if (e.RowIndex != parentBindingSource.Count - 1)
+            {
+                dataGridViewParent.ClearSelection();
+                parentBindingSource.Position = e.RowIndex;
+                dataGridViewParent.Rows[e.RowIndex].Selected = true;
+                dataGridChildViewUpdate();
+
+            }
+        }
+
         private void dataGridViewChild_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             childBindingSource.Position = e.RowIndex;
@@ -119,19 +168,22 @@ namespace Lab1
                 using (SqlConnection conn = new SqlConnection(cs))
                 {
 
-                    conn.Open();
                     string InsertQuery = ConfigurationManager.AppSettings["InsertQuery"];
                     SqlCommand cmd = new SqlCommand(InsertQuery, conn);
-                    cmd.Parameters.AddWithValue("@childForeignKey", pFKid);
+                    cmd.Parameters.AddWithValue("childForeignKey", pFKid);
+                    cmd.Parameters.AddWithValue("childPrimaryKey", id);
                     foreach (string column in childColumnNames)
                     {
                         System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)panel1.Controls[column];
                         cmd.Parameters.AddWithValue("@" + column, textBox.Text);
                     }
+                    conn.Open();
                     cmd.ExecuteNonQuery();
-                    dataSet.Clear();
-                    childDataAdapter.Fill(dataSet, childTable);
-                    dataGridViewChild.DataSource = dataSet.Tables[0];
+                    dataSetChild.Clear();
+
+                    childDataAdapter.Fill(dataSetChild);
+
+                    dataGridViewChild.DataSource = dataSetChild.Tables[0];
                     conn.Close();
                 }
             }catch(Exception ex)
@@ -150,11 +202,11 @@ namespace Lab1
                     conn.Open();
                     string DeleteQuery = ConfigurationManager.AppSettings["DeleteQuery"];
                     SqlCommand cmd = new SqlCommand(DeleteQuery, conn);
-                    cmd.Parameters.AddWithValue("id_joc", id);
+                    cmd.Parameters.AddWithValue("childPrimaryKey", id);
                     cmd.ExecuteNonQuery();
-                    dataSet.Clear();
-                    childDataAdapter.Fill(dataSet, childTable);
-                    dataGridViewChild.DataSource = dataSet.Tables[0];
+                    dataSetChild.Clear();
+                    childDataAdapter.Fill(dataSetChild);
+                    dataGridViewChild.DataSource = dataSetChild.Tables[0];
                     conn.Close();
                 }
             }
@@ -170,21 +222,25 @@ namespace Lab1
             {
                 using (SqlConnection conn = new SqlConnection(cs))
                 {
-                    conn.Open();
+                    
                     string UpdateQuery = ConfigurationManager.AppSettings["UpdateQuery"];
                     SqlCommand cmd = new SqlCommand(UpdateQuery, conn);
                     cmd.Parameters.AddWithValue("childForeignKey", pFKid);
-                    cmd.Parameters.AddWithValue("id_joc", id);
+                    cmd.Parameters.AddWithValue("childPrimaryKey", id);
                     foreach (string column in childColumnNames)
                     {
                         System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)panel1.Controls[column];
                         cmd.Parameters.AddWithValue("@" + column, textBox.Text);
                     }
+                    conn.Open();
                     cmd.ExecuteNonQuery();
-                    dataSet.Clear();
-                    childDataAdapter.Fill(dataSet, childTable);
-                    dataGridViewChild.DataSource = dataSet.Tables[0];
+                    dataSetChild.Clear();
+              
+                    childDataAdapter.Fill(dataSetChild);
+
+                    dataGridViewChild.DataSource = dataSetChild.Tables[0];
                     conn.Close();
+                    
 
                 }
             }catch(Exception ex)
@@ -193,12 +249,9 @@ namespace Lab1
             }
         }
 
-        private void dataGridViewParent_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridViewParent.SelectedRows.Count == 0)
-                return;
-            pFKid = int.Parse(dataGridViewParent.CurrentRow.Cells[0].Value.ToString());
-        }
+        
+
+
     }
 }
 
