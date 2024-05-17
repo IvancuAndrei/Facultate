@@ -1,0 +1,43 @@
+USE [Jocuri_Video]
+GO
+
+CREATE PROCEDURE nr_reads_t1 AS
+BEGIN
+	BEGIN TRY
+		BEGIN TRAN
+		SELECT * FROM Jocuri_Video
+		INSERT INTO log_table VALUES('SELECT', 'Jocuri Video', CURRENT_TIMESTAMP)
+		WAITFOR DELAY '00:00:10'
+		SELECT * FROM Jocuri_Video
+		INSERT INTO log_table VALUES('SELECT', 'Jocuri Video', CURRENT_TIMESTAMP)
+		COMMIT TRAN
+
+		PRINT 'Transaction commited'
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRAN
+		PRINT 'Transaction rollbacked'
+	END CATCH
+END
+GO
+
+CREATE PROCEDURE nr_reads_t2 AS
+BEGIN
+	-- SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
+	BEGIN TRY
+		BEGIN TRAN
+		WAITFOR DELAY '00:00:02'
+		UPDATE Jocuri_Video SET pret = 10 WHERE id_joc = 1
+		INSERT INTO log_table VALUES ('UPDATE', 'Jocuri Video', CURRENT_TIMESTAMP)
+		COMMIT TRAN
+
+		PRINT 'Transaction commited'
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRAN
+
+		PRINT 'Transaction rollbacked'
+	END CATCH
+END
+
+EXEC nr_reads_t1
