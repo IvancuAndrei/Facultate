@@ -1,0 +1,1142 @@
+Terminals unused in grammar
+
+    UNKNOWN
+
+
+State 22 conflicts: 6 shift/reduce
+State 74 conflicts: 7 shift/reduce
+
+
+Grammar
+
+    0 $accept: program $end
+
+    1 program: LBRACE bloc-decl-var bloc-instr RBRACE
+
+    2 bloc-decl-var: lista-declaratii
+
+    3 lista-declaratii: lista-declaratii declaratie
+    4                 | declaratie
+
+    5 declaratie: tip-var lista-var SEMICOLON
+
+    6 tip-var: INT
+    7        | DOUBLE
+    8        | FLOAT
+    9        | decl-pred
+
+   10 decl-pred: STRUCT LBRACE bloc-decl-var RBRACE
+
+   11 lista-var: ID COMMA lista-var
+   12          | ID
+
+   13 bloc-instr: list-instr
+
+   14 list-instr: instr
+   15           | instr list-instr
+
+   16 instr: atribuire
+   17      | io
+   18      | cond
+   19      | rep
+
+   20 atribuire: ID ASSIGN expr SEMICOLON
+
+   21 expr: CONST
+   22     | ID
+   23     | expr op expr
+
+   24 op: PLUS
+   25   | MINUS
+   26   | DIV
+   27   | MOD
+   28   | MUL
+   29   | AND
+   30   | OR
+
+   31 io: CIN RIGHT_SHIFT ID SEMICOLON
+   32   | COUT LEFT_SHIFT expr LEFT_SHIFT ENDL SEMICOLON
+
+   33 cond: IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE
+   34     | IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE bloc-instr
+   35     | IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE IF cond
+
+   36 cerinta: ID comp expr
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+   39    | WHILE LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE
+
+   40 comp: LT
+   41     | GT
+   42     | LE
+   43     | GE
+   44     | EQ
+   45     | NE
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    error (256)
+    INT (258) 6
+    FLOAT (259) 8
+    STRUCT (260) 10
+    DOUBLE (261) 7
+    LPAREN (262) 33 34 35 37 38 39
+    RPAREN (263) 33 34 35 37 38 39
+    LBRACE (264) 1 10 33 34 35 37 39
+    RBRACE (265) 1 10 33 34 35 37 39
+    COMMA (266) 11
+    SEMICOLON (267) 5 20 31 32 37 38
+    RIGHT_SHIFT (268) 31
+    LEFT_SHIFT (269) 32
+    ASSIGN (270) 20 37 38
+    PLUS (271) 24
+    MINUS (272) 25
+    MUL (273) 28
+    DIV (274) 26
+    MOD (275) 27
+    AND (276) 29
+    OR (277) 30
+    NE (278) 45
+    EQ (279) 44
+    LT (280) 40
+    GT (281) 41
+    LE (282) 42
+    GE (283) 43
+    CIN (284) 31
+    COUT (285) 32
+    WHILE (286) 39
+    IF (287) 33 34 35
+    FOR (288) 37 38
+    ELSE (289) 34 35
+    ENDL (290) 32
+    CONST (291) 21
+    ID (292) 11 12 20 22 31 36 37 38
+    UNKNOWN (293)
+
+
+Nonterminals, with rules where they appear
+
+    $accept (39)
+        on left: 0
+    program (40)
+        on left: 1
+        on right: 0
+    bloc-decl-var (41)
+        on left: 2
+        on right: 1 10
+    lista-declaratii (42)
+        on left: 3 4
+        on right: 2 3
+    declaratie (43)
+        on left: 5
+        on right: 3 4
+    tip-var (44)
+        on left: 6 7 8 9
+        on right: 5
+    decl-pred (45)
+        on left: 10
+        on right: 9
+    lista-var (46)
+        on left: 11 12
+        on right: 5 11
+    bloc-instr (47)
+        on left: 13
+        on right: 1 33 34 35 37 38 39
+    list-instr (48)
+        on left: 14 15
+        on right: 13 15
+    instr (49)
+        on left: 16 17 18 19
+        on right: 14 15
+    atribuire (50)
+        on left: 20
+        on right: 16
+    expr (51)
+        on left: 21 22 23
+        on right: 20 23 32 36 37 38
+    op (52)
+        on left: 24 25 26 27 28 29 30
+        on right: 23
+    io (53)
+        on left: 31 32
+        on right: 17
+    cond (54)
+        on left: 33 34 35
+        on right: 18 35
+    cerinta (55)
+        on left: 36
+        on right: 33 34 35 37 38 39
+    rep (56)
+        on left: 37 38 39
+        on right: 19
+    comp (57)
+        on left: 40 41 42 43 44 45
+        on right: 36
+
+
+State 0
+
+    0 $accept: • program $end
+
+    LBRACE  shift, and go to state 1
+
+    program  go to state 2
+
+
+State 1
+
+    1 program: LBRACE • bloc-decl-var bloc-instr RBRACE
+
+    INT     shift, and go to state 3
+    FLOAT   shift, and go to state 4
+    STRUCT  shift, and go to state 5
+    DOUBLE  shift, and go to state 6
+
+    bloc-decl-var     go to state 7
+    lista-declaratii  go to state 8
+    declaratie        go to state 9
+    tip-var           go to state 10
+    decl-pred         go to state 11
+
+
+State 2
+
+    0 $accept: program • $end
+
+    $end  shift, and go to state 12
+
+
+State 3
+
+    6 tip-var: INT •
+
+    $default  reduce using rule 6 (tip-var)
+
+
+State 4
+
+    8 tip-var: FLOAT •
+
+    $default  reduce using rule 8 (tip-var)
+
+
+State 5
+
+   10 decl-pred: STRUCT • LBRACE bloc-decl-var RBRACE
+
+    LBRACE  shift, and go to state 13
+
+
+State 6
+
+    7 tip-var: DOUBLE •
+
+    $default  reduce using rule 7 (tip-var)
+
+
+State 7
+
+    1 program: LBRACE bloc-decl-var • bloc-instr RBRACE
+
+    CIN    shift, and go to state 14
+    COUT   shift, and go to state 15
+    WHILE  shift, and go to state 16
+    IF     shift, and go to state 17
+    FOR    shift, and go to state 18
+    ID     shift, and go to state 19
+
+    bloc-instr  go to state 20
+    list-instr  go to state 21
+    instr       go to state 22
+    atribuire   go to state 23
+    io          go to state 24
+    cond        go to state 25
+    rep         go to state 26
+
+
+State 8
+
+    2 bloc-decl-var: lista-declaratii •
+    3 lista-declaratii: lista-declaratii • declaratie
+
+    INT     shift, and go to state 3
+    FLOAT   shift, and go to state 4
+    STRUCT  shift, and go to state 5
+    DOUBLE  shift, and go to state 6
+
+    $default  reduce using rule 2 (bloc-decl-var)
+
+    declaratie  go to state 27
+    tip-var     go to state 10
+    decl-pred   go to state 11
+
+
+State 9
+
+    4 lista-declaratii: declaratie •
+
+    $default  reduce using rule 4 (lista-declaratii)
+
+
+State 10
+
+    5 declaratie: tip-var • lista-var SEMICOLON
+
+    ID  shift, and go to state 28
+
+    lista-var  go to state 29
+
+
+State 11
+
+    9 tip-var: decl-pred •
+
+    $default  reduce using rule 9 (tip-var)
+
+
+State 12
+
+    0 $accept: program $end •
+
+    $default  accept
+
+
+State 13
+
+   10 decl-pred: STRUCT LBRACE • bloc-decl-var RBRACE
+
+    INT     shift, and go to state 3
+    FLOAT   shift, and go to state 4
+    STRUCT  shift, and go to state 5
+    DOUBLE  shift, and go to state 6
+
+    bloc-decl-var     go to state 30
+    lista-declaratii  go to state 8
+    declaratie        go to state 9
+    tip-var           go to state 10
+    decl-pred         go to state 11
+
+
+State 14
+
+   31 io: CIN • RIGHT_SHIFT ID SEMICOLON
+
+    RIGHT_SHIFT  shift, and go to state 31
+
+
+State 15
+
+   32 io: COUT • LEFT_SHIFT expr LEFT_SHIFT ENDL SEMICOLON
+
+    LEFT_SHIFT  shift, and go to state 32
+
+
+State 16
+
+   39 rep: WHILE • LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE
+
+    LPAREN  shift, and go to state 33
+
+
+State 17
+
+   33 cond: IF • LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE
+   34     | IF • LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE bloc-instr
+   35     | IF • LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE IF cond
+
+    LPAREN  shift, and go to state 34
+
+
+State 18
+
+   37 rep: FOR • LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR • LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+
+    LPAREN  shift, and go to state 35
+
+
+State 19
+
+   20 atribuire: ID • ASSIGN expr SEMICOLON
+
+    ASSIGN  shift, and go to state 36
+
+
+State 20
+
+    1 program: LBRACE bloc-decl-var bloc-instr • RBRACE
+
+    RBRACE  shift, and go to state 37
+
+
+State 21
+
+   13 bloc-instr: list-instr •
+
+    $default  reduce using rule 13 (bloc-instr)
+
+
+State 22
+
+   14 list-instr: instr •
+   15           | instr • list-instr
+
+    CIN    shift, and go to state 14
+    COUT   shift, and go to state 15
+    WHILE  shift, and go to state 16
+    IF     shift, and go to state 17
+    FOR    shift, and go to state 18
+    ID     shift, and go to state 19
+
+    CIN       [reduce using rule 14 (list-instr)]
+    COUT      [reduce using rule 14 (list-instr)]
+    WHILE     [reduce using rule 14 (list-instr)]
+    IF        [reduce using rule 14 (list-instr)]
+    FOR       [reduce using rule 14 (list-instr)]
+    ID        [reduce using rule 14 (list-instr)]
+    $default  reduce using rule 14 (list-instr)
+
+    list-instr  go to state 38
+    instr       go to state 22
+    atribuire   go to state 23
+    io          go to state 24
+    cond        go to state 25
+    rep         go to state 26
+
+
+State 23
+
+   16 instr: atribuire •
+
+    $default  reduce using rule 16 (instr)
+
+
+State 24
+
+   17 instr: io •
+
+    $default  reduce using rule 17 (instr)
+
+
+State 25
+
+   18 instr: cond •
+
+    $default  reduce using rule 18 (instr)
+
+
+State 26
+
+   19 instr: rep •
+
+    $default  reduce using rule 19 (instr)
+
+
+State 27
+
+    3 lista-declaratii: lista-declaratii declaratie •
+
+    $default  reduce using rule 3 (lista-declaratii)
+
+
+State 28
+
+   11 lista-var: ID • COMMA lista-var
+   12          | ID •
+
+    COMMA  shift, and go to state 39
+
+    $default  reduce using rule 12 (lista-var)
+
+
+State 29
+
+    5 declaratie: tip-var lista-var • SEMICOLON
+
+    SEMICOLON  shift, and go to state 40
+
+
+State 30
+
+   10 decl-pred: STRUCT LBRACE bloc-decl-var • RBRACE
+
+    RBRACE  shift, and go to state 41
+
+
+State 31
+
+   31 io: CIN RIGHT_SHIFT • ID SEMICOLON
+
+    ID  shift, and go to state 42
+
+
+State 32
+
+   32 io: COUT LEFT_SHIFT • expr LEFT_SHIFT ENDL SEMICOLON
+
+    CONST  shift, and go to state 43
+    ID     shift, and go to state 44
+
+    expr  go to state 45
+
+
+State 33
+
+   39 rep: WHILE LPAREN • cerinta RPAREN LBRACE bloc-instr RBRACE
+
+    ID  shift, and go to state 46
+
+    cerinta  go to state 47
+
+
+State 34
+
+   33 cond: IF LPAREN • cerinta RPAREN LBRACE bloc-instr RBRACE
+   34     | IF LPAREN • cerinta RPAREN LBRACE bloc-instr RBRACE ELSE bloc-instr
+   35     | IF LPAREN • cerinta RPAREN LBRACE bloc-instr RBRACE ELSE IF cond
+
+    ID  shift, and go to state 46
+
+    cerinta  go to state 48
+
+
+State 35
+
+   37 rep: FOR LPAREN • ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN • ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+
+    ID  shift, and go to state 49
+
+
+State 36
+
+   20 atribuire: ID ASSIGN • expr SEMICOLON
+
+    CONST  shift, and go to state 43
+    ID     shift, and go to state 44
+
+    expr  go to state 50
+
+
+State 37
+
+    1 program: LBRACE bloc-decl-var bloc-instr RBRACE •
+
+    $default  reduce using rule 1 (program)
+
+
+State 38
+
+   15 list-instr: instr list-instr •
+
+    $default  reduce using rule 15 (list-instr)
+
+
+State 39
+
+   11 lista-var: ID COMMA • lista-var
+
+    ID  shift, and go to state 28
+
+    lista-var  go to state 51
+
+
+State 40
+
+    5 declaratie: tip-var lista-var SEMICOLON •
+
+    $default  reduce using rule 5 (declaratie)
+
+
+State 41
+
+   10 decl-pred: STRUCT LBRACE bloc-decl-var RBRACE •
+
+    $default  reduce using rule 10 (decl-pred)
+
+
+State 42
+
+   31 io: CIN RIGHT_SHIFT ID • SEMICOLON
+
+    SEMICOLON  shift, and go to state 52
+
+
+State 43
+
+   21 expr: CONST •
+
+    $default  reduce using rule 21 (expr)
+
+
+State 44
+
+   22 expr: ID •
+
+    $default  reduce using rule 22 (expr)
+
+
+State 45
+
+   23 expr: expr • op expr
+   32 io: COUT LEFT_SHIFT expr • LEFT_SHIFT ENDL SEMICOLON
+
+    LEFT_SHIFT  shift, and go to state 53
+    PLUS        shift, and go to state 54
+    MINUS       shift, and go to state 55
+    MUL         shift, and go to state 56
+    DIV         shift, and go to state 57
+    MOD         shift, and go to state 58
+    AND         shift, and go to state 59
+    OR          shift, and go to state 60
+
+    op  go to state 61
+
+
+State 46
+
+   36 cerinta: ID • comp expr
+
+    NE  shift, and go to state 62
+    EQ  shift, and go to state 63
+    LT  shift, and go to state 64
+    GT  shift, and go to state 65
+    LE  shift, and go to state 66
+    GE  shift, and go to state 67
+
+    comp  go to state 68
+
+
+State 47
+
+   39 rep: WHILE LPAREN cerinta • RPAREN LBRACE bloc-instr RBRACE
+
+    RPAREN  shift, and go to state 69
+
+
+State 48
+
+   33 cond: IF LPAREN cerinta • RPAREN LBRACE bloc-instr RBRACE
+   34     | IF LPAREN cerinta • RPAREN LBRACE bloc-instr RBRACE ELSE bloc-instr
+   35     | IF LPAREN cerinta • RPAREN LBRACE bloc-instr RBRACE ELSE IF cond
+
+    RPAREN  shift, and go to state 70
+
+
+State 49
+
+   37 rep: FOR LPAREN ID • ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID • ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+
+    ASSIGN  shift, and go to state 71
+
+
+State 50
+
+   20 atribuire: ID ASSIGN expr • SEMICOLON
+   23 expr: expr • op expr
+
+    SEMICOLON  shift, and go to state 72
+    PLUS       shift, and go to state 54
+    MINUS      shift, and go to state 55
+    MUL        shift, and go to state 56
+    DIV        shift, and go to state 57
+    MOD        shift, and go to state 58
+    AND        shift, and go to state 59
+    OR         shift, and go to state 60
+
+    op  go to state 61
+
+
+State 51
+
+   11 lista-var: ID COMMA lista-var •
+
+    $default  reduce using rule 11 (lista-var)
+
+
+State 52
+
+   31 io: CIN RIGHT_SHIFT ID SEMICOLON •
+
+    $default  reduce using rule 31 (io)
+
+
+State 53
+
+   32 io: COUT LEFT_SHIFT expr LEFT_SHIFT • ENDL SEMICOLON
+
+    ENDL  shift, and go to state 73
+
+
+State 54
+
+   24 op: PLUS •
+
+    $default  reduce using rule 24 (op)
+
+
+State 55
+
+   25 op: MINUS •
+
+    $default  reduce using rule 25 (op)
+
+
+State 56
+
+   28 op: MUL •
+
+    $default  reduce using rule 28 (op)
+
+
+State 57
+
+   26 op: DIV •
+
+    $default  reduce using rule 26 (op)
+
+
+State 58
+
+   27 op: MOD •
+
+    $default  reduce using rule 27 (op)
+
+
+State 59
+
+   29 op: AND •
+
+    $default  reduce using rule 29 (op)
+
+
+State 60
+
+   30 op: OR •
+
+    $default  reduce using rule 30 (op)
+
+
+State 61
+
+   23 expr: expr op • expr
+
+    CONST  shift, and go to state 43
+    ID     shift, and go to state 44
+
+    expr  go to state 74
+
+
+State 62
+
+   45 comp: NE •
+
+    $default  reduce using rule 45 (comp)
+
+
+State 63
+
+   44 comp: EQ •
+
+    $default  reduce using rule 44 (comp)
+
+
+State 64
+
+   40 comp: LT •
+
+    $default  reduce using rule 40 (comp)
+
+
+State 65
+
+   41 comp: GT •
+
+    $default  reduce using rule 41 (comp)
+
+
+State 66
+
+   42 comp: LE •
+
+    $default  reduce using rule 42 (comp)
+
+
+State 67
+
+   43 comp: GE •
+
+    $default  reduce using rule 43 (comp)
+
+
+State 68
+
+   36 cerinta: ID comp • expr
+
+    CONST  shift, and go to state 43
+    ID     shift, and go to state 44
+
+    expr  go to state 75
+
+
+State 69
+
+   39 rep: WHILE LPAREN cerinta RPAREN • LBRACE bloc-instr RBRACE
+
+    LBRACE  shift, and go to state 76
+
+
+State 70
+
+   33 cond: IF LPAREN cerinta RPAREN • LBRACE bloc-instr RBRACE
+   34     | IF LPAREN cerinta RPAREN • LBRACE bloc-instr RBRACE ELSE bloc-instr
+   35     | IF LPAREN cerinta RPAREN • LBRACE bloc-instr RBRACE ELSE IF cond
+
+    LBRACE  shift, and go to state 77
+
+
+State 71
+
+   37 rep: FOR LPAREN ID ASSIGN • expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN • expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+
+    CONST  shift, and go to state 43
+    ID     shift, and go to state 44
+
+    expr  go to state 78
+
+
+State 72
+
+   20 atribuire: ID ASSIGN expr SEMICOLON •
+
+    $default  reduce using rule 20 (atribuire)
+
+
+State 73
+
+   32 io: COUT LEFT_SHIFT expr LEFT_SHIFT ENDL • SEMICOLON
+
+    SEMICOLON  shift, and go to state 79
+
+
+State 74
+
+   23 expr: expr • op expr
+   23     | expr op expr •
+
+    PLUS   shift, and go to state 54
+    MINUS  shift, and go to state 55
+    MUL    shift, and go to state 56
+    DIV    shift, and go to state 57
+    MOD    shift, and go to state 58
+    AND    shift, and go to state 59
+    OR     shift, and go to state 60
+
+    PLUS      [reduce using rule 23 (expr)]
+    MINUS     [reduce using rule 23 (expr)]
+    MUL       [reduce using rule 23 (expr)]
+    DIV       [reduce using rule 23 (expr)]
+    MOD       [reduce using rule 23 (expr)]
+    AND       [reduce using rule 23 (expr)]
+    OR        [reduce using rule 23 (expr)]
+    $default  reduce using rule 23 (expr)
+
+    op  go to state 61
+
+
+State 75
+
+   23 expr: expr • op expr
+   36 cerinta: ID comp expr •
+
+    PLUS   shift, and go to state 54
+    MINUS  shift, and go to state 55
+    MUL    shift, and go to state 56
+    DIV    shift, and go to state 57
+    MOD    shift, and go to state 58
+    AND    shift, and go to state 59
+    OR     shift, and go to state 60
+
+    $default  reduce using rule 36 (cerinta)
+
+    op  go to state 61
+
+
+State 76
+
+   39 rep: WHILE LPAREN cerinta RPAREN LBRACE • bloc-instr RBRACE
+
+    CIN    shift, and go to state 14
+    COUT   shift, and go to state 15
+    WHILE  shift, and go to state 16
+    IF     shift, and go to state 17
+    FOR    shift, and go to state 18
+    ID     shift, and go to state 19
+
+    bloc-instr  go to state 80
+    list-instr  go to state 21
+    instr       go to state 22
+    atribuire   go to state 23
+    io          go to state 24
+    cond        go to state 25
+    rep         go to state 26
+
+
+State 77
+
+   33 cond: IF LPAREN cerinta RPAREN LBRACE • bloc-instr RBRACE
+   34     | IF LPAREN cerinta RPAREN LBRACE • bloc-instr RBRACE ELSE bloc-instr
+   35     | IF LPAREN cerinta RPAREN LBRACE • bloc-instr RBRACE ELSE IF cond
+
+    CIN    shift, and go to state 14
+    COUT   shift, and go to state 15
+    WHILE  shift, and go to state 16
+    IF     shift, and go to state 17
+    FOR    shift, and go to state 18
+    ID     shift, and go to state 19
+
+    bloc-instr  go to state 81
+    list-instr  go to state 21
+    instr       go to state 22
+    atribuire   go to state 23
+    io          go to state 24
+    cond        go to state 25
+    rep         go to state 26
+
+
+State 78
+
+   23 expr: expr • op expr
+   37 rep: FOR LPAREN ID ASSIGN expr • SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr • SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+
+    SEMICOLON  shift, and go to state 82
+    PLUS       shift, and go to state 54
+    MINUS      shift, and go to state 55
+    MUL        shift, and go to state 56
+    DIV        shift, and go to state 57
+    MOD        shift, and go to state 58
+    AND        shift, and go to state 59
+    OR         shift, and go to state 60
+
+    op  go to state 61
+
+
+State 79
+
+   32 io: COUT LEFT_SHIFT expr LEFT_SHIFT ENDL SEMICOLON •
+
+    $default  reduce using rule 32 (io)
+
+
+State 80
+
+   39 rep: WHILE LPAREN cerinta RPAREN LBRACE bloc-instr • RBRACE
+
+    RBRACE  shift, and go to state 83
+
+
+State 81
+
+   33 cond: IF LPAREN cerinta RPAREN LBRACE bloc-instr • RBRACE
+   34     | IF LPAREN cerinta RPAREN LBRACE bloc-instr • RBRACE ELSE bloc-instr
+   35     | IF LPAREN cerinta RPAREN LBRACE bloc-instr • RBRACE ELSE IF cond
+
+    RBRACE  shift, and go to state 84
+
+
+State 82
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON • cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON • cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+
+    ID  shift, and go to state 46
+
+    cerinta  go to state 85
+
+
+State 83
+
+   39 rep: WHILE LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE •
+
+    $default  reduce using rule 39 (rep)
+
+
+State 84
+
+   33 cond: IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE •
+   34     | IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE • ELSE bloc-instr
+   35     | IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE • ELSE IF cond
+
+    ELSE  shift, and go to state 86
+
+    $default  reduce using rule 33 (cond)
+
+
+State 85
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta • SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON cerinta • SEMICOLON ID ASSIGN expr RPAREN bloc-instr
+
+    SEMICOLON  shift, and go to state 87
+
+
+State 86
+
+   34 cond: IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE • bloc-instr
+   35     | IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE • IF cond
+
+    CIN    shift, and go to state 14
+    COUT   shift, and go to state 15
+    WHILE  shift, and go to state 16
+    IF     shift, and go to state 88
+    FOR    shift, and go to state 18
+    ID     shift, and go to state 19
+
+    bloc-instr  go to state 89
+    list-instr  go to state 21
+    instr       go to state 22
+    atribuire   go to state 23
+    io          go to state 24
+    cond        go to state 25
+    rep         go to state 26
+
+
+State 87
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON • ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON • ID ASSIGN expr RPAREN bloc-instr
+
+    ID  shift, and go to state 90
+
+
+State 88
+
+   33 cond: IF • LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE
+   34     | IF • LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE bloc-instr
+   35     | IF • LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE IF cond
+   35     | IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE IF • cond
+
+    LPAREN  shift, and go to state 34
+    IF      shift, and go to state 17
+
+    cond  go to state 91
+
+
+State 89
+
+   34 cond: IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE bloc-instr •
+
+    $default  reduce using rule 34 (cond)
+
+
+State 90
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID • ASSIGN expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID • ASSIGN expr RPAREN bloc-instr
+
+    ASSIGN  shift, and go to state 92
+
+
+State 91
+
+   35 cond: IF LPAREN cerinta RPAREN LBRACE bloc-instr RBRACE ELSE IF cond •
+
+    $default  reduce using rule 35 (cond)
+
+
+State 92
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN • expr RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN • expr RPAREN bloc-instr
+
+    CONST  shift, and go to state 43
+    ID     shift, and go to state 44
+
+    expr  go to state 93
+
+
+State 93
+
+   23 expr: expr • op expr
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr • RPAREN LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr • RPAREN bloc-instr
+
+    RPAREN  shift, and go to state 94
+    PLUS    shift, and go to state 54
+    MINUS   shift, and go to state 55
+    MUL     shift, and go to state 56
+    DIV     shift, and go to state 57
+    MOD     shift, and go to state 58
+    AND     shift, and go to state 59
+    OR      shift, and go to state 60
+
+    op  go to state 61
+
+
+State 94
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN • LBRACE bloc-instr RBRACE
+   38    | FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN • bloc-instr
+
+    LBRACE  shift, and go to state 95
+    CIN     shift, and go to state 14
+    COUT    shift, and go to state 15
+    WHILE   shift, and go to state 16
+    IF      shift, and go to state 17
+    FOR     shift, and go to state 18
+    ID      shift, and go to state 19
+
+    bloc-instr  go to state 96
+    list-instr  go to state 21
+    instr       go to state 22
+    atribuire   go to state 23
+    io          go to state 24
+    cond        go to state 25
+    rep         go to state 26
+
+
+State 95
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE • bloc-instr RBRACE
+
+    CIN    shift, and go to state 14
+    COUT   shift, and go to state 15
+    WHILE  shift, and go to state 16
+    IF     shift, and go to state 17
+    FOR    shift, and go to state 18
+    ID     shift, and go to state 19
+
+    bloc-instr  go to state 97
+    list-instr  go to state 21
+    instr       go to state 22
+    atribuire   go to state 23
+    io          go to state 24
+    cond        go to state 25
+    rep         go to state 26
+
+
+State 96
+
+   38 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN bloc-instr •
+
+    $default  reduce using rule 38 (rep)
+
+
+State 97
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr • RBRACE
+
+    RBRACE  shift, and go to state 98
+
+
+State 98
+
+   37 rep: FOR LPAREN ID ASSIGN expr SEMICOLON cerinta SEMICOLON ID ASSIGN expr RPAREN LBRACE bloc-instr RBRACE •
+
+    $default  reduce using rule 37 (rep)

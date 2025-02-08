@@ -1,0 +1,23 @@
+Program, Declarations, Declaration, Declarations_rest, Type, Decl-pred, List_var, List_var_rest, Instructions, Instructions_rest, Instruction, Atribuire, Expr, Expr_rest, Op, Io, Cond, Cerinta, Rep, Comp
+{, }, int, double, float, struct, id, comma, =, ;, const, +, -, /, %, *, &&, or, cin, >>, cout, <<, endl, if, (, ), for, while, <, >, <=, >=, ==, !=
+Program
+Program: { Declarations Instructions }
+Declarations: Declaration Declarations_rest
+Declarations_rest: Declaration Declarations_rest | @
+Declaration: Type List_var ;
+Type: int | double | float | Decl-pred
+Decl-pred: struct { Declarations }
+List_var: id List_var_rest
+List_var_rest: comma id List_var_rest | @
+Instructions: Instruction Instructions
+Instructions_rest: Instruction Instructions_rest | @
+Instruction: Atribuire | Io | Cond | Rep
+Atribuire: id = Expr ;
+Expr: const Expr_rest | id Expr_rest
+Expr_rest: Op Expr | @
+Op: + | - | / | % | * | && | or
+Io: cin >> id ; | cout << Expr << endl ;
+Cond: if ( Cerinta ) { Instructions }
+Cerinta: id Comp Expr
+Rep: for ( id = Expr ; Cerinta ; id = Expr ) { Instructions } | while ( Cerinta ) { Instructions }
+Comp: < | > | <= | >= | == | !=
