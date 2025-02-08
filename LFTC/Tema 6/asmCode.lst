@@ -1,0 +1,40 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  
+     4                                  extern exit
+     5                                  import exit msvcrt.dll
+     6                                  
+     7                                  extern scanf
+     8                                  import scanf msvcrt.dll
+     9                                  
+    10                                  extern printf
+    11                                  import printf msvcrt.dll
+    12                                  
+    13                                  segment data use32 class=data
+    14 00000000 00<rept>                	 b times 4 db 0
+    15 00000004 00<rept>                	 a times 4 db 0
+    16 00000008 256400                  	 format db "%d", 0
+    17                                  
+    18                                  segment code use32 class=code
+    19                                  	start:
+    20 00000000 B003                    		mov AL, 3
+    21 00000002 A2[00000000]            		mov [b], AL
+    22                                  
+    23 00000007 68[04000000]            		push dword a
+    24 0000000C 68[08000000]            		push dword format
+    25 00000011 FF15[00000000]          		call [scanf]
+    26 00000017 83C408                  		add ESP, 4 * 2
+    27                                  
+    28 0000001A A0[04000000]            		mov AL, [a]
+    29 0000001F 0205[00000000]          		add AL, byte [b]
+    30 00000025 F625[00000000]          		mul byte [b]
+    31 0000002B 0205[04000000]          		add AL, byte [a]
+    32 00000031 A2[04000000]            		mov [a], AL
+    33                                  
+    34 00000036 FF35[04000000]          		push dword [a]
+    35 0000003C 68[08000000]            		push dword format
+    36 00000041 FF15[00000000]          		call [printf]
+    37 00000047 83C408                  		add ESP, 4 * 2
+    38                                  
+    39 0000004A 6A00                    		push dword 0
+    40 0000004C FF15[00000000]          		call [exit]

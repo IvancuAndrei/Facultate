@@ -1,0 +1,3 @@
+D:/Facultate - Github/Facultate/PPD/tema2/proiectcpp/cmake-build-debug/CMakeFiles/proiectcpp.dir
+D:/Facultate - Github/Facultate/PPD/tema2/proiectcpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Facultate - Github/Facultate/PPD/tema2/proiectcpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

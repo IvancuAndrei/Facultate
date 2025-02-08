@@ -1,0 +1,7 @@
+{
+    int a, b;
+    b = 3;
+    cin >> a;
+    a = a + b * b + a;
+    cout << a;
+}
