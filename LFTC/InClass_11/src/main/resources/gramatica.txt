@@ -1,0 +1,8 @@
+
+
+
+S -> aA | bB
+A -> a
+B -> b
+S -> bB
+C -> eps

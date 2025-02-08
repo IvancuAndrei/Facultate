@@ -1,0 +1,7 @@
+{
+int r ;
+float pi = 3.14 ;
+cin >> r ;
+cout << 2*pi * r  << endl ;
+cout << pi * r * r << endl ;
+}
