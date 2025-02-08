@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="proiectcpp" targetName="proiectcpp" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="23c1c888-266e-44e2-9246-ce7d061424bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/FIP/ElementFIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/FIP/FIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/LexicalUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/NodeBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/TS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/TSC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/TSID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/resources/FIP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/resources/TSC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/resources/TSID.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 1/Analizator-lexical/src/main/resources/program.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Automat_finit/src/main/java/com/example/FiniteStateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Automat_finit/src/main/java/com/example/Transition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Automat_finit/src/main/resources/bnf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Automat_finit/src/main/resources/constants.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/FIP/ElementFIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/FIP/FIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/LexicalUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/NodeBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/TS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/TSC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/TSID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/FiniteMachine/FiniteStateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/FiniteMachine/Transition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/java/com/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/Analizator_lexical/FIP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/Analizator_lexical/TSC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/Analizator_lexical/TSID.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/Analizator_lexical/program.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/FiniteMachines/bnf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/FiniteMachines/identifier.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/FiniteMachines/integer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LFTC/Tema 2/Lab_2/src/main/resources/FiniteMachines/real.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/FileContentIndex/52db8ca1-acce-4206-9ad4-78bb73049c5c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.metadata.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.projects.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/ref/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/ref/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/refint/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/refint/Lab1.dll" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="2.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2o1jGieLICBRPDhqc6DLdbr8ghF" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.proiectcpp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Facultate - Github/Facultate/PPD/tema2/proiectcpp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Facultate\PPD\Teme\tema2\proiectcpp\cmake-build-debug" />
+      <recent name="C:\Facultate\LFTC\Tema2\proiectcpp\files\input" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="proiectcpp" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="input_10_10_3.txt LINII 2" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="proiectcpp" TARGET_NAME="proiectcpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="proiectcpp" RUN_TARGET_NAME="proiectcpp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23c1c888-266e-44e2-9246-ce7d061424bf" name="Changes" comment="" />
+      <created>1730043881849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730043881849</updated>
+      <workItem from="1730043882913" duration="2516000" />
+      <workItem from="1730046457147" duration="1279000" />
+      <workItem from="1730112459379" duration="1397000" />
+      <workItem from="1730381710694" duration="262000" />
+      <workItem from="1730453359862" duration="681000" />
+      <workItem from="1731280039667" duration="882000" />
+      <workItem from="1732113534866" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>63</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>183</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

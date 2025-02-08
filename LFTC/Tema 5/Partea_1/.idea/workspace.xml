@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3cef7f2f-9e4e-4c5d-afdf-285189fe2ffd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../InClass_11/src/main/java/com/example/Gramatica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../InClass_11/src/main/resources/gramatica.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/java/com/example/FIP/ElementFIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/java/com/example/FIP/FIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/java/com/example/LexicalUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/java/com/example/TS/NodeBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/java/com/example/TS/TS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/java/com/example/TS/TSC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/java/com/example/TS/TSID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/resources/FIP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/resources/TSC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/resources/TSID.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 1/Analizator-lexical/src/main/resources/program.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Automat_finit/src/main/java/com/example/FiniteStateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Automat_finit/src/main/java/com/example/Transition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Automat_finit/src/main/resources/bnf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Automat_finit/src/main/resources/constants.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/FIP/ElementFIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/FIP/FIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/LexicalUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/NodeBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/TS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/TSC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Analizator_lexical/TS/TSID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/FiniteMachine/FiniteStateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/FiniteMachine/Transition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/java/com/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/Analizator_lexical/FIP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/Analizator_lexical/TSC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/Analizator_lexical/TSID.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/Analizator_lexical/program.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/FiniteMachines/bnf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/FiniteMachines/identifier.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/FiniteMachines/integer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 2/Lab_2/src/main/resources/FiniteMachines/real.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Analyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Grammar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Rule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gramatica.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/java/com/example/Analyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/java/com/example/Grammar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/java/com/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/java/com/example/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/java/com/example/Production.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/java/com/example/Rule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/resources/FIP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Partea_2/src/main/resources/gramatica.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/FileContentIndex/52db8ca1-acce-4206-9ad4-78bb73049c5c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/Lab1/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.metadata.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.projects.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/ref/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/ref/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/refint/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/refint/Lab1.dll" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IvancuAndrei&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IvancuAndrei/Facultate.git&quot;,
+    &quot;accountId&quot;: &quot;96a35feb-74cb-4eec-8a64-2438881bc727&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2rG2HFalPr7uicSJMp7WvdNtP4f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Partea_1 [:com.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Facultate - Github/Facultate/LFTC/Tema 5/Partea_1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Main" />
+      <module name="Partea_1.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cef7f2f-9e4e-4c5d-afdf-285189fe2ffd" name="Changes" comment="" />
+      <created>1736171003968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736171003968</updated>
+      <workItem from="1736171005094" duration="9551000" />
+      <workItem from="1736257937037" duration="16688000" />
+      <workItem from="1736334266295" duration="4000" />
+      <workItem from="1736351969543" duration="17852000" />
+      <workItem from="1736435180839" duration="1240000" />
+      <workItem from="1736443711122" duration="641000" />
+      <workItem from="1736444417619" duration="7000" />
+      <workItem from="1736450296152" duration="1076000" />
+      <workItem from="1736458575755" duration="16000" />
+      <workItem from="1736503431238" duration="1614000" />
+      <workItem from="1736721942098" duration="1365000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

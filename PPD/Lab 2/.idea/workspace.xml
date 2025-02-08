@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Lab_2" targetName="Lab_2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="093b5100-ef18-4b6e-9e80-4aa143a3740f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/FIP/ElementFIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/FIP/FIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/LexicalUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/NodeBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/TS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/TSC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/java/com/example/TS/TSID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/resources/FIP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/resources/TSC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/resources/TSID.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 1/Analizator-lexical/src/main/resources/program.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 2/Automat_finit/src/main/resources/bnf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LFTC/Tema 2/Automat_finit/src/main/resources/transitions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/Lab1/FileContentIndex/52db8ca1-acce-4206-9ad4-78bb73049c5c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/Lab1/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/Lab1/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/Lab1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/Lab1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/Lab1/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/Lab1/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.metadata.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/.vs/ProjectEvaluation/lab1.projects.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/bin/Debug/net8.0-windows/Lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/Lab1.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/ref/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/ref/Lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/refint/Lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGBD/Lab1/Lab1/obj/Debug/net8.0-windows/refint/Lab1.dll" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ncGg086yJXDIgBTqIdljPfNTCq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.Lab_2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "D:/Facultate - Github/Facultate/PPD/tema2/proiectcpp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Lab_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab_2" TARGET_NAME="Lab_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Lab_2" RUN_TARGET_NAME="Lab_2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="093b5100-ef18-4b6e-9e80-4aa143a3740f" name="Changes" comment="" />
+      <created>1729265057615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729265057615</updated>
+      <workItem from="1729265059501" duration="2920000" />
+      <workItem from="1729429402330" duration="17000" />
+      <workItem from="1730378459770" duration="2000" />
+      <workItem from="1730378621594" duration="30000" />
+      <workItem from="1730378680006" duration="43000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+</project>
