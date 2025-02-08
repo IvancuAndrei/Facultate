@@ -1,0 +1,8 @@
+﻿  Main.cpp
+  Utils.cpp
+  Varianta0.cpp
+D:\Facultate - Github\Facultate\PPD\tema3\Varianta0.cpp(8,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Facultate - Github\Facultate\PPD\tema3\Varianta0.cpp(9,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Varianta1.cpp
+  Generating Code...
+  tema3.vcxproj -> D:\Facultate - Github\Facultate\PPD\tema3\x64\Debug\tema3.exe
