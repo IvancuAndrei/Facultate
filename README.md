@@ -11,4 +11,7 @@
  - PLF = [Programare Logica si Functionala 🌵](https://github.com/IvancuAndrei/Facultate/tree/main/PLF)
  - PS = [Probabilitati si Statistica 🤓](https://github.com/IvancuAndrei/Facultate/tree/main/PS)
  - AI = [Inteligenta Artificiala 🤖](https://github.com/IvancuAndrei/Facultate/tree/main/AI)
+ - LFTC = [Limbaje formale si Tehnici de compilare ](https://github.com/IvancuAndrei/Facultate/tree/main/LFTC)
+ - PPD = [Programare Paralela si Distribuita ](https://github.com/IvancuAndrei/Facultate/tree/main/PPD)
+ - SGBD = [Sisteme de Gestiune a Bazelor de Date ](https://github.com/IvancuAndrei/Facultate/tree/main/SGBD)
    
