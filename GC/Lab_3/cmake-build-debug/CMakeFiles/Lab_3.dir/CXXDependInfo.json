@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "D:/Facultate - Github/Facultate/GC/Lab_3/cmake-build-debug",
+	"dir-cur-src" : "D:/Facultate - Github/Facultate/GC/Lab_3",
+	"dir-top-bld" : "D:/Facultate - Github/Facultate/GC/Lab_3/cmake-build-debug",
+	"dir-top-src" : "D:/Facultate - Github/Facultate/GC/Lab_3",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "D:/Facultate - Github/Facultate/GC/Lab_3/cmake-build-debug/CMakeFiles/Lab_3.dir"
+}

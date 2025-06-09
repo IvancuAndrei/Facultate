@@ -1,0 +1,12 @@
+{
+  "name": "ciur-eratostene",
+  "version": "1.0.0",
+  "main": "ciur_Erathostene.ts",
+  "scripts": {
+    "start": "ts-node ciur_Erathostene.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.0.0",
+    "typescript": "^4.0.0"
+  }
+}

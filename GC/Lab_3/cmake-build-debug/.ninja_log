@@ -1,0 +1,14 @@
+# ninja log v6
+6	83	7658905657750764	CMakeFiles/Lab_3.dir/main.cpp.obj.ddi	54b536c723cbf3bc
+84	132	7658905658960710	CMakeFiles/Lab_3.dir/CXX.dd	28dfe96ad250500b
+84	132	7658905658960710	D:/Facultate - Github/Facultate/GC/Lab_3/cmake-build-debug/CMakeFiles/Lab_3.dir/CXXModules.json	28dfe96ad250500b
+84	132	7658905658960710	CMakeFiles/Lab_3.dir/main.cpp.obj.modmap	28dfe96ad250500b
+139	259	7658905659080386	CMakeFiles/Lab_3.dir/main.cpp.obj	c1e1d7b6b8aab691
+11	1119	7658905657791753	CMakeFiles/Lab_3.dir/glad.c.obj	5c0ae73648873afd
+1122	1257	7658905668905566	Lab_3.exe	43ad30df16637c47
+8	53	7658906529373394	CMakeFiles/Lab_3.dir/main.cpp.obj.ddi	54b536c723cbf3bc
+53	87	7658906529818077	CMakeFiles/Lab_3.dir/CXX.dd	28dfe96ad250500b
+53	87	7658906529818077	D:/Facultate - Github/Facultate/GC/Lab_3/cmake-build-debug/CMakeFiles/Lab_3.dir/CXXModules.json	28dfe96ad250500b
+53	87	7658906529818077	CMakeFiles/Lab_3.dir/main.cpp.obj.modmap	28dfe96ad250500b
+88	163	7658906530169751	CMakeFiles/Lab_3.dir/main.cpp.obj	c1e1d7b6b8aab691
+164	311	7658906530918299	Lab_3.exe	43ad30df16637c47
